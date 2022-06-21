@@ -10,26 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="comit">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="changed language to tsx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sirius-challenge/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +34,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/my-app/node_modules/typescript/lib" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -60,6 +46,7 @@
       <updated>1655822275452</updated>
       <workItem from="1655822277030" duration="2890000" />
       <workItem from="1655827263837" duration="267000" />
+      <workItem from="1655832551601" duration="767000" />
     </task>
     <task id="LOCAL-00001" summary="comit">
       <created>1655826734234</created>
@@ -68,7 +55,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655826734234</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="changed language to tsx">
+      <created>1655832639991</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655832639991</updated>
+    </task>
+    <task id="LOCAL-00003" summary="changed language to tsx">
+      <created>1655832830149</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655832830149</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,12 +89,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="comit" />
-    <option name="LAST_COMMIT_MESSAGE" value="comit" />
+    <MESSAGE value="changed language to tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed language to tsx" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1655826757732">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1655832895859">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1655826757732" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1655832895859" />
   </component>
 </project>
