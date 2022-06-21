@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles, withStyles} from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -24,7 +24,23 @@ function createData(name: string, status: string, specie: string, gender: string
 
 
 
+const StyledTableCell = withStyles((theme) => ({
+    head: {
+        backgroundColor: theme.palette.common.black,
+        color: theme.palette.common.white,
+    },
+    body: {
+        fontSize: 14,
+    },
+}))(TableCell);
 
+const StyledTableRow = withStyles((theme) => ({
+    root: {
+        '&:nth-of-type(odd)': {
+            backgroundColor: theme.palette.action.hover,
+        },
+    },
+}))(TableRow);
 
 
 export default function BasicTable() {
@@ -50,28 +66,28 @@ export default function BasicTable() {
     })
 
     return (
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} >
             <Table className={classes.table} aria-label="simple table">
                 <TableHead>
-                    <TableRow>
-                        <TableCell>Name</TableCell>
-                        <TableCell align="right">Status</TableCell>
-                        <TableCell align="right">Specie</TableCell>
-                        <TableCell align="right">Gender</TableCell>
-                        <TableCell align="right">Episodes</TableCell>
-                        <TableCell align="right">detail</TableCell>
-                    </TableRow>
+                    <StyledTableRow>
+                        <StyledTableCell>Name</StyledTableCell>
+                        <StyledTableCell align="right">Status</StyledTableCell>
+                        <StyledTableCell align="right">Specie</StyledTableCell>
+                        <StyledTableCell align="right">Gender</StyledTableCell>
+                        <StyledTableCell align="right">Episodes</StyledTableCell>
+                        <StyledTableCell align="right">detail</StyledTableCell>
+                    </StyledTableRow>
                 </TableHead>
                 <TableBody>
                     {characters.map((character) => (
-                        <TableRow key={character.id}>
-                            <TableCell align="right">{character.name}</TableCell>
-                            <TableCell align="right">{character.status}</TableCell>
-                            <TableCell align="right">{character.species}</TableCell>
-                            <TableCell align="right">{character.gender}</TableCell>
-                            <TableCell align="right">{character.episode}</TableCell>
-                            <TableCell align="right">{character.detail}</TableCell>
-                        </TableRow>
+                        <StyledTableRow key={character.id}>
+                            <StyledTableCell align="right">{character.name}</StyledTableCell>
+                            <StyledTableCell align="right">{character.status}</StyledTableCell>
+                            <StyledTableCell  align="right">{character.species}</StyledTableCell>
+                            <StyledTableCell align="right">{character.gender}</StyledTableCell>
+                            <StyledTableCell align="right" >{character.episode}</StyledTableCell>
+                            <StyledTableCell align="right">{character.detail}</StyledTableCell>
+                        </StyledTableRow>
                     ))}
                 </TableBody>
             </Table>
