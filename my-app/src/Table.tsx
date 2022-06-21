@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -7,6 +7,9 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import {getAllCharacterData} from "./api/CharacterApi";
+import {CharacterType} from "./Types/Types";
+import { useState } from 'react';
 
 const useStyles = makeStyles({
     table: {
@@ -18,6 +21,9 @@ function createData(name: string, status: string, specie: string, gender: string
     return { name, status, specie, gender, episodes,detail };
 }
 
+
+
+
 const rows = [
     createData('Rick', 'dead', 'human', 'male', 1.0,'cranky'),
     createData('Rick', 'dead', 'human', 'male', 1.0,'cranky'),
@@ -25,8 +31,27 @@ const rows = [
 
 ];
 
+
 export default function BasicTable() {
+    const [characters, setCharacters]=useState([])
     const classes = useStyles();
+
+    function getCharacters() {
+        getAllCharacterData()
+            .then((res) => {
+                console.log(res)
+                setCharacters(res.results)
+                console.log(res.results)
+            })
+            .catch((err) => {
+                if (err.status === 401|| err.status===404)
+                    console.log(err)
+
+            })
+    }
+    useEffect(() => {
+       getCharacters()
+    })
 
     return (
         <TableContainer component={Paper}>
@@ -56,4 +81,5 @@ export default function BasicTable() {
             </Table>
         </TableContainer>
     );
+
 }
