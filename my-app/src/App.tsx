@@ -10,7 +10,7 @@ function App() {
     <div >
         <Container >
             <Box component="span" m={1}>
-                <header   >Rick and Morty Characters</header>
+                <header>Rick and Morty Characters</header>
             </Box>
             <div style={{ height: 400, width: '100%' }}>
             <BasicTable></BasicTable>
