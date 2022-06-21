@@ -17,23 +17,18 @@ const useStyles = makeStyles({
     },
 });
 
-function createData(name: string, status: string, specie: string, gender: string, episodes: number, detail:string) {
+function createData(name: string, status: string, specie: string, gender: string, episodes: string, detail:string) {
     return { name, status, specie, gender, episodes,detail };
 }
 
 
 
 
-const rows = [
-    createData('Rick', 'dead', 'human', 'male', 1.0,'cranky'),
-    createData('Rick', 'dead', 'human', 'male', 1.0,'cranky'),
-    createData('Rick', 'dead', 'human', 'male', 1.0,'cranky'),
 
-];
 
 
 export default function BasicTable() {
-    const [characters, setCharacters]=useState([])
+    const [characters, setCharacters]=useState<any[]>([]);
     const classes = useStyles();
 
     function getCharacters() {
@@ -42,6 +37,7 @@ export default function BasicTable() {
                 console.log(res)
                 setCharacters(res.results)
                 console.log(res.results)
+                console.log(res.results[0].name)
             })
             .catch((err) => {
                 if (err.status === 401|| err.status===404)
@@ -67,14 +63,14 @@ export default function BasicTable() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {rows.map((row) => (
-                        <TableRow key={row.name}>
-                            <TableCell align="right">{row.name}</TableCell>
-                            <TableCell align="right">{row.status}</TableCell>
-                            <TableCell align="right">{row.specie}</TableCell>
-                            <TableCell align="right">{row.gender}</TableCell>
-                            <TableCell align="right">{row.episodes}</TableCell>
-                            <TableCell align="right">{row.detail}</TableCell>
+                    {characters.map((character) => (
+                        <TableRow key={character.id}>
+                            <TableCell align="right">{character.name}</TableCell>
+                            <TableCell align="right">{character.status}</TableCell>
+                            <TableCell align="right">{character.species}</TableCell>
+                            <TableCell align="right">{character.gender}</TableCell>
+                            <TableCell align="right">{character.episode}</TableCell>
+                            <TableCell align="right">{character.detail}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
