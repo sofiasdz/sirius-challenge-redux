@@ -9,7 +9,7 @@ export function SearchBox() {
 
 
 return(
-    <ButtonGroup  color="primary" aria-label="outlined primary button group">
+    <ButtonGroup style={{marginBottom:20}}  color="primary" aria-label="outlined primary button group">
         <Button disabled onClick={() => {
         }}><SearchIcon/></Button>
         <div>

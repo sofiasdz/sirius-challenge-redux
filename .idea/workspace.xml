@@ -10,11 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="Added Search Bar">
-      <change afterPath="$PROJECT_DIR$/my-app/src/TableCell.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/api/EpisodeApi.ts" afterDir="false" />
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="trying to make the table cell component work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/SearchBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/SearchBox.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/TableCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/TableCell.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/Types/Types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Types/Types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +50,7 @@
       <workItem from="1655827263837" duration="267000" />
       <workItem from="1655832551601" duration="1143000" />
       <workItem from="1655834269377" duration="5216000" />
-      <workItem from="1655904771574" duration="5102000" />
+      <workItem from="1655904771574" duration="7730000" />
     </task>
     <task id="LOCAL-00001" summary="comit">
       <created>1655826734234</created>
@@ -135,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655905279059</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="trying to make the table cell component work">
+      <created>1655910769992</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1655910769992</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,12 +173,13 @@
     <MESSAGE value="styled table" />
     <MESSAGE value="changes to text" />
     <MESSAGE value="Added Search Bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Search Bar" />
+    <MESSAGE value="trying to make the table cell component work" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying to make the table cell component work" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1655841003148">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1655910772801">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1655841003148" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1655910772801" />
   </component>
 </project>

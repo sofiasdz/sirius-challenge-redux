@@ -32,15 +32,12 @@ export  default function TableCellCharacter(props: Props) {
     }))(TableRow);
 
     function getEpisodes(episodes:string[]) {
-        const episodeList: string | any[] | ((prevState: string[]) => string[])=[]
+        let episodeList: string[] = [];
        episodes.forEach((episode,i) =>{
             getEpisodeData(episode)
             .then((res) => {
                 console.log(res)
-                episodeList.concat(res.episode)
-                episodeList.concat(",")
-                episodeList.concat(res.name)
-                episodeList.concat(",")
+                episodeList.push(`${res.episode} - ${res.name}`)
             })
             .catch((err) => {
                 if (err.status === 401|| err.status===404)
@@ -52,17 +49,18 @@ export  default function TableCellCharacter(props: Props) {
 
     }
     useEffect(() => {
-        getEpisodes(props.character.episodes)
-    })
+        console.log(props.character)
+        getEpisodes(props.character.episode)
+    },[])
 
     return(
     <StyledTableRow key={props.character.id}>
         <StyledTableCell align="right">{props.character.name}</StyledTableCell>
         <StyledTableCell align="right">{props.character.status}</StyledTableCell>
-        <StyledTableCell align="right">{props.character.specie}</StyledTableCell>
+        <StyledTableCell align="right">{props.character.species}</StyledTableCell>
         <StyledTableCell align="right">{props.character.gender}</StyledTableCell>
-        <StyledTableCell align="right">{episodeList.toString()}</StyledTableCell>
-        <StyledTableCell align="right">{props.character.details}</StyledTableCell>
+        <StyledTableCell align="right">{episodeList.join(", ")}</StyledTableCell>
+        <StyledTableCell align="right">{props.character.type}</StyledTableCell>
     </StyledTableRow>
 
     )

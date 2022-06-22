@@ -3,10 +3,10 @@ export type CharacterType = {
     id:string
     name:string
     status: string,
-    specie: string,
+    species: string,
     gender:string,
-    episodes:string[]
-    details:string
+    episode:string[]
+    type:string
 
 }
 

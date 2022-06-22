@@ -75,7 +75,7 @@ export default function BasicTable() {
             <Table className={classes.table} aria-label="simple table">
                 <TableHead>
                     <StyledTableRow>
-                        <StyledTableCell>Name</StyledTableCell>
+                        <StyledTableCell align="right">Name</StyledTableCell>
                         <StyledTableCell align="right">Status</StyledTableCell>
                         <StyledTableCell align="right">Specie</StyledTableCell>
                         <StyledTableCell align="right">Gender</StyledTableCell>

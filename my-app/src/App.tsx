@@ -11,9 +11,17 @@ function App() {
     <div >
         <Container >
             <Box component="span" m={1}>
-                <header>Rick and Morty Characters</header>
+                <header style={{
+                    textAlign: "center",
+                    alignSelf: "center",
+                    fontSize:30,
+                    padding:20
+                }}>Rick and Morty Characters</header>
             </Box>
-            <Box component="span" m={1}>
+            <Box  style={{
+                padding:20,
+                marginBottom:10
+            }}component="span" m={1}>
                 <SearchBox></SearchBox>
             </Box>
 
