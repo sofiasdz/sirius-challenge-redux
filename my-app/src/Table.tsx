@@ -10,6 +10,8 @@ import Paper from '@material-ui/core/Paper';
 import {getAllCharacterData} from "./api/CharacterApi";
 import {CharacterType} from "./Types/Types";
 import { useState } from 'react';
+import {getEpisodeData} from "./api/EpisodeApi";
+import TableCellCharacter from "./TableCell";
 
 const useStyles = makeStyles({
     table: {
@@ -44,7 +46,7 @@ const StyledTableRow = withStyles((theme) => ({
 
 
 export default function BasicTable() {
-    const [characters, setCharacters]=useState<any[]>([]);
+    const [characters, setCharacters]=useState<CharacterType[]>([]);
     const classes = useStyles();
 
     function getCharacters() {
@@ -61,6 +63,9 @@ export default function BasicTable() {
 
             })
     }
+
+
+
     useEffect(() => {
        getCharacters()
     })
@@ -79,15 +84,8 @@ export default function BasicTable() {
                     </StyledTableRow>
                 </TableHead>
                 <TableBody>
-                    {characters.map((character) => (
-                        <StyledTableRow key={character.id}>
-                            <StyledTableCell align="right">{character.name}</StyledTableCell>
-                            <StyledTableCell align="right">{character.status}</StyledTableCell>
-                            <StyledTableCell  align="right">{character.species}</StyledTableCell>
-                            <StyledTableCell align="right">{character.gender}</StyledTableCell>
-                            <StyledTableCell align="right" >{character.episode}</StyledTableCell>
-                            <StyledTableCell align="right">{character.detail}</StyledTableCell>
-                        </StyledTableRow>
+                    {characters.map((c) => (
+                        <TableCellCharacter character={c}/>
                     ))}
                 </TableBody>
             </Table>
