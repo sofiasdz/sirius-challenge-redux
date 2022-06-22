@@ -1,12 +1,27 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Box, Container} from "@material-ui/core";
 import BasicTable from "./Table";
 import {SearchBox} from "./SearchBox";
+import {CharacterType} from "./Types/Types";
+import {getAllCharacterData} from "./api/CharacterApi";
 
 
 function App() {
+    const [characters, setCharacters]=useState<CharacterType[]>([]);
+
+    useEffect(() => {
+        getAllCharacterData()
+            .then((res) => {
+                setCharacters(res.results)
+            })
+            .catch((err) => {
+                if (err.status === 401|| err.status===404)
+                    console.log(err)
+
+            })
+    },[])
   return (
     <div >
         <Container >
@@ -26,7 +41,10 @@ function App() {
             </Box>
 
             <div style={{ height: 400, width: '100%' }}>
-            <BasicTable></BasicTable>
+                {
+                    characters.length === 0 ? <></> :
+                    <BasicTable data={characters}></BasicTable>
+                }
             </div>
         </Container>
     </div>

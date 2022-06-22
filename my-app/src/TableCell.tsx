@@ -3,9 +3,10 @@ import {withStyles} from "@material-ui/core/styles";
 import TableRow from "@material-ui/core/TableRow";
 import {CharacterType, EpisodeType} from "./Types/Types";
 import {getEpisodeData} from "./api/EpisodeApi";
-import {Button, TableCell, Typography} from "@material-ui/core";
+import {Box, Button, TableCell, Typography} from "@material-ui/core";
 import { Ellipsis,EllipsisMode } from "react-simple-ellipsis";
 import Tooltip from '@material-ui/core/Tooltip';
+import VisibilityIcon from '@material-ui/icons/Visibility';
 
 type Props = {
     character: CharacterType
@@ -34,26 +35,20 @@ export  default function TableCellCharacter(props: Props) {
     }))(TableRow);
 
     function getEpisodes(episodes:string[]) {
-        let episodeList: string[] = [];
-       episodes.forEach((episode,i) =>{
+        let list: string[] = [];
+       episodes.forEach((episode,i) => {
             getEpisodeData(episode)
             .then((res) => {
-                console.log(res)
-                episodeList.push(`${res.episode} - ${res.name}`)
+                list.push(`${res.episode} - ${res.name}`)
             })
             .catch((err) => {
                 if (err.status === 401|| err.status===404)
                     console.log(err)
 
             })})
-        setEpisodeList(episodeList)
-        console.log(episodeList)
-
+        setEpisodeList(list)
     }
-    useEffect(() => {
-        console.log(props.character)
-        getEpisodes(props.character.episode)
-    },[])
+
 
     const LightTooltip = withStyles((theme) => ({
         tooltip: {
@@ -66,14 +61,14 @@ export  default function TableCellCharacter(props: Props) {
 
     return(
     <StyledTableRow key={props.character.id}>
-        <StyledTableCell align="right">{props.character.name}</StyledTableCell>
-        <StyledTableCell align="right">{props.character.status}</StyledTableCell>
-        <StyledTableCell align="right">{props.character.species}</StyledTableCell>
-        <StyledTableCell align="right">{props.character.gender}</StyledTableCell>
+        <StyledTableCell align="left">{props.character.name}</StyledTableCell>
+        <StyledTableCell align="left">{props.character.status}</StyledTableCell>
+        <StyledTableCell align="left">{props.character.species}</StyledTableCell>
+        <StyledTableCell align="left">{props.character.gender}</StyledTableCell>
 
         <LightTooltip  disableFocusListener disableTouchListener title={episodeList.join(", ")} >
 
-        <StyledTableCell align="right">
+        <StyledTableCell align="left">
             <Ellipsis
             ellipsis="..."
             label=""
@@ -86,7 +81,12 @@ export  default function TableCellCharacter(props: Props) {
         </LightTooltip>
 
 
-        <StyledTableCell align="right" >{props.character.type}</StyledTableCell>
+        <StyledTableCell align="left">{props.character.type}</StyledTableCell>
+        <StyledTableCell align="left">
+            <Button>
+            <VisibilityIcon></VisibilityIcon>
+            </Button>
+        </StyledTableCell>
     </StyledTableRow>
 
     )

@@ -45,46 +45,26 @@ const StyledTableRow = withStyles((theme) => ({
 }))(TableRow);
 
 
-export default function BasicTable() {
-    const [characters, setCharacters]=useState<CharacterType[]>([]);
+export default function BasicTable({data}:{data: CharacterType[]}) {
     const classes = useStyles();
 
-    function getCharacters() {
-        getAllCharacterData()
-            .then((res) => {
-                console.log(res)
-                setCharacters(res.results)
-                console.log(res.results)
-                console.log(res.results[0].name)
-            })
-            .catch((err) => {
-                if (err.status === 401|| err.status===404)
-                    console.log(err)
-
-            })
-    }
-
-
-
-    useEffect(() => {
-       getCharacters()
-    })
-
+console.log({data});
     return (
         <TableContainer component={Paper} >
             <Table className={classes.table} aria-label="simple table">
                 <TableHead>
                     <StyledTableRow>
-                        <StyledTableCell align="right">Name</StyledTableCell>
-                        <StyledTableCell align="right">Status</StyledTableCell>
-                        <StyledTableCell align="right">Specie</StyledTableCell>
-                        <StyledTableCell align="right">Gender</StyledTableCell>
-                        <StyledTableCell align="right">Episodes</StyledTableCell>
-                        <StyledTableCell align="right">detail</StyledTableCell>
+                        <StyledTableCell align="left">Name</StyledTableCell>
+                        <StyledTableCell align="left">Status</StyledTableCell>
+                        <StyledTableCell align="left">Specie</StyledTableCell>
+                        <StyledTableCell align="left">Gender</StyledTableCell>
+                        <StyledTableCell align="left">Episodes</StyledTableCell>
+                        <StyledTableCell align="left">Detail</StyledTableCell>
+                        <StyledTableCell align="left"></StyledTableCell>
                     </StyledTableRow>
                 </TableHead>
                 <TableBody>
-                    {characters.map((c) => (
+                    {data.map((c) => (
                         <TableCellCharacter character={c}/>
                     ))}
                 </TableBody>
