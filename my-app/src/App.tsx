@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import {Box, Container} from "@material-ui/core";
 import BasicTable from "./Table";
+import {SearchBox} from "./SearchBox";
 
 
 function App() {
@@ -12,6 +13,10 @@ function App() {
             <Box component="span" m={1}>
                 <header>Rick and Morty Characters</header>
             </Box>
+            <Box component="span" m={1}>
+                <SearchBox></SearchBox>
+            </Box>
+
             <div style={{ height: 400, width: '100%' }}>
             <BasicTable></BasicTable>
             </div>
