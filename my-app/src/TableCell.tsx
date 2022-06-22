@@ -4,6 +4,7 @@ import TableRow from "@material-ui/core/TableRow";
 import {CharacterType, EpisodeType} from "./Types/Types";
 import {getEpisodeData} from "./api/EpisodeApi";
 import {TableCell} from "@material-ui/core";
+import { Ellipsis,EllipsisMode } from "react-simple-ellipsis";
 
 type Props = {
     character: CharacterType
@@ -59,8 +60,16 @@ export  default function TableCellCharacter(props: Props) {
         <StyledTableCell align="right">{props.character.status}</StyledTableCell>
         <StyledTableCell align="right">{props.character.species}</StyledTableCell>
         <StyledTableCell align="right">{props.character.gender}</StyledTableCell>
-        <StyledTableCell align="right">{episodeList.join(", ")}</StyledTableCell>
-        <StyledTableCell align="right">{props.character.type}</StyledTableCell>
+        <StyledTableCell align="right"> <Ellipsis
+            ellipsis="..."
+            label=""
+            id={props.character.id}
+            text={episodeList.join(", ")}
+            limit={20}
+            class="more"
+            mode={EllipsisMode.After}
+        /></StyledTableCell>
+        <StyledTableCell align="right" >{props.character.type}</StyledTableCell>
     </StyledTableRow>
 
     )
