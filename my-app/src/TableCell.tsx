@@ -3,8 +3,9 @@ import {withStyles} from "@material-ui/core/styles";
 import TableRow from "@material-ui/core/TableRow";
 import {CharacterType, EpisodeType} from "./Types/Types";
 import {getEpisodeData} from "./api/EpisodeApi";
-import {TableCell} from "@material-ui/core";
+import {Button, TableCell, Typography} from "@material-ui/core";
 import { Ellipsis,EllipsisMode } from "react-simple-ellipsis";
+import Tooltip from '@material-ui/core/Tooltip';
 
 type Props = {
     character: CharacterType
@@ -54,21 +55,37 @@ export  default function TableCellCharacter(props: Props) {
         getEpisodes(props.character.episode)
     },[])
 
+    const LightTooltip = withStyles((theme) => ({
+        tooltip: {
+            backgroundColor: theme.palette.common.white,
+            color: 'rgba(0,0,0,0.87)',
+            boxShadow: theme.shadows[1],
+            fontSize: 11,
+        },
+    }))(Tooltip);
+
     return(
     <StyledTableRow key={props.character.id}>
         <StyledTableCell align="right">{props.character.name}</StyledTableCell>
         <StyledTableCell align="right">{props.character.status}</StyledTableCell>
         <StyledTableCell align="right">{props.character.species}</StyledTableCell>
         <StyledTableCell align="right">{props.character.gender}</StyledTableCell>
-        <StyledTableCell align="right"> <Ellipsis
+
+        <LightTooltip  disableFocusListener disableTouchListener title={episodeList.join(", ")} >
+
+        <StyledTableCell align="right">
+            <Ellipsis
             ellipsis="..."
             label=""
             id={props.character.id}
             text={episodeList.join(", ")}
             limit={20}
             class="more"
-            mode={EllipsisMode.After}
-        /></StyledTableCell>
+            mode={EllipsisMode.After}/>
+        </StyledTableCell>
+        </LightTooltip>
+
+
         <StyledTableCell align="right" >{props.character.type}</StyledTableCell>
     </StyledTableRow>
 
