@@ -12,6 +12,9 @@ import {CharacterType} from "./Types/Types";
 import { useState } from 'react';
 import {getEpisodeData} from "./api/EpisodeApi";
 import TableCellCharacter from "./TableCell";
+import Select from 'react-select'
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
 const useStyles = makeStyles({
     table: {
@@ -52,7 +55,16 @@ type Props = {
 }
 export default function BasicTable(props: Props) {
     const classes = useStyles();
+    const [species, setSpecies] = useState("asd");
+    const options = [
+        { value: 'chocolate', label: 'Chocolate' },
+        { value: 'strawberry', label: 'Strawberry' },
+        { value: 'vanilla', label: 'Vanilla' }
+    ]
+ function handleSpeciesChange(){
+     props.data=props.data.filter(f=> f.species.toLowerCase().includes(species.toLowerCase()) || species === 'Species')
 
+ }
 
     return (
         <TableContainer component={Paper} >
@@ -61,7 +73,13 @@ export default function BasicTable(props: Props) {
                     <StyledTableRow>
                         <StyledTableCell align="left">Name</StyledTableCell>
                         <StyledTableCell align="left">Status</StyledTableCell>
-                        <StyledTableCell align="left">Specie</StyledTableCell>
+                        <StyledTableCell align="left">
+                            { species === 'asd' ?
+                            <ArrowDownwardIcon/>:
+                            <ArrowUpwardIcon/>}
+
+                           Species
+                        </StyledTableCell>
                         <StyledTableCell align="left">Gender</StyledTableCell>
                         <StyledTableCell align="left">Episodes</StyledTableCell>
                         <StyledTableCell align="left">Detail</StyledTableCell>
