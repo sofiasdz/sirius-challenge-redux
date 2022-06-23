@@ -15,6 +15,8 @@ import TableCellCharacter from "./TableCell";
 import Select from 'react-select'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import {Button} from "@material-ui/core";
+import VisibilityIcon from "@material-ui/icons/Visibility";
 
 const useStyles = makeStyles({
     table: {
@@ -55,7 +57,7 @@ type Props = {
 }
 export default function BasicTable(props: Props) {
     const classes = useStyles();
-    const [species, setSpecies] = useState("asd");
+    const [species, setSpecies] = useState("des");
     const options = [
         { value: 'chocolate', label: 'Chocolate' },
         { value: 'strawberry', label: 'Strawberry' },
@@ -74,9 +76,11 @@ export default function BasicTable(props: Props) {
                         <StyledTableCell align="left">Name</StyledTableCell>
                         <StyledTableCell align="left">Status</StyledTableCell>
                         <StyledTableCell align="left">
-                            { species === 'asd' ?
-                            <ArrowDownwardIcon/>:
-                            <ArrowUpwardIcon/>}
+                            {species === 'asd' ?
+                                <Button color={"secondary"} onClick={()=>setSpecies('des')}>
+                                    <ArrowDownwardIcon/>
+                                </Button>:
+                                <Button color={"secondary"} onClick={()=>setSpecies('asd')}><ArrowUpwardIcon/></Button>}
 
                            Species
                         </StyledTableCell>
