@@ -7,12 +7,13 @@ import {Box, Button, TableCell, Typography} from "@material-ui/core";
 import { Ellipsis,EllipsisMode } from "react-simple-ellipsis";
 import Tooltip from '@material-ui/core/Tooltip';
 import VisibilityIcon from '@material-ui/icons/Visibility';
+import Select from 'react-select'
 
 type Props = {
     character: CharacterType
 }
 export  default function TableCellCharacter(props: Props) {
-    const [episodeList, setEpisodeList]=useState<string[]>([]);
+
 
 
 
@@ -34,7 +35,7 @@ export  default function TableCellCharacter(props: Props) {
         },
     }))(TableRow);
 
-    function getEpisodes(episodes:string[]) {
+/*    function getEpisodes(episodes:string[]) {
         let list: string[] = [];
        episodes.forEach((episode,i) => {
             getEpisodeData(episode)
@@ -47,7 +48,7 @@ export  default function TableCellCharacter(props: Props) {
 
             })})
         setEpisodeList(list)
-    }
+    }*/
 
 
     const LightTooltip = withStyles((theme) => ({
@@ -66,14 +67,14 @@ export  default function TableCellCharacter(props: Props) {
         <StyledTableCell align="left">{props.character.species}</StyledTableCell>
         <StyledTableCell align="left">{props.character.gender}</StyledTableCell>
 
-        <LightTooltip  disableFocusListener disableTouchListener title={episodeList.join(", ")} >
+        <LightTooltip  disableFocusListener disableTouchListener title={props.character.episode.join(", ")} >
 
         <StyledTableCell align="left">
             <Ellipsis
             ellipsis="..."
             label=""
             id={props.character.id}
-            text={episodeList.join(", ")}
+            text={props.character.episode.join(", ")}
             limit={20}
             class="more"
             mode={EllipsisMode.After}/>
