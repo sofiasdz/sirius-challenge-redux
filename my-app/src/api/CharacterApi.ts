@@ -10,9 +10,9 @@ import {request} from './API'
     });
 }*/
 
-export function getAllCharacterData(): Promise<any> {
+export function getAllCharacterData(pageNumber:string): Promise<any> {
     return request({
-        url:"https://rickandmortyapi.com/api/character",
+        url:"https://rickandmortyapi.com/api/character/?page=",
         method: 'GET',
         headers: {'Content-Type': 'application/json'}
     });

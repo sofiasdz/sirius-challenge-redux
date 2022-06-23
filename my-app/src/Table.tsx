@@ -17,6 +17,7 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import {Button} from "@material-ui/core";
 import VisibilityIcon from "@material-ui/icons/Visibility";
+import Pagination from "@material-ui/lab/Pagination";
 
 const useStyles = makeStyles({
     table: {
@@ -101,6 +102,7 @@ export default function BasicTable(props: Props) {
                     ))}
                 </TableBody>
             </Table>
+            <Pagination count={10} size="large" />
         </TableContainer>
     );
 

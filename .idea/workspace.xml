@@ -10,9 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="implemented state asociated to species sorting buttons">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="sorting alfabetically by species works!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/api/CharacterApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/api/CharacterApi.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +51,7 @@
       <workItem from="1655834269377" duration="5216000" />
       <workItem from="1655904771574" duration="8157000" />
       <workItem from="1655918229237" duration="7074000" />
-      <workItem from="1655985765246" duration="4979000" />
+      <workItem from="1655985765246" duration="7384000" />
     </task>
     <task id="LOCAL-00001" summary="comit">
       <created>1655826734234</created>
@@ -197,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655991417592</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="sorting alfabetically by species works!">
+      <created>1655992825246</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1655992825246</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,17 +246,18 @@
     <MESSAGE value="search bar works" />
     <MESSAGE value="Implemented sorting species buttons" />
     <MESSAGE value="implemented state asociated to species sorting buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented state asociated to species sorting buttons" />
+    <MESSAGE value="sorting alfabetically by species works!" />
+    <option name="LAST_COMMIT_MESSAGE" value="sorting alfabetically by species works!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1655986265690" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1655988133725">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1655992828501">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1655988133725" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1655992828501" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
