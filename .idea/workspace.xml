@@ -10,7 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="Implemented sorting species buttons">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="implemented state asociated to species sorting buttons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Table.tsx" afterDir="false" />
     </list>
@@ -48,7 +48,7 @@
       <workItem from="1655834269377" duration="5216000" />
       <workItem from="1655904771574" duration="8157000" />
       <workItem from="1655918229237" duration="7074000" />
-      <workItem from="1655985765246" duration="4170000" />
+      <workItem from="1655985765246" duration="4979000" />
     </task>
     <task id="LOCAL-00001" summary="comit">
       <created>1655826734234</created>
@@ -190,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655990727754</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="implemented state asociated to species sorting buttons">
+      <created>1655991417592</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1655991417592</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +235,8 @@
     <MESSAGE value="tooltip shows episode list" />
     <MESSAGE value="search bar works" />
     <MESSAGE value="Implemented sorting species buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented sorting species buttons" />
+    <MESSAGE value="implemented state asociated to species sorting buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented state asociated to species sorting buttons" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">

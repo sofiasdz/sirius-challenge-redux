@@ -77,10 +77,14 @@ export default function BasicTable(props: Props) {
                         <StyledTableCell align="left">Status</StyledTableCell>
                         <StyledTableCell align="left">
                             {species === 'asd' ?
-                                <Button color={"secondary"} onClick={()=>setSpecies('des')}>
+                                <Button color={"secondary"} onClick={
+                                    ()=>{setSpecies('des')
+                                        props.data.sort((a, b) => a.species.localeCompare(b.species))
+                                    }}>
                                     <ArrowDownwardIcon/>
                                 </Button>:
-                                <Button color={"secondary"} onClick={()=>setSpecies('asd')}><ArrowUpwardIcon/></Button>}
+                                <Button color={"secondary"} onClick={()=>{setSpecies('asd')
+                                    props.data.sort((a, b) => a.species.localeCompare(b.species)).reverse() }}><ArrowUpwardIcon/></Button>}
 
                            Species
                         </StyledTableCell>
