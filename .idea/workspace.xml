@@ -10,9 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="scraped episode list">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="tooltip shows episode list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/TableCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/TableCell.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/SearchBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/SearchBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Table.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +50,7 @@
       <workItem from="1655834269377" duration="5216000" />
       <workItem from="1655904771574" duration="8157000" />
       <workItem from="1655918229237" duration="7074000" />
-      <workItem from="1655985765246" duration="508000" />
+      <workItem from="1655985765246" duration="1550000" />
     </task>
     <task id="LOCAL-00001" summary="comit">
       <created>1655826734234</created>
@@ -169,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655925934691</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="tooltip shows episode list">
+      <created>1655987156479</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1655987156480</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,17 +213,18 @@
     <MESSAGE value="added elipsis with episodes" />
     <MESSAGE value="added tooltip" />
     <MESSAGE value="scraped episode list" />
-    <option name="LAST_COMMIT_MESSAGE" value="scraped episode list" />
+    <MESSAGE value="tooltip shows episode list" />
+    <option name="LAST_COMMIT_MESSAGE" value="tooltip shows episode list" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1655986265690" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1655925937226">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1655987160231">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1655925937226" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1655987160231" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

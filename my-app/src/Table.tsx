@@ -44,11 +44,16 @@ const StyledTableRow = withStyles((theme) => ({
     },
 }))(TableRow);
 
+type Props = {
+    data: CharacterType[],
+    search:string,
+    setSearch:any
 
-export default function BasicTable({data}:{data: CharacterType[]}) {
+}
+export default function BasicTable(props: Props) {
     const classes = useStyles();
 
-console.log({data});
+
     return (
         <TableContainer component={Paper} >
             <Table className={classes.table} aria-label="simple table">
@@ -64,7 +69,8 @@ console.log({data});
                     </StyledTableRow>
                 </TableHead>
                 <TableBody>
-                    {data.map((c) => (
+                    {props.data.filter(f=> f.name.toLowerCase().includes(props.search.toLowerCase()) || props.search === '')
+                        .map((c) => (
                         <TableCellCharacter character={c}/>
                     ))}
                 </TableBody>

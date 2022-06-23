@@ -1,8 +1,14 @@
 import {Button, ButtonGroup, TextField} from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
 import {useState} from "react";
-export function SearchBox() {
- const [search, setSearch] = useState("");
+import {CharacterType} from "./Types/Types";
+
+type Props = {
+    search: string
+    setSearch: any
+}
+export function SearchBox(props: Props) {
+
 
 
 
@@ -13,8 +19,8 @@ return(
         <Button disabled onClick={() => {
         }}><SearchIcon/></Button>
         <div>
-            <TextField variant={"outlined"} color="primary" value={search}
-                       placeholder={'search'} onChange={e => setSearch(e.target.value)}/>
+            <TextField variant={"outlined"} color="primary" value={props.search}
+                       placeholder={'search'} onChange={e => props.setSearch(e.target.value)}/>
         </div>
     </ButtonGroup>
 )

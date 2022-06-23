@@ -10,6 +10,7 @@ import {getAllCharacterData} from "./api/CharacterApi";
 
 function App() {
     const [characters, setCharacters]=useState<CharacterType[]>([]);
+    const [search, setSearch] = useState("");
 
     useEffect(() => {
         getAllCharacterData()
@@ -37,13 +38,13 @@ function App() {
                 padding:20,
                 marginBottom:10
             }}component="span" m={1}>
-                <SearchBox></SearchBox>
+                <SearchBox search={search} setSearch={setSearch}></SearchBox>
             </Box>
 
             <div style={{ height: 400, width: '100%' }}>
                 {
                     characters.length === 0 ? <></> :
-                    <BasicTable data={characters}></BasicTable>
+                    <BasicTable data={characters} search={search} setSearch={setSearch}></BasicTable>
                 }
             </div>
         </Container>
