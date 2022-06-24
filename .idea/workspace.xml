@@ -10,8 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="modal wip">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="modal now shows character data">
       <change beforePath="$PROJECT_DIR$/my-app/src/TableCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/TableCell.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/Types/Types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Types/Types.ts" afterDir="false" />
     </list>
@@ -50,7 +49,7 @@
       <workItem from="1655904771574" duration="8157000" />
       <workItem from="1655918229237" duration="7074000" />
       <workItem from="1655985765246" duration="7880000" />
-      <workItem from="1656071617479" duration="8366000" />
+      <workItem from="1656071617479" duration="8648000" />
     </task>
     <task id="LOCAL-00001" summary="comit">
       <created>1655826734234</created>
@@ -248,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656078313323</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="modal now shows character data">
+      <created>1656081077352</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1656081077352</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +273,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed language to tsx" />
     <MESSAGE value="added title" />
     <MESSAGE value="added table" />
     <MESSAGE value="changed variables" />
@@ -292,7 +297,8 @@
     <MESSAGE value="pagination still doesnt work" />
     <MESSAGE value="PAGINATION WORKSS!!" />
     <MESSAGE value="modal wip" />
-    <option name="LAST_COMMIT_MESSAGE" value="modal wip" />
+    <MESSAGE value="modal now shows character data" />
+    <option name="LAST_COMMIT_MESSAGE" value="modal now shows character data" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
@@ -303,10 +309,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1656078352822">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1656081115032">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1656078352822" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1656081115032" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

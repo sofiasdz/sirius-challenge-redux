@@ -10,6 +10,7 @@ export type CharacterType = {
     created:string,
     origin:Origin,
     location:Location,
+    image:string
 
 
 }

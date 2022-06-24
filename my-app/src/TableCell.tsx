@@ -3,6 +3,7 @@ import {createStyles, makeStyles, Theme, withStyles} from "@material-ui/core/sty
 import TableRow from "@material-ui/core/TableRow";
 import {CharacterType} from "./Types/Types";
 import {
+    Avatar,
     Button,
     Dialog, DialogActions,
     DialogContent,
@@ -152,10 +153,12 @@ export  default function TableCellCharacter(props: Props) {
                         aria-describedby="alert-dialog-description"
 
                     >
-                        <DialogTitle id="alert-dialog-title">{"Use Google's location service?"}</DialogTitle>
                         <DialogContent>
                             <DialogContentText id="alert-dialog-description">
+                                <Avatar alt="Remy Sharp" src={props.character.image}  />
+
                                 <form className={classes.root} noValidate autoComplete="off">
+
 
                                     <TextField    id="standard-read-only-input"
 
