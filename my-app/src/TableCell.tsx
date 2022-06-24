@@ -3,7 +3,16 @@ import {createStyles, makeStyles, Theme, withStyles} from "@material-ui/core/sty
 import TableRow from "@material-ui/core/TableRow";
 import {CharacterType, EpisodeType} from "./Types/Types";
 import {getEpisodeData} from "./api/EpisodeApi";
-import {Box, Button, TableCell, Typography} from "@material-ui/core";
+import {
+    Box,
+    Button,
+    Dialog, DialogActions,
+    DialogContent,
+    DialogContentText,
+    DialogTitle,
+    TableCell,
+    Typography
+} from "@material-ui/core";
 import { Ellipsis,EllipsisMode } from "react-simple-ellipsis";
 import Tooltip from '@material-ui/core/Tooltip';
 import VisibilityIcon from '@material-ui/icons/Visibility';
@@ -97,6 +106,7 @@ export  default function TableCellCharacter(props: Props) {
         },
     }))(Tooltip);
 
+    // @ts-ignore
     return(
     <StyledTableRow key={props.character.id}>
         <StyledTableCell align="left">{props.character.name}</StyledTableCell>
@@ -124,20 +134,28 @@ export  default function TableCellCharacter(props: Props) {
             <Button onClick={handleOpen}>
             <VisibilityIcon></VisibilityIcon>
                 <div>
-                    <Modal
+                    <Dialog
                         open={open}
                         onClose={handleClose}
-                        aria-labelledby="simple-modal-title"
-                        aria-describedby="simple-modal-description"
+                        aria-labelledby="alert-dialog-title"
+                        aria-describedby="alert-dialog-description"
                     >
-                        <div  >
-                            <h2 id="simple-modal-title">Text in a modal</h2>
-                            <p id="simple-modal-description">
-                                Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                            </p>
-
-                        </div>
-                    </Modal>
+                        <DialogTitle id="alert-dialog-title">{"Use Google's location service?"}</DialogTitle>
+                        <DialogContent>
+                            <DialogContentText id="alert-dialog-description">
+                                Let Google help apps determine location. This means sending anonymous location data to
+                                Google, even when no apps are running.
+                            </DialogContentText>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button onClick={handleClose} color="primary">
+                                Disagree
+                            </Button>
+                            <Button onClick={handleClose} color="primary" autoFocus>
+                                Agree
+                            </Button>
+                        </DialogActions>
+                    </Dialog>
                 </div>
             </Button>
         </StyledTableCell>
