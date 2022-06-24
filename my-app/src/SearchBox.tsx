@@ -4,12 +4,21 @@ import React, {useState} from "react";
 import {CharacterType} from "./Types/Types";
 import {ThemeProvider} from "@material-ui/core/styles";
 import {MyTheme} from "./Theme";
+import classes from "*.module.css";
+import makeStyles from "@material-ui/core/styles/makeStyles";
 
 type Props = {
     search: string
     setSearch: any
 }
+const useStyles = makeStyles({
+    input: {
+        color: 'rgba(0, 223, 221, 1)',
+    }
+});
+
 export function SearchBox(props: Props) {
+    const classes = useStyles();
 
 
 
@@ -23,7 +32,7 @@ return(
         }}><SearchIcon style={{color:MyTheme.palette.secondary.main}} ></SearchIcon></Button>
         <div>
             <TextField variant={"outlined"} color='secondary' value={props.search}
-                       placeholder={'search'} onChange={e => props.setSearch(e.target.value)}/>
+                       placeholder={'search'} onChange={e => props.setSearch(e.target.value)} inputProps={{ className: classes.input }}/>
         </div>
     </ButtonGroup>
     </ThemeProvider>
