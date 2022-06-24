@@ -63,7 +63,9 @@ export default function BasicTable(props: Props) {
 
     const handleChange = (event:any, value:number) => {
         setPageNumber(value);
-        getNewPage(pageNumber)
+        getNewPage(value)
+        console.log(value)
+
     };
 
 
@@ -71,7 +73,8 @@ export default function BasicTable(props: Props) {
     function getNewPage(pageNumber: number){
         getAllCharacterData(pageNumber)
             .then((res) => {
-                props.setCharacters(res.result)
+                props.setCharacters(res.results)
+
             })
             .catch((err) => {
                 if (err.status === 401|| err.status===404)
