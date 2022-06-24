@@ -41,7 +41,7 @@ function App() {
     );
 
     useEffect(() => {
-        getAllCharacterData("1")
+        getAllCharacterData(1)
             .then((res) => {
                 setCharacters(res.results)
             })
@@ -73,7 +73,7 @@ function App() {
                 {
                     characters.length === 0 ? <></> :
                         <TableContainer>
-                    <BasicTable data={characters} search={search} setSearch={setSearch}></BasicTable>
+                    <BasicTable data={characters}  setCharacters={setCharacters} search={search} setSearch={setSearch}></BasicTable>
                         </TableContainer>
                 }
             </div>

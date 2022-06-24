@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {withStyles} from "@material-ui/core/styles";
+import {createStyles, makeStyles, Theme, withStyles} from "@material-ui/core/styles";
 import TableRow from "@material-ui/core/TableRow";
 import {CharacterType, EpisodeType} from "./Types/Types";
 import {getEpisodeData} from "./api/EpisodeApi";
@@ -8,13 +8,50 @@ import { Ellipsis,EllipsisMode } from "react-simple-ellipsis";
 import Tooltip from '@material-ui/core/Tooltip';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import Select from 'react-select'
+import Modal from "@material-ui/core/Modal";
 
 type Props = {
     character: CharacterType
 }
+function rand() {
+    return Math.round(Math.random() * 20) - 10;
+}
+
+function getModalStyle() {
+    const top = 50 + rand();
+    const left = 50 + rand();
+
+    return {
+        top: `${top}%`,
+        left: `${left}%`,
+        transform: `translate(-${top}%, -${left}%)`,
+    };
+}
+
+const useStyles = makeStyles((theme: Theme) =>
+    createStyles({
+        paper: {
+            position: 'absolute',
+            width: 400,
+            backgroundColor: theme.palette.background.paper,
+            border: '2px solid #000',
+            boxShadow: theme.shadows[5],
+            padding: theme.spacing(2, 4, 3),
+        },
+    }),
+);
+
+
 export  default function TableCellCharacter(props: Props) {
+    const [open, setOpen] = useState(false);
+    const [modalStyle] = React.useState(getModalStyle);
 
-
+    const handleOpen = () => {
+        setOpen(true);
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
 
 
     const StyledTableCell = withStyles((theme) => ({
@@ -84,8 +121,24 @@ export  default function TableCellCharacter(props: Props) {
 
         <StyledTableCell align="left">{props.character.type}</StyledTableCell>
         <StyledTableCell align="left">
-            <Button>
+            <Button onClick={handleOpen}>
             <VisibilityIcon></VisibilityIcon>
+                <div>
+                    <Modal
+                        open={open}
+                        onClose={handleClose}
+                        aria-labelledby="simple-modal-title"
+                        aria-describedby="simple-modal-description"
+                    >
+                        <div  >
+                            <h2 id="simple-modal-title">Text in a modal</h2>
+                            <p id="simple-modal-description">
+                                Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                            </p>
+
+                        </div>
+                    </Modal>
+                </div>
             </Button>
         </StyledTableCell>
     </StyledTableRow>

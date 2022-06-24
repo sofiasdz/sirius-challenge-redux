@@ -18,6 +18,7 @@ import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import {Button} from "@material-ui/core";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import Pagination from "@material-ui/lab/Pagination";
+import Modal from '@material-ui/core/Modal';
 
 const useStyles = makeStyles({
     table: {
@@ -45,6 +46,7 @@ const StyledTableRow = withStyles((theme) => ({
 
 type Props = {
     data: CharacterType[],
+    setCharacters: any,
     search:string,
     setSearch:any,
 
@@ -58,22 +60,18 @@ export default function BasicTable(props: Props) {
 
 
 
+
     const handleChange = (event:any, value:number) => {
         setPageNumber(value);
-        handlePageNumber(value)
+        getNewPage(pageNumber)
     };
-    function handlePageNumber(page: number) {
-
-        setPageNumber(pageNumber)
-        getNewPage(pageNumber.toString())
 
 
-    }
 
-    function getNewPage(pageNumber: string){
+    function getNewPage(pageNumber: number){
         getAllCharacterData(pageNumber)
             .then((res) => {
-                props.data=res.result
+                props.setCharacters(res.result)
             })
             .catch((err) => {
                 if (err.status === 401|| err.status===404)
@@ -115,7 +113,7 @@ export default function BasicTable(props: Props) {
                     ))}
                 </TableBody>
             </Table>
-            <Pagination count={10} page={pageNumber} onChange={(event,value)=>handleChange(event,value)} size="large" />
+            <Pagination count={10} page={pageNumber} onChange={handleChange} size="large" />
         </TableContainer>
     );
 
