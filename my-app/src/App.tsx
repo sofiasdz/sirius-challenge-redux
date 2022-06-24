@@ -8,7 +8,7 @@ import {
     Grid,
     makeStyles,
     TableContainer,
-    Theme
+    Theme, useTheme
 } from "@material-ui/core";
 import BasicTable from "./Table";
 import {SearchBox} from "./SearchBox";
@@ -16,6 +16,7 @@ import {CharacterType} from "./Types/Types";
 import {getAllCharacterData} from "./api/CharacterApi";
 import { ThemeProvider } from '@material-ui/core/styles';
 import {MyTheme} from "./Theme";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 
 
@@ -48,14 +49,17 @@ function App() {
 
             })
     },[])
+
   return (
       <ThemeProvider theme={MyTheme}>
-    <div >
-        <Container >
-            <Box component="span" m={1}>
+          <CssBaseline/>
+
+        <Container  style={{ height:"100%", background: MyTheme.palette.primary.dark, overflow: "scroll"}} >
+            <Box component="span" m={1} style={{ background: MyTheme.palette.primary.dark }}>
                 <header style={{
                     textAlign: "center",
                     alignSelf: "center",
+                    color:MyTheme.palette.secondary.main,
                     fontSize:30,
                     padding:20
                 }}>Rick and Morty Characters</header>
@@ -83,8 +87,8 @@ function App() {
 
 
 
-    </div>
       </ThemeProvider>
+
   );
 }
 

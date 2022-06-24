@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {makeStyles, withStyles} from '@material-ui/core/styles';
+import {makeStyles, ThemeProvider, withStyles} from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -19,6 +19,7 @@ import {Button} from "@material-ui/core";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import Pagination from "@material-ui/lab/Pagination";
 import Modal from '@material-ui/core/Modal';
+import {MyTheme} from "./Theme";
 
 const useStyles = makeStyles({
     table: {
@@ -28,8 +29,9 @@ const useStyles = makeStyles({
 
 const StyledTableCell = withStyles((theme) => ({
     head: {
-        backgroundColor: theme.palette.common.black,
-        color: theme.palette.common.white,
+        backgroundColor: MyTheme.palette.primary.light,
+        color:  MyTheme.palette.secondary.main,
+        fontSize:18
     },
     body: {
         fontSize: 14,
@@ -39,7 +41,7 @@ const StyledTableCell = withStyles((theme) => ({
 const StyledTableRow = withStyles((theme) => ({
     root: {
         '&:nth-of-type(odd)': {
-            backgroundColor: theme.palette.action.hover,
+            backgroundColor: MyTheme.palette.primary.main,
         },
     },
 }))(TableRow);
@@ -84,6 +86,7 @@ export default function BasicTable(props: Props) {
     }
 
     return (
+        <ThemeProvider theme={MyTheme}>
         <TableContainer component={Paper} >
             <Table className={classes.table} aria-label="simple table">
                 <TableHead>
@@ -91,6 +94,7 @@ export default function BasicTable(props: Props) {
                         <StyledTableCell align="left">Name</StyledTableCell>
                         <StyledTableCell align="left">Status</StyledTableCell>
                         <StyledTableCell align="left">
+                            <div style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                             {species === 'asd' ?
                                 <Button color={"secondary"} onClick={
                                     ()=>{setSpecies('des')
@@ -101,7 +105,8 @@ export default function BasicTable(props: Props) {
                                 <Button color={"secondary"} onClick={()=>{setSpecies('asd')
                                     props.data.sort((a, b) => a.species.localeCompare(b.species)).reverse() }}><ArrowUpwardIcon/></Button>}
 
-                           Species
+                           <text>Species</text>
+                            </div>
                         </StyledTableCell>
                         <StyledTableCell align="left">Gender</StyledTableCell>
                         <StyledTableCell align="left">Episodes</StyledTableCell>
@@ -118,6 +123,7 @@ export default function BasicTable(props: Props) {
             </Table>
             <Pagination count={10} page={pageNumber} onChange={handleChange} size="large" />
         </TableContainer>
+        </ThemeProvider>
     );
 
 }

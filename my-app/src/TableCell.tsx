@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import {createStyles, makeStyles, Theme, withStyles} from "@material-ui/core/styles";
+import {createStyles, makeStyles, Theme, ThemeProvider, withStyles} from "@material-ui/core/styles";
 import TableRow from "@material-ui/core/TableRow";
 import {CharacterType} from "./Types/Types";
 import {
@@ -14,6 +14,7 @@ import {
 import { Ellipsis,EllipsisMode } from "react-simple-ellipsis";
 import Tooltip from '@material-ui/core/Tooltip';
 import VisibilityIcon from '@material-ui/icons/Visibility';
+import {MyTheme} from "./Theme";
 
 type Props = {
     character: CharacterType
@@ -38,7 +39,7 @@ const useStyles = makeStyles((theme: Theme) =>
         paper: {
             position: 'absolute',
             width: 400,
-            backgroundColor: theme.palette.background.paper,
+            backgroundColor:MyTheme.palette.primary.main,
             border: '2px solid #000',
             boxShadow: theme.shadows[5],
             padding: theme.spacing(2, 4, 3),
@@ -77,8 +78,8 @@ export  default function TableCellCharacter(props: Props) {
 
     const StyledTableCell = withStyles((theme) => ({
         head: {
-            backgroundColor: theme.palette.common.black,
-            color: theme.palette.common.white,
+            backgroundColor: MyTheme.palette.primary.main,
+            color: MyTheme.palette.primary.contrastText,
         },
         body: {
             fontSize: 14,
@@ -88,8 +89,18 @@ export  default function TableCellCharacter(props: Props) {
     const StyledTableRow = withStyles((theme) => ({
         root: {
             '&:nth-of-type(odd)': {
-                backgroundColor: theme.palette.action.hover,
+
+                backgroundColor: MyTheme.palette.primary.light,
+                color:  MyTheme.palette.secondary.light,
+
             },
+            '&:nth-of-type(even)': {
+                backgroundColor: MyTheme.palette.primary.main,
+                color:  MyTheme.palette.secondary.main,
+
+            },
+
+
         },
     }))(TableRow);
 
@@ -120,6 +131,7 @@ export  default function TableCellCharacter(props: Props) {
 
     // @ts-ignore
     return(
+        <ThemeProvider theme={MyTheme}>
     <StyledTableRow key={props.character.id}>
         <StyledTableCell align="left">{props.character.name}</StyledTableCell>
         <StyledTableCell align="left">{props.character.status}</StyledTableCell>
@@ -145,19 +157,19 @@ export  default function TableCellCharacter(props: Props) {
         <StyledTableCell align="left">
             <Button onClick={handleOpen}>
             <VisibilityIcon></VisibilityIcon>
-                <div>
+                <div color={MyTheme.palette.primary.dark}>
                     <Dialog
                         open={open}
                         onClose={handleClose}
                         aria-labelledby="alert-dialog-title"
                         aria-describedby="alert-dialog-description"
-
+                        color={MyTheme.palette.primary.dark}
                     >
-                        <DialogContent>
+                        <DialogContent  >
                             <DialogContentText id="alert-dialog-description">
                                 <Avatar alt="Remy Sharp" src={props.character.image}  />
 
-                                <form className={classes.root} noValidate autoComplete="off">
+                                <form   color={MyTheme.palette.primary.dark} className={classes.root} noValidate autoComplete="off">
 
 
                                     <TextField    id="standard-read-only-input"
@@ -168,6 +180,7 @@ export  default function TableCellCharacter(props: Props) {
                                                   }}
                                                   label={"Name"}
                                                   variant="outlined"
+
                                     />
                                     <TextField    id="standard-read-only-input"
 
@@ -230,6 +243,7 @@ export  default function TableCellCharacter(props: Props) {
             </Button>
         </StyledTableCell>
     </StyledTableRow>
+        </ThemeProvider>
 
     )
 }
