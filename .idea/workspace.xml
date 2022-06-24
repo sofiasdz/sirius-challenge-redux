@@ -10,12 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="sorting alfabetically by species works!">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="added pagination ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/api/CharacterApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/api/CharacterApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Table.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +49,8 @@
       <workItem from="1655834269377" duration="5216000" />
       <workItem from="1655904771574" duration="8157000" />
       <workItem from="1655918229237" duration="7074000" />
-      <workItem from="1655985765246" duration="7384000" />
+      <workItem from="1655985765246" duration="7880000" />
+      <workItem from="1656071617479" duration="981000" />
     </task>
     <task id="LOCAL-00001" summary="comit">
       <created>1655826734234</created>
@@ -207,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655992825246</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added pagination ui">
+      <created>1655995785665</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1655995785665</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +253,8 @@
     <MESSAGE value="Implemented sorting species buttons" />
     <MESSAGE value="implemented state asociated to species sorting buttons" />
     <MESSAGE value="sorting alfabetically by species works!" />
-    <option name="LAST_COMMIT_MESSAGE" value="sorting alfabetically by species works!" />
+    <MESSAGE value="added pagination ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="added pagination ui" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
@@ -262,5 +269,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="421" y="82" width="597" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1655924725287" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1655995647658">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1655995647658" />
   </component>
 </project>

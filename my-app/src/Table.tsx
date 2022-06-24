@@ -25,13 +25,6 @@ const useStyles = makeStyles({
     },
 });
 
-function createData(name: string, status: string, specie: string, gender: string, episodes: string, detail:string) {
-    return { name, status, specie, gender, episodes,detail };
-}
-
-
-
-
 const StyledTableCell = withStyles((theme) => ({
     head: {
         backgroundColor: theme.palette.common.black,
@@ -53,21 +46,34 @@ const StyledTableRow = withStyles((theme) => ({
 type Props = {
     data: CharacterType[],
     search:string,
-    setSearch:any
+    setSearch:any,
+
 
 }
 export default function BasicTable(props: Props) {
     const classes = useStyles();
     const [species, setSpecies] = useState("des");
-    const options = [
-        { value: 'chocolate', label: 'Chocolate' },
-        { value: 'strawberry', label: 'Strawberry' },
-        { value: 'vanilla', label: 'Vanilla' }
-    ]
- function handleSpeciesChange(){
-     props.data=props.data.filter(f=> f.species.toLowerCase().includes(species.toLowerCase()) || species === 'Species')
+    const [pageNumber, setPageNumber] = useState(1);
 
- }
+
+    function HandlePageNumber(pageNumber: number) {
+        setPageNumber(pageNumber)
+        getNewPage(pageNumber.toString())
+
+
+    }
+
+    function getNewPage(pageNumber: string){
+        getAllCharacterData(pageNumber)
+            .then((res) => {
+                props.data=res.result
+            })
+            .catch((err) => {
+                if (err.status === 401|| err.status===404)
+                    console.log(err)
+
+            })
+    }
 
     return (
         <TableContainer component={Paper} >
@@ -102,7 +108,7 @@ export default function BasicTable(props: Props) {
                     ))}
                 </TableBody>
             </Table>
-            <Pagination count={10} size="large" />
+            <Pagination count={10} page={pageNumber} onChange={()=>HandlePageNumber(pageNumber)} size="large" />
         </TableContainer>
     );
 

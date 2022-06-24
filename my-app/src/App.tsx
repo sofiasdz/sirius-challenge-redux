@@ -25,7 +25,7 @@ import Pagination from '@material-ui/lab/Pagination';
 function App() {
     const [characters, setCharacters]=useState<CharacterType[]>([]);
     const [search, setSearch] = useState("");
-    const [pageNumber, setPageNumber] = useState("1");
+
 
     const useStyles = makeStyles((theme: Theme) =>
         createStyles({
@@ -41,7 +41,7 @@ function App() {
     );
 
     useEffect(() => {
-        getAllCharacterData(pageNumber)
+        getAllCharacterData("1")
             .then((res) => {
                 setCharacters(res.results)
             })
