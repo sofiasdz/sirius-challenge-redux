@@ -1,23 +1,18 @@
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import {createStyles, makeStyles, Theme, withStyles} from "@material-ui/core/styles";
 import TableRow from "@material-ui/core/TableRow";
-import {CharacterType, EpisodeType} from "./Types/Types";
-import {getEpisodeData} from "./api/EpisodeApi";
+import {CharacterType} from "./Types/Types";
 import {
-    Box,
     Button,
     Dialog, DialogActions,
     DialogContent,
     DialogContentText,
     DialogTitle,
-    TableCell,
-    Typography
+    TableCell, TextField
 } from "@material-ui/core";
 import { Ellipsis,EllipsisMode } from "react-simple-ellipsis";
 import Tooltip from '@material-ui/core/Tooltip';
 import VisibilityIcon from '@material-ui/icons/Visibility';
-import Select from 'react-select'
-import Modal from "@material-ui/core/Modal";
 
 type Props = {
     character: CharacterType
@@ -47,13 +42,29 @@ const useStyles = makeStyles((theme: Theme) =>
             boxShadow: theme.shadows[5],
             padding: theme.spacing(2, 4, 3),
         },
+        root: {
+            '& > *': {
+                margin: theme.spacing(1),
+                width: '25ch',
+             /*   flex: 1,
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                alignContent: 'center',
+                paddingRight: 50,
+                paddingLeft: 50,*/
+
+
+
+            },
+        },
     }),
 );
 
 
 export  default function TableCellCharacter(props: Props) {
+    const classes = useStyles();
     const [open, setOpen] = useState(false);
-    const [modalStyle] = React.useState(getModalStyle);
 
     const handleOpen = () => {
         setOpen(true);
@@ -139,22 +150,78 @@ export  default function TableCellCharacter(props: Props) {
                         onClose={handleClose}
                         aria-labelledby="alert-dialog-title"
                         aria-describedby="alert-dialog-description"
+
                     >
                         <DialogTitle id="alert-dialog-title">{"Use Google's location service?"}</DialogTitle>
                         <DialogContent>
                             <DialogContentText id="alert-dialog-description">
-                                Let Google help apps determine location. This means sending anonymous location data to
-                                Google, even when no apps are running.
+                                <form className={classes.root} noValidate autoComplete="off">
+
+                                    <TextField    id="standard-read-only-input"
+
+                                                  defaultValue={props.character.name}
+                                                  InputProps={{
+                                                      readOnly: true,
+                                                  }}
+                                                  label={"Name"}
+                                                  variant="outlined"
+                                    />
+                                    <TextField    id="standard-read-only-input"
+
+                                                  defaultValue={props.character.id}
+                                                  InputProps={{
+                                                      readOnly: true,
+                                                  }}
+                                                  label={"Code"}
+                                                  variant="outlined"
+                                                />
+                                    <TextField    id="standard-read-only-input"
+                                                  defaultValue={props.character.created}
+                                                  label={"Air Date"}
+                                                  InputProps={{
+                                                      readOnly: true,
+                                                  }} variant="outlined" />
+                                    <TextField    id="standard-read-only-input"
+
+                                                  defaultValue={props.character.type}
+                                                  InputProps={{
+                                                      readOnly: true,
+                                                  }}
+                                                  label={"Type"}
+                                                  variant="outlined" />
+
+                                    <TextField    id="standard-read-only-input"
+
+                                                  defaultValue={props.character.gender}
+                                                  InputProps={{
+                                                      readOnly: true,
+                                                  }}
+                                                  label={"Gender"}
+                                                  variant="outlined"
+                                    />
+                                    <TextField    id="standard-read-only-input"
+
+                                                  defaultValue={props.character.origin.name}
+                                                  InputProps={{
+                                                      readOnly: true,
+                                                  }}
+                                                  label={"Origin"}
+                                                  variant="outlined"
+                                    />
+                                    <TextField    id="standard-read-only-input"
+                                                  defaultValue={props.character.location.name}
+                                                  InputProps={{
+                                                      readOnly: true,
+                                                  }}
+                                                  label={"Location"}
+                                                  variant="outlined" />
+
+
+
+
+                                </form>
                             </DialogContentText>
                         </DialogContent>
-                        <DialogActions>
-                            <Button onClick={handleClose} color="primary">
-                                Disagree
-                            </Button>
-                            <Button onClick={handleClose} color="primary" autoFocus>
-                                Agree
-                            </Button>
-                        </DialogActions>
                     </Dialog>
                 </div>
             </Button>

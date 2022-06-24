@@ -6,7 +6,20 @@ export type CharacterType = {
     species: string,
     gender:string,
     episode:string[]
-    type:string
+    type:string,
+    created:string,
+    origin:Origin,
+    location:Location,
+
+
+}
+
+export type Origin = {
+    name:string
+
+}
+export type Location = {
+    name:string
 
 }
 
