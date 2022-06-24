@@ -10,9 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="added pagination ui">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="pagination is implemented but doesnt work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Table.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +49,7 @@
       <workItem from="1655904771574" duration="8157000" />
       <workItem from="1655918229237" duration="7074000" />
       <workItem from="1655985765246" duration="7880000" />
-      <workItem from="1656071617479" duration="981000" />
+      <workItem from="1656071617479" duration="1657000" />
     </task>
     <task id="LOCAL-00001" summary="comit">
       <created>1655826734234</created>
@@ -213,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655995785665</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="pagination is implemented but doesnt work">
+      <created>1656072719094</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1656072719094</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +260,8 @@
     <MESSAGE value="implemented state asociated to species sorting buttons" />
     <MESSAGE value="sorting alfabetically by species works!" />
     <MESSAGE value="added pagination ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="added pagination ui" />
+    <MESSAGE value="pagination is implemented but doesnt work" />
+    <option name="LAST_COMMIT_MESSAGE" value="pagination is implemented but doesnt work" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">

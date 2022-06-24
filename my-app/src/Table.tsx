@@ -56,7 +56,14 @@ export default function BasicTable(props: Props) {
     const [pageNumber, setPageNumber] = useState(1);
 
 
-    function HandlePageNumber(pageNumber: number) {
+
+
+    const handleChange = (event:any, value:number) => {
+        setPageNumber(value);
+        handlePageNumber(value)
+    };
+    function handlePageNumber(page: number) {
+
         setPageNumber(pageNumber)
         getNewPage(pageNumber.toString())
 
@@ -108,7 +115,7 @@ export default function BasicTable(props: Props) {
                     ))}
                 </TableBody>
             </Table>
-            <Pagination count={10} page={pageNumber} onChange={()=>HandlePageNumber(pageNumber)} size="large" />
+            <Pagination count={10} page={pageNumber} onChange={(event,value)=>handleChange(event,value)} size="large" />
         </TableContainer>
     );
 
