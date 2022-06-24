@@ -1,25 +1,20 @@
 import React, {useEffect, useState} from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import {
     Box,
-    Button,
     Container,
     createStyles,
     Grid,
     makeStyles,
-    Paper,
     TableContainer,
-    TablePagination,
     Theme
 } from "@material-ui/core";
 import BasicTable from "./Table";
 import {SearchBox} from "./SearchBox";
 import {CharacterType} from "./Types/Types";
 import {getAllCharacterData} from "./api/CharacterApi";
-import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
-import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft';
-import Pagination from '@material-ui/lab/Pagination';
+
 
 
 function App() {
