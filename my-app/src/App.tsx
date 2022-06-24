@@ -14,6 +14,8 @@ import BasicTable from "./Table";
 import {SearchBox} from "./SearchBox";
 import {CharacterType} from "./Types/Types";
 import {getAllCharacterData} from "./api/CharacterApi";
+import { ThemeProvider } from '@material-ui/core/styles';
+import {MyTheme} from "./Theme";
 
 
 
@@ -47,6 +49,7 @@ function App() {
             })
     },[])
   return (
+      <ThemeProvider theme={MyTheme}>
     <div >
         <Container >
             <Box component="span" m={1}>
@@ -81,6 +84,7 @@ function App() {
 
 
     </div>
+      </ThemeProvider>
   );
 }
 
