@@ -52,9 +52,9 @@ function App() {
 
   return (
       <ThemeProvider theme={MyTheme}>
-          <CssBaseline/>
+          <CssBaseline />
 
-        <Container  style={{ height:"100%", background: MyTheme.palette.primary.dark, overflow: "scroll"}} >
+        <Container  style={{ height:"100%", width:"100%", background: MyTheme.palette.primary.dark, overflow: "scroll"}} >
             <Box component="span" m={1} style={{ background: MyTheme.palette.primary.dark }}>
                 <header style={{
                     textAlign: "center",

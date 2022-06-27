@@ -24,11 +24,32 @@ import {MyTheme} from "./Theme";
 const useStyles = makeStyles({
     table: {
         minWidth: 650,
+        borderRadius:10,
     },
     root:{
         borderRadius:10,
 
+
     }
+});
+
+const useStyles2 = makeStyles({
+
+    root:{
+
+
+        backgroundColor:MyTheme.palette.primary.dark,
+        height:50
+
+
+    },
+    ul:{
+        fontColor:MyTheme.palette.primary.contrastText,
+        color:MyTheme.palette.primary.contrastText,
+        height:50
+
+    },
+
 });
 
 
@@ -39,13 +60,19 @@ const StyledTableCell = withStyles((theme) => ({
         fontSize:18,
         width:500,
        paddingTop:20,
-        height:5
+        height:5,
+        flex:1,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
 
 
 
     },
     body: {
         fontSize: 14,
+        flex:1,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
 
 
     },
@@ -72,6 +99,7 @@ type Props = {
 }
 export default function BasicTable(props: Props) {
     const classes = useStyles();
+    const classes2 = useStyles2();
     const [species, setSpecies] = useState("des");
     const [pageNumber, setPageNumber] = useState(1);
 
@@ -110,8 +138,8 @@ export default function BasicTable(props: Props) {
                         <StyledTableCell align="left">Name</StyledTableCell>
                         <StyledTableCell align="left">Status</StyledTableCell>
                         <StyledTableCell align="left">
-                            <div style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                <div style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <div style={{ flexDirection: 'row', justifyContent: 'space-between',flex:1, }}>
+
                             {species === 'asd' ?
                                 <Button color={"secondary"} onClick={
                                     ()=>{setSpecies('des')
@@ -124,10 +152,10 @@ export default function BasicTable(props: Props) {
                                 <Button color={"secondary"} onClick={()=>{setSpecies('asd')
                                     props.data.sort((a, b) => a.species.localeCompare(b.species)).reverse() }}><ArrowUpwardIcon/></Button>
                                 }
-                                </div>
 
-                                <div style={{ flexDirection: 'row', justifyContent: 'space-between' }}> <text>Species</text>
-                                </div>
+
+                                 <text>Species</text>
+
                             </div>
                         </StyledTableCell>
                         <StyledTableCell align="left">Gender</StyledTableCell>
@@ -143,7 +171,7 @@ export default function BasicTable(props: Props) {
                     ))}
                 </TableBody>
             </Table>
-            <Pagination count={10} page={pageNumber} onChange={handleChange} size="large" />
+            <Pagination classes={{root:classes2.root, ul:classes2.ul}} count={10} page={pageNumber} variant={'outlined'} onChange={handleChange} size="large" />
         </TableContainer>
         </ThemeProvider>
     );
