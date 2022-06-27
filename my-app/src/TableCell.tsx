@@ -70,16 +70,32 @@ const useStyles2 = makeStyles({
              alignItems: 'center',
              alignContent: 'center',
              paddingRight: 50,
-             paddingLeft: 30,
+             paddingLeft: 10,
 
 
 
     },
+    input: {
+
+        marginBottom:60
+
+
+    },
+});
+const useStyles3 = makeStyles({
+    root: {
+            background: MyTheme.palette.primary.contrastText,
+            borderRadius:4,
+            width:270,
+
+
+    }
 });
 
 export  default function TableCellCharacter(props: Props) {
     const classes = useStyles();
     const classes2 = useStyles2();
+    const classes3=useStyles3();
     const [open, setOpen] = useState(false);
 
     const handleOpen = () => {
@@ -197,70 +213,91 @@ export  default function TableCellCharacter(props: Props) {
                                 root: classes2.root, // class name, e.g. `classes-nesting-root-x`
 
                             }} >
-                                <Avatar alt="Remy Sharp" src={props.character.image}  />
+                                <div style={{flex: 1,
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    alignContent: 'center',
+                                    paddingRight: 50,
+                                    paddingLeft: 85,
+                                    paddingBottom:5
+                                }}>
+                                <img style={{borderRadius:200, height:120}} src={props.character.image}></img>
+                                </div>
+
 
                                 <form   color={MyTheme.palette.primary.dark} className={classes.root} noValidate autoComplete="off">
 
+                                    <text style={{color:MyTheme.palette.primary.contrastText, fontSize:15}}>Name</text>
 
                                     <TextField    id="standard-read-only-input"
 
                                                   defaultValue={props.character.name}
-                                                  InputProps={{
-                                                      readOnly: true,
-                                                  }}
-                                                  label={"Name"}
+                                                  className={classes3.root}
+                                                  inputProps={{readOnly: true }}
                                                   variant="outlined"
 
+
                                     />
+                                    <text style={{color:MyTheme.palette.primary.contrastText, fontSize:15}}>Code</text>
                                     <TextField    id="standard-read-only-input"
 
                                                   defaultValue={props.character.id}
+                                                  className={classes3.root}
                                                   InputProps={{
                                                       readOnly: true,
                                                   }}
-                                                  label={"Code"}
+
                                                   variant="outlined"
                                                 />
+                                    <text style={{color:MyTheme.palette.primary.contrastText, fontSize:15}}>Air Date</text>
                                     <TextField    id="standard-read-only-input"
                                                   defaultValue={props.character.created}
-                                                  label={"Air Date"}
                                                   InputProps={{
                                                       readOnly: true,
-                                                  }} variant="outlined" />
+                                                  }} variant="outlined"
+                                                  className={classes3.root}/>
+                                    <text style={{color:MyTheme.palette.primary.contrastText, fontSize:15}}>Type</text>
                                     <TextField    id="standard-read-only-input"
 
                                                   defaultValue={props.character.type}
                                                   InputProps={{
                                                       readOnly: true,
                                                   }}
-                                                  label={"Type"}
-                                                  variant="outlined" />
 
+                                                  variant="outlined"
+                                                  className={classes3.root}/>
+                                    <text style={{color:MyTheme.palette.primary.contrastText, fontSize:15}}>Gender</text>
                                     <TextField    id="standard-read-only-input"
 
                                                   defaultValue={props.character.gender}
                                                   InputProps={{
                                                       readOnly: true,
                                                   }}
-                                                  label={"Gender"}
+
                                                   variant="outlined"
+                                                  className={classes3.root}
                                     />
+                                    <text style={{color:MyTheme.palette.primary.contrastText, fontSize:15}}>Origin</text>
                                     <TextField    id="standard-read-only-input"
 
                                                   defaultValue={props.character.origin.name}
                                                   InputProps={{
                                                       readOnly: true,
                                                   }}
-                                                  label={"Origin"}
+
+                                                  className={classes3.root}
                                                   variant="outlined"
                                     />
+                                    <text style={{color:MyTheme.palette.primary.contrastText, fontSize:15}}>Location</text>
                                     <TextField    id="standard-read-only-input"
                                                   defaultValue={props.character.location.name}
                                                   InputProps={{
                                                       readOnly: true,
                                                   }}
-                                                  label={"Location"}
-                                                  variant="outlined" />
+
+                                                  variant="outlined"
+                                                  className={classes3.root}/>
 
 
 
