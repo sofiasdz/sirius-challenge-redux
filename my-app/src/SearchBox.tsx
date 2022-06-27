@@ -14,7 +14,9 @@ type Props = {
 const useStyles = makeStyles({
     input: {
         color: 'rgba(0, 223, 221, 1)',
-    }
+        border:'rgba(0, 223, 221, 1)',
+    },
+   
 });
 
 export function SearchBox(props: Props) {

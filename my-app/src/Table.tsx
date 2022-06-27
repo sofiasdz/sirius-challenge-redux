@@ -31,10 +31,16 @@ const StyledTableCell = withStyles((theme) => ({
     head: {
         backgroundColor: MyTheme.palette.primary.light,
         color:  MyTheme.palette.secondary.main,
-        fontSize:18
+        fontSize:18,
+        width:150,
+       paddingTop:20,
+
+
     },
     body: {
         fontSize: 14,
+
+
     },
 }))(TableCell);
 
@@ -96,16 +102,20 @@ export default function BasicTable(props: Props) {
                         <StyledTableCell align="left">
                             <div style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                             {species === 'asd' ?
-                                <Button color={"secondary"} onClick={
+                                <div style={{ flexDirection: 'row', justifyContent: 'space-between' }}><Button color={"secondary"} onClick={
                                     ()=>{setSpecies('des')
                                         props.data.sort((a, b) => a.species.localeCompare(b.species))
                                     }}>
                                     <ArrowDownwardIcon/>
-                                </Button>:
+                                </Button>
+                                </div>:
+                                <div style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                 <Button color={"secondary"} onClick={()=>{setSpecies('asd')
-                                    props.data.sort((a, b) => a.species.localeCompare(b.species)).reverse() }}><ArrowUpwardIcon/></Button>}
+                                    props.data.sort((a, b) => a.species.localeCompare(b.species)).reverse() }}><ArrowUpwardIcon/></Button>
+                                </div>}
 
-                           <text>Species</text>
+                                <div style={{ flexDirection: 'row', justifyContent: 'space-between' }}> <text>Species</text>
+                                </div>
                             </div>
                         </StyledTableCell>
                         <StyledTableCell align="left">Gender</StyledTableCell>

@@ -62,10 +62,24 @@ const useStyles = makeStyles((theme: Theme) =>
         },
     }),
 );
+const useStyles2 = makeStyles({
+    root: {
+           flex: 1,
+             flexDirection: 'column',
+             justifyContent: 'center',
+             alignItems: 'center',
+             alignContent: 'center',
+             paddingRight: 50,
+             paddingLeft: 30,
 
+
+
+    },
+});
 
 export  default function TableCellCharacter(props: Props) {
     const classes = useStyles();
+    const classes2 = useStyles2();
     const [open, setOpen] = useState(false);
 
     const handleOpen = () => {
@@ -83,6 +97,7 @@ export  default function TableCellCharacter(props: Props) {
         },
         body: {
             fontSize: 14,
+            fontColor:MyTheme.palette.primary.contrastText,
         },
     }))(TableCell);
 
@@ -120,7 +135,9 @@ export  default function TableCellCharacter(props: Props) {
     }*/
 
 
+
     const LightTooltip = withStyles((theme) => ({
+
         tooltip: {
             backgroundColor: theme.palette.common.white,
             color: 'rgba(0,0,0,0.87)',
@@ -129,7 +146,8 @@ export  default function TableCellCharacter(props: Props) {
         },
     }))(Tooltip);
 
-    // @ts-ignore
+
+
     return(
         <ThemeProvider theme={MyTheme}>
     <StyledTableRow key={props.character.id}>
@@ -164,9 +182,21 @@ export  default function TableCellCharacter(props: Props) {
                         aria-labelledby="alert-dialog-title"
                         aria-describedby="alert-dialog-description"
                         color={MyTheme.palette.primary.dark}
+
+                        PaperProps={{
+                            style: {
+                                backgroundColor:MyTheme.palette.primary.dark ,
+                                boxShadow: 'none',
+                                width:350
+
+                            },
+                        }}
                     >
                         <DialogContent  >
-                            <DialogContentText id="alert-dialog-description">
+                            <DialogContentText   classes={{
+                                root: classes2.root, // class name, e.g. `classes-nesting-root-x`
+
+                            }} >
                                 <Avatar alt="Remy Sharp" src={props.character.image}  />
 
                                 <form   color={MyTheme.palette.primary.dark} className={classes.root} noValidate autoComplete="off">
