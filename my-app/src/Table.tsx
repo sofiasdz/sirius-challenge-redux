@@ -25,15 +25,22 @@ const useStyles = makeStyles({
     table: {
         minWidth: 650,
     },
+    root:{
+        borderRadius:10,
+
+    }
 });
+
 
 const StyledTableCell = withStyles((theme) => ({
     head: {
-        backgroundColor: MyTheme.palette.primary.light,
+        backgroundColor: MyTheme.palette.primary.main,
         color:  MyTheme.palette.secondary.main,
         fontSize:18,
-        width:150,
+        width:500,
        paddingTop:20,
+        height:5
+
 
 
     },
@@ -42,13 +49,16 @@ const StyledTableCell = withStyles((theme) => ({
 
 
     },
+
 }))(TableCell);
 
 const StyledTableRow = withStyles((theme) => ({
-    root: {
-        '&:nth-of-type(odd)': {
-            backgroundColor: MyTheme.palette.primary.main,
-        },
+    head: {
+
+
+
+
+
     },
 }))(TableRow);
 
@@ -95,24 +105,26 @@ export default function BasicTable(props: Props) {
         <ThemeProvider theme={MyTheme}>
         <TableContainer component={Paper} >
             <Table className={classes.table} aria-label="simple table">
-                <TableHead>
-                    <StyledTableRow>
+                <TableHead classes={{root:classes.root}} >
+                    <StyledTableRow >
                         <StyledTableCell align="left">Name</StyledTableCell>
                         <StyledTableCell align="left">Status</StyledTableCell>
                         <StyledTableCell align="left">
                             <div style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                                <div style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                             {species === 'asd' ?
-                                <div style={{ flexDirection: 'row', justifyContent: 'space-between' }}><Button color={"secondary"} onClick={
+                                <Button color={"secondary"} onClick={
                                     ()=>{setSpecies('des')
                                         props.data.sort((a, b) => a.species.localeCompare(b.species))
                                     }}>
                                     <ArrowDownwardIcon/>
                                 </Button>
-                                </div>:
-                                <div style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                                :
+
                                 <Button color={"secondary"} onClick={()=>{setSpecies('asd')
                                     props.data.sort((a, b) => a.species.localeCompare(b.species)).reverse() }}><ArrowUpwardIcon/></Button>
-                                </div>}
+                                }
+                                </div>
 
                                 <div style={{ flexDirection: 'row', justifyContent: 'space-between' }}> <text>Species</text>
                                 </div>

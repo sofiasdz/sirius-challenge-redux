@@ -106,33 +106,28 @@ export  default function TableCellCharacter(props: Props) {
     };
 
 
-    const StyledTableCell = withStyles((theme) => ({
-        head: {
-            backgroundColor: MyTheme.palette.primary.main,
-            color: MyTheme.palette.primary.contrastText,
-        },
-        body: {
-            fontSize: 14,
-            fontColor:MyTheme.palette.primary.contrastText,
-        },
-    }))(TableCell);
+
 
     const StyledTableRow = withStyles((theme) => ({
         root: {
             '&:nth-of-type(odd)': {
 
-                backgroundColor: MyTheme.palette.primary.light,
-                color:  MyTheme.palette.secondary.light,
+                backgroundColor: MyTheme.palette.primary.dark,
+                color:  MyTheme.palette.primary.contrastText,
+
 
             },
             '&:nth-of-type(even)': {
                 backgroundColor: MyTheme.palette.primary.main,
-                color:  MyTheme.palette.secondary.main,
+                color:  MyTheme.palette.primary.contrastText,
+
 
             },
 
 
         },
+
+
     }))(TableRow);
 
 /*    function getEpisodes(episodes:string[]) {
@@ -167,14 +162,14 @@ export  default function TableCellCharacter(props: Props) {
     return(
         <ThemeProvider theme={MyTheme}>
     <StyledTableRow key={props.character.id}>
-        <StyledTableCell align="left">{props.character.name}</StyledTableCell>
-        <StyledTableCell align="left">{props.character.status}</StyledTableCell>
-        <StyledTableCell align="left">{props.character.species}</StyledTableCell>
-        <StyledTableCell align="left">{props.character.gender}</StyledTableCell>
+        <TableCell align="left">{props.character.name}</TableCell>
+        <TableCell align="left">{props.character.status}</TableCell>
+        <TableCell align="left">{props.character.species}</TableCell>
+        <TableCell align="left">{props.character.gender}</TableCell>
 
         <LightTooltip  disableFocusListener disableTouchListener title={props.character.episode.join(", ")} >
 
-        <StyledTableCell align="left">
+        <TableCell align="left">
             <Ellipsis
             ellipsis="..."
             label=""
@@ -183,12 +178,12 @@ export  default function TableCellCharacter(props: Props) {
             limit={20}
             class="more"
             mode={EllipsisMode.After}/>
-        </StyledTableCell>
+        </TableCell>
         </LightTooltip>
 
 
-        <StyledTableCell align="left">{props.character.type}</StyledTableCell>
-        <StyledTableCell align="left">
+        <TableCell align="left">{props.character.type}</TableCell>
+        <TableCell align="left">
             <Button onClick={handleOpen}>
             <VisibilityIcon></VisibilityIcon>
                 <div color={MyTheme.palette.primary.dark}>
@@ -308,7 +303,7 @@ export  default function TableCellCharacter(props: Props) {
                     </Dialog>
                 </div>
             </Button>
-        </StyledTableCell>
+        </TableCell>
     </StyledTableRow>
         </ThemeProvider>
 
