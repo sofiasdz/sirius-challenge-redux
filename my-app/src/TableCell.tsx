@@ -114,6 +114,10 @@ export  default function TableCellCharacter(props: Props) {
 
                 backgroundColor: MyTheme.palette.primary.dark,
                 fontColor:MyTheme.palette.primary.contrastText,
+                borderBottom: "none",
+                borderBottomLeftRadius:30,
+                borderTopLeftRadius:30
+
 
 
 
@@ -121,6 +125,10 @@ export  default function TableCellCharacter(props: Props) {
             '&:nth-of-type(even)': {
                 backgroundColor: MyTheme.palette.primary.main,
                 fontColor:  MyTheme.palette.primary.contrastText,
+                borderBottom: "none",
+                borderBottomLeftRadius:30,
+                borderTopLeftRadius:30
+
 
 
             },
@@ -129,7 +137,33 @@ export  default function TableCellCharacter(props: Props) {
         },
 
 
+
     }))(TableRow);
+
+    const StyledTableCell = withStyles((theme) => ({
+        root: {
+            '&:nth-of-type(odd)': {
+
+
+                borderBottom: "none",
+
+
+
+            },
+            '&:nth-of-type(even)': {
+
+                borderBottom: "none",
+
+
+
+            },
+
+
+        },
+
+
+
+    }))(TableCell);
 
 /*    function getEpisodes(episodes:string[]) {
         let list: string[] = [];
@@ -151,7 +185,7 @@ export  default function TableCellCharacter(props: Props) {
     const LightTooltip = withStyles((theme) => ({
 
         tooltip: {
-            backgroundColor: theme.palette.common.white,
+            backgroundColor: MyTheme.palette.primary.light,
             color: 'rgba(0,0,0,0.87)',
             boxShadow: theme.shadows[1],
             fontSize: 11,
@@ -161,34 +195,34 @@ export  default function TableCellCharacter(props: Props) {
 
 
     return(
-        <ThemeProvider theme={MyTheme}>
-    <StyledTableRow key={props.character.id}>
-        <TableCell align="left">
+
+    <StyledTableRow  key={props.character.id}>
+        <TableCell style={{borderBottom: "none"}} align="left">
             <text style={{color:MyTheme.palette.primary.contrastText}}>
             {props.character.name}
             </text>
         </TableCell>
-        <TableCell align="left">
+        <StyledTableCell  align="left">
             <text style={{color:MyTheme.palette.primary.contrastText}}>
             {props.character.status}
             </text>
-        </TableCell>
-        <TableCell align="left">
+        </StyledTableCell>
+        <StyledTableCell align="left">
             <text style={{color:MyTheme.palette.primary.contrastText}}>
             {props.character.species}
             </text>
-        </TableCell>
-        <TableCell align="left">
+        </StyledTableCell>
+        <StyledTableCell  align="left">
             <text style={{color:MyTheme.palette.primary.contrastText}}>
                 {props.character.gender}
             </text>
-        </TableCell>
+        </StyledTableCell>
 
 
 
         <LightTooltip  disableFocusListener disableTouchListener title={props.character.episode.join(", ")} >
 
-        <TableCell align="left">
+        <StyledTableCell  align="left">
             <text style={{color:MyTheme.palette.primary.contrastText}}>
             <Ellipsis
             ellipsis="..."
@@ -199,16 +233,16 @@ export  default function TableCellCharacter(props: Props) {
             class="more"
             mode={EllipsisMode.After}/>
             </text>
-        </TableCell>
+        </StyledTableCell>
         </LightTooltip>
 
 
-        <TableCell align="left">
+        <StyledTableCell  align="left">
             <text style={{color:MyTheme.palette.primary.contrastText}}>
             {props.character.type}
             </text>
-        </TableCell>
-        <TableCell align="left">
+        </StyledTableCell>
+        <TableCell  style={{ borderBottom: "none"}}align="left">
             <Button onClick={handleOpen}>
             <VisibilityIcon style={{color:MyTheme.palette.primary.contrastText}}></VisibilityIcon>
                 <div color={MyTheme.palette.primary.dark}>
@@ -330,7 +364,7 @@ export  default function TableCellCharacter(props: Props) {
             </Button>
         </TableCell>
     </StyledTableRow>
-        </ThemeProvider>
+
 
     )
 }

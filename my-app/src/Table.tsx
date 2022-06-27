@@ -25,12 +25,19 @@ const useStyles = makeStyles({
     table: {
         minWidth: 650,
         borderRadius:10,
+
+
     },
     root:{
         borderRadius:10,
+        minWidth: 650,
 
 
-    }
+
+
+
+    },
+
 });
 
 const useStyles2 = makeStyles({
@@ -39,17 +46,46 @@ const useStyles2 = makeStyles({
 
 
         backgroundColor:MyTheme.palette.primary.dark,
-        height:50
+        height:50,
+        '& ul > li:not(:first-child):not(:last-child) > button:not(.Mui-selected)': {
+            backgroundColor: 'transparent',
+            color:'white',
+            borderColor:MyTheme.palette.primary.dark,
+        },
 
 
     },
     ul:{
-        fontColor:MyTheme.palette.primary.contrastText,
-        color:MyTheme.palette.primary.contrastText,
-        height:50
+        height:50,
+
+        '& .Mui-selected': {
+            backgroundColor: 'transparent',
+            color:'#19D5C6',
+            borderColor:'#19D5C6',
+
+        },
 
     },
 
+});
+const useStyles3 = makeStyles({
+
+    root:{
+        borderRadius:10,
+        color:MyTheme.palette.primary.dark,
+
+
+
+
+    },
+    body:{
+        borderRadius:10,
+        color:MyTheme.palette.primary.dark,
+
+
+
+
+    }
 });
 
 
@@ -63,16 +99,16 @@ const StyledTableCell = withStyles((theme) => ({
         height:5,
         flex:1,
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        borderBottom: "none"
 
 
 
     },
     body: {
-        fontSize: 14,
-        flex:1,
-        flexDirection: 'row',
-        justifyContent: 'space-between'
+
+
+
 
 
     },
@@ -80,7 +116,8 @@ const StyledTableCell = withStyles((theme) => ({
 }))(TableCell);
 
 const StyledTableRow = withStyles((theme) => ({
-    head: {
+    root: {
+
 
 
 
@@ -100,6 +137,7 @@ type Props = {
 export default function BasicTable(props: Props) {
     const classes = useStyles();
     const classes2 = useStyles2();
+    const classes3 = useStyles3();
     const [species, setSpecies] = useState("des");
     const [pageNumber, setPageNumber] = useState(1);
 
@@ -130,9 +168,9 @@ export default function BasicTable(props: Props) {
     }
 
     return (
-        <ThemeProvider theme={MyTheme}>
-        <TableContainer component={Paper} >
-            <Table className={classes.table} aria-label="simple table">
+
+        <TableContainer className={classes3.root} component={Paper} >
+
                 <TableHead classes={{root:classes.root}} >
                     <StyledTableRow >
                         <StyledTableCell align="left">Name</StyledTableCell>
@@ -164,16 +202,18 @@ export default function BasicTable(props: Props) {
                         <StyledTableCell align="left"></StyledTableCell>
                     </StyledTableRow>
                 </TableHead>
-                <TableBody>
+
                     {props.data.filter(f=> f.name.toLowerCase().includes(props.search.toLowerCase()) || props.search === '')
                         .map((c) => (
                         <TableCellCharacter character={c}/>
                     ))}
-                </TableBody>
-            </Table>
-            <Pagination classes={{root:classes2.root, ul:classes2.ul}} count={10} page={pageNumber} variant={'outlined'} onChange={handleChange} size="large" />
+
+
+
+            <Pagination   classes={{root:classes2.root, ul:classes2.ul}} count={10} page={pageNumber} variant={'outlined'} onChange={handleChange} size="large" />
+
         </TableContainer>
-        </ThemeProvider>
+
     );
 
 }

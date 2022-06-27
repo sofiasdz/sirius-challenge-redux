@@ -53,8 +53,7 @@ function App() {
   return (
       <ThemeProvider theme={MyTheme}>
           <CssBaseline />
-
-        <Container  style={{ height:"100%", width:"100%", background: MyTheme.palette.primary.dark, overflow: "scroll"}} >
+            <Container >
             <Box component="span" m={1} style={{ background: MyTheme.palette.primary.dark }}>
                 <header style={{
                     textAlign: "center",
@@ -71,18 +70,18 @@ function App() {
                 <SearchBox search={search} setSearch={setSearch}></SearchBox>
             </Box>
 
-            <div style={{ height: 400, width: '100%' }}>
+
                 {
                     characters.length === 0 ? <></> :
-                        <TableContainer>
+
                     <BasicTable data={characters}  setCharacters={setCharacters} search={search} setSearch={setSearch}></BasicTable>
-                        </TableContainer>
+
                 }
-            </div>
-        </Container>
 
 
 
+
+            </Container>
 
 
 
