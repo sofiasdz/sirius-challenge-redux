@@ -17,12 +17,14 @@ import {getAllCharacterData} from "./api/CharacterApi";
 import { ThemeProvider } from '@material-ui/core/styles';
 import {MyTheme} from "./Theme";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import logo from './logo_alta_ 1 1.png'
 
 
 
 function App() {
     const [characters, setCharacters]=useState<CharacterType[]>([]);
     const [search, setSearch] = useState("");
+
 
 
     const useStyles = makeStyles((theme: Theme) =>
@@ -55,6 +57,12 @@ function App() {
           <CssBaseline />
             <Container >
             <Box component="span" m={1} style={{ background: MyTheme.palette.primary.dark }}>
+                <div style={{ flex:1,
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    borderBottom: "none",
+                    }}>
+                <img style={{borderRadius:200, height:100,paddingLeft:1150, paddingTop:10}} src={logo}></img>
                 <header style={{
                     textAlign: "center",
                     alignSelf: "center",
@@ -62,12 +70,19 @@ function App() {
                     fontSize:30,
                     padding:20
                 }}>Rick and Morty Characters</header>
+                </div>
+
             </Box>
             <Box  style={{
                 padding:20,
                 marginBottom:10
             }}component="span" m={1}>
                 <SearchBox search={search} setSearch={setSearch}></SearchBox>
+
+
+
+
+
             </Box>
 
 
