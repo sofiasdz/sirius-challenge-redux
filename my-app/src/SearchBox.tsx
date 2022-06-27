@@ -13,6 +13,7 @@ type Props = {
 }
 const useStyles = makeStyles({
     input: {
+        fontSize:20,
         color: 'rgba(0, 223, 221, 1)',
         border:'rgba(0, 223, 221, 1)',
     },
@@ -34,7 +35,7 @@ return(
         }}><SearchIcon style={{color:MyTheme.palette.secondary.main}} ></SearchIcon></Button>
         <div>
             <TextField variant={"outlined"} color='secondary' value={props.search}
-                       placeholder={'search'} onChange={e => props.setSearch(e.target.value)} inputProps={{ className: classes.input }}/>
+                       placeholder={'Search Character'} onChange={e => props.setSearch(e.target.value)} inputProps={{ className: classes.input }}/>
         </div>
     </ButtonGroup>
     </ThemeProvider>

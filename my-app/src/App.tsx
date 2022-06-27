@@ -67,7 +67,7 @@ function App() {
                     textAlign: "center",
                     alignSelf: "center",
                     color:MyTheme.palette.secondary.main,
-                    fontSize:30,
+                    fontSize:40,
                     padding:20
                 }}>Rick and Morty Characters</header>
                 </div>

@@ -10,10 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="added sirius logo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/TableCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/TableCell.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="made the  character details dialog wider" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +53,7 @@
       <workItem from="1655985765246" duration="7880000" />
       <workItem from="1656071617479" duration="8938000" />
       <workItem from="1656095935423" duration="7058000" />
-      <workItem from="1656345335337" duration="15483000" />
+      <workItem from="1656345335337" duration="15800000" />
     </task>
     <task id="LOCAL-00001" summary="comit">
       <created>1655826734234</created>
@@ -345,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656362324840</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="made the  character details dialog wider">
+      <created>1656362978951</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1656362978951</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,7 +368,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added elipsis with episodes" />
     <MESSAGE value="added tooltip" />
     <MESSAGE value="scraped episode list" />
     <MESSAGE value="tooltip shows episode list" />
@@ -389,7 +392,8 @@
     <MESSAGE value="pagination matches table" />
     <MESSAGE value="fixed styling issues" />
     <MESSAGE value="added sirius logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="added sirius logo" />
+    <MESSAGE value="made the  character details dialog wider" />
+    <option name="LAST_COMMIT_MESSAGE" value="made the  character details dialog wider" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
