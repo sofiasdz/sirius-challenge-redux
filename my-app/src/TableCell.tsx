@@ -113,13 +113,14 @@ export  default function TableCellCharacter(props: Props) {
             '&:nth-of-type(odd)': {
 
                 backgroundColor: MyTheme.palette.primary.dark,
-                color:  MyTheme.palette.primary.contrastText,
+                fontColor:MyTheme.palette.primary.contrastText,
+
 
 
             },
             '&:nth-of-type(even)': {
                 backgroundColor: MyTheme.palette.primary.main,
-                color:  MyTheme.palette.primary.contrastText,
+                fontColor:  MyTheme.palette.primary.contrastText,
 
 
             },
@@ -162,14 +163,33 @@ export  default function TableCellCharacter(props: Props) {
     return(
         <ThemeProvider theme={MyTheme}>
     <StyledTableRow key={props.character.id}>
-        <TableCell align="left">{props.character.name}</TableCell>
-        <TableCell align="left">{props.character.status}</TableCell>
-        <TableCell align="left">{props.character.species}</TableCell>
-        <TableCell align="left">{props.character.gender}</TableCell>
+        <TableCell align="left">
+            <text style={{color:MyTheme.palette.primary.contrastText}}>
+            {props.character.name}
+            </text>
+        </TableCell>
+        <TableCell align="left">
+            <text style={{color:MyTheme.palette.primary.contrastText}}>
+            {props.character.status}
+            </text>
+        </TableCell>
+        <TableCell align="left">
+            <text style={{color:MyTheme.palette.primary.contrastText}}>
+            {props.character.species}
+            </text>
+        </TableCell>
+        <TableCell align="left">
+            <text style={{color:MyTheme.palette.primary.contrastText}}>
+                {props.character.gender}
+            </text>
+        </TableCell>
+
+
 
         <LightTooltip  disableFocusListener disableTouchListener title={props.character.episode.join(", ")} >
 
         <TableCell align="left">
+            <text style={{color:MyTheme.palette.primary.contrastText}}>
             <Ellipsis
             ellipsis="..."
             label=""
@@ -178,14 +198,19 @@ export  default function TableCellCharacter(props: Props) {
             limit={20}
             class="more"
             mode={EllipsisMode.After}/>
+            </text>
         </TableCell>
         </LightTooltip>
 
 
-        <TableCell align="left">{props.character.type}</TableCell>
+        <TableCell align="left">
+            <text style={{color:MyTheme.palette.primary.contrastText}}>
+            {props.character.type}
+            </text>
+        </TableCell>
         <TableCell align="left">
             <Button onClick={handleOpen}>
-            <VisibilityIcon></VisibilityIcon>
+            <VisibilityIcon style={{color:MyTheme.palette.primary.contrastText}}></VisibilityIcon>
                 <div color={MyTheme.palette.primary.dark}>
                     <Dialog
                         open={open}

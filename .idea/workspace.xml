@@ -10,9 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="Dialog finished, looks like figma">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="table looks closer to figma">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Table.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/TableCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/TableCell.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +51,7 @@
       <workItem from="1655985765246" duration="7880000" />
       <workItem from="1656071617479" duration="8938000" />
       <workItem from="1656095935423" duration="7058000" />
-      <workItem from="1656345335337" duration="6482000" />
+      <workItem from="1656345335337" duration="7383000" />
     </task>
     <task id="LOCAL-00001" summary="comit">
       <created>1655826734234</created>
@@ -306,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656351129806</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="table looks closer to figma">
+      <created>1656352475719</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1656352475719</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +331,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changes to text" />
     <MESSAGE value="Added Search Bar" />
     <MESSAGE value="trying to make the table cell component work" />
     <MESSAGE value="cell compenent and episode request works" />
@@ -350,7 +355,8 @@
     <MESSAGE value="change search box text color" />
     <MESSAGE value="changed dialog background color and centered items" />
     <MESSAGE value="Dialog finished, looks like figma" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dialog finished, looks like figma" />
+    <MESSAGE value="table looks closer to figma" />
+    <option name="LAST_COMMIT_MESSAGE" value="table looks closer to figma" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
