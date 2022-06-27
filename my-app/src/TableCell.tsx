@@ -48,6 +48,7 @@ const useStyles = makeStyles((theme: Theme) =>
             '& > *': {
                 margin: theme.spacing(1),
                 width: '25ch',
+
              /*   flex: 1,
                 flexDirection: 'column',
                 justifyContent: 'center',
@@ -86,7 +87,8 @@ const useStyles3 = makeStyles({
     root: {
             background: MyTheme.palette.primary.contrastText,
             borderRadius:4,
-            width:270,
+            width:350,
+
 
 
     }
@@ -257,7 +259,7 @@ export  default function TableCellCharacter(props: Props) {
                             style: {
                                 backgroundColor:MyTheme.palette.primary.dark ,
                                 boxShadow: 'none',
-                                width:350
+                                width:450
 
                             },
                         }}
@@ -272,8 +274,8 @@ export  default function TableCellCharacter(props: Props) {
                                     justifyContent: 'center',
                                     alignItems: 'center',
                                     alignContent: 'center',
-                                    paddingRight: 50,
-                                    paddingLeft: 85,
+                                    paddingRight: 60,
+                                    paddingLeft: 130,
                                     paddingBottom:5
                                 }}>
                                 <img style={{borderRadius:200, height:120}} src={props.character.image}></img>
@@ -281,7 +283,11 @@ export  default function TableCellCharacter(props: Props) {
 
 
                                 <form   color={MyTheme.palette.primary.dark} className={classes.root} noValidate autoComplete="off">
+                                    <div style={{
 
+                                        paddingLeft: 10,
+
+                                    }}>
                                     <text style={{color:MyTheme.palette.primary.contrastText, fontSize:15}}>Name</text>
 
                                     <TextField    id="standard-read-only-input"
@@ -355,8 +361,10 @@ export  default function TableCellCharacter(props: Props) {
 
 
 
+                                    </div>
 
                                 </form>
+
                             </DialogContentText>
                         </DialogContent>
                     </Dialog>
