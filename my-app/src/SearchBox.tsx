@@ -1,10 +1,8 @@
-import {Button, ButtonGroup, TextField} from "@material-ui/core";
+import {Button, ButtonGroup, styled, TextField} from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
-import React, {useState} from "react";
-import {CharacterType} from "./Types/Types";
+import React from "react";
 import {ThemeProvider} from "@material-ui/core/styles";
 import {MyTheme} from "./Theme";
-import classes from "*.module.css";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
 type Props = {
@@ -16,9 +14,28 @@ const useStyles = makeStyles({
         fontSize:20,
         color: 'rgba(0, 223, 221, 1)',
         border:'rgba(0, 223, 221, 1)',
+
+
+
     },
+    underline: {
+        "&:before": {
+            borderBottom: "2px solid rgba(0, 223, 221, 1)"
+        },
+        "&:hover:not($disabled):not($focused):not($error):before": {
+            borderBottom: "2px solid rgba(0, 223, 221, 1)"
+        },
+        "&:after": {
+            borderBottom: "3px solid purple"
+        }
+    },
+    disabled: {},
+    focused: {},
+    error: {}
+
    
 });
+
 
 export function SearchBox(props: Props) {
     const classes = useStyles();
@@ -28,14 +45,15 @@ export function SearchBox(props: Props) {
 
 
 
+
 return(
     <ThemeProvider theme={MyTheme}>
-    <ButtonGroup style={{marginBottom:20}}  color="primary" aria-label="outlined primary button group">
-        <Button disabled onClick={() => {
+    <ButtonGroup style={{marginBottom:20}}   >
+        <Button style={{borderColor:MyTheme.palette.primary.dark}}  disabled onClick={() => {
         }}><SearchIcon style={{color:MyTheme.palette.secondary.main}} ></SearchIcon></Button>
         <div>
-            <TextField variant={"outlined"} color='secondary' value={props.search}
-                       placeholder={'Search Character'} onChange={e => props.setSearch(e.target.value)} inputProps={{ className: classes.input }}/>
+            <TextField variant={"standard"} color='secondary' value={props.search}
+                       placeholder={'Search Character'} onChange={e => props.setSearch(e.target.value)} InputProps={{classes}} />
         </div>
     </ButtonGroup>
     </ThemeProvider>
