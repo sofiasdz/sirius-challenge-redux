@@ -10,7 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="made the  character details dialog wider" />
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="minor styling fixes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/TableCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/TableCell.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +56,8 @@
       <workItem from="1655985765246" duration="7880000" />
       <workItem from="1656071617479" duration="8938000" />
       <workItem from="1656095935423" duration="7058000" />
-      <workItem from="1656345335337" duration="15800000" />
+      <workItem from="1656345335337" duration="15976000" />
+      <workItem from="1656374018441" duration="199000" />
     </task>
     <task id="LOCAL-00001" summary="comit">
       <created>1655826734234</created>
@@ -349,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656362978951</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="minor styling fixes">
+      <created>1656363377161</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1656363377161</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +379,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added tooltip" />
     <MESSAGE value="scraped episode list" />
     <MESSAGE value="tooltip shows episode list" />
     <MESSAGE value="search bar works" />
@@ -393,7 +403,8 @@
     <MESSAGE value="fixed styling issues" />
     <MESSAGE value="added sirius logo" />
     <MESSAGE value="made the  character details dialog wider" />
-    <option name="LAST_COMMIT_MESSAGE" value="made the  character details dialog wider" />
+    <MESSAGE value="minor styling fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor styling fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
@@ -404,10 +415,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1656362394877">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1656363380113">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1656362394877" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1656363380113" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

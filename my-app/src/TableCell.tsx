@@ -187,7 +187,7 @@ export  default function TableCellCharacter(props: Props) {
     const LightTooltip = withStyles((theme) => ({
 
         tooltip: {
-            backgroundColor: MyTheme.palette.primary.light,
+            backgroundColor: 'white',
             color: 'rgba(0,0,0,0.87)',
             boxShadow: theme.shadows[1],
             fontSize: 11,
