@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="FINISHED STYLING">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="changed search box to match figma">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/SearchBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/SearchBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Table.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
       <workItem from="1656071617479" duration="8938000" />
       <workItem from="1656095935423" duration="7058000" />
       <workItem from="1656345335337" duration="15976000" />
-      <workItem from="1656374018441" duration="2398000" />
+      <workItem from="1656374018441" duration="3782000" />
     </task>
     <task id="LOCAL-00001" summary="comit">
       <created>1655826734234</created>
@@ -367,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656429838683</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="changed search box to match figma">
+      <created>1656434621593</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1656434621593</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +393,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="tooltip shows episode list" />
     <MESSAGE value="search bar works" />
     <MESSAGE value="Implemented sorting species buttons" />
     <MESSAGE value="implemented state asociated to species sorting buttons" />
@@ -411,7 +417,8 @@
     <MESSAGE value="made the  character details dialog wider" />
     <MESSAGE value="minor styling fixes" />
     <MESSAGE value="FINISHED STYLING" />
-    <option name="LAST_COMMIT_MESSAGE" value="FINISHED STYLING" />
+    <MESSAGE value="changed search box to match figma" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed search box to match figma" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
@@ -422,10 +429,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1656429842102">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1656434679900">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1656429842102" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1656434679900" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

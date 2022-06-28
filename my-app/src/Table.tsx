@@ -1,7 +1,6 @@
-import React, {useEffect} from 'react';
-import {makeStyles, ThemeProvider, withStyles} from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
+import React from 'react';
+import {makeStyles, withStyles} from '@material-ui/core/styles';
+
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
@@ -10,15 +9,11 @@ import Paper from '@material-ui/core/Paper';
 import {getAllCharacterData} from "./api/CharacterApi";
 import {CharacterType} from "./Types/Types";
 import { useState } from 'react';
-import {getEpisodeData} from "./api/EpisodeApi";
 import TableCellCharacter from "./TableCell";
-import Select from 'react-select'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import {Button} from "@material-ui/core";
-import VisibilityIcon from "@material-ui/icons/Visibility";
 import Pagination from "@material-ui/lab/Pagination";
-import Modal from '@material-ui/core/Modal';
 import {MyTheme} from "./Theme";
 
 const useStyles = makeStyles({
@@ -50,22 +45,42 @@ const useStyles2 = makeStyles({
         '& ul > li:not(:first-child):not(:last-child) > button:not(.Mui-selected)': {
             backgroundColor: 'transparent',
             color:'white',
-            borderColor:MyTheme.palette.primary.dark,
+            borderColor:MyTheme.palette.primary.main,
+
+
         },
+
+
+
 
 
     },
     ul:{
         height:50,
-
+        "& > *": {
+            marginTop: 10
+        },
         '& .Mui-selected': {
             backgroundColor: 'transparent',
             color:'#19D5C6',
             borderColor:'#19D5C6',
 
         },
+        "& .MuiPaginationItem-icon": {
+            color: MyTheme.palette.secondary.main,
+
+
+        },
+        "& .MuiPaginationItem-ellipsis": {
+            color: MyTheme.palette.secondary.main,
+
+
+        }
+
+
 
     },
+
 
 });
 const useStyles3 = makeStyles({
@@ -210,7 +225,7 @@ export default function BasicTable(props: Props) {
 
 
 
-            <Pagination   classes={{root:classes2.root, ul:classes2.ul}} count={10} page={pageNumber} variant={'outlined'} onChange={handleChange} size="large" />
+            <Pagination    classes={{root:classes2.root, ul:classes2.ul}}   count={10} page={pageNumber} variant={'outlined'} onChange={handleChange} size="large" />
 
         </TableContainer>
 
