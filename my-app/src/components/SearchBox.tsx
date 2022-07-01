@@ -1,4 +1,4 @@
-import {Button, ButtonGroup, styled, TextField} from "@material-ui/core";
+import {Button, ButtonGroup, TextField} from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
 import React from "react";
 import {ThemeProvider} from "@material-ui/core/styles";
@@ -11,10 +11,9 @@ type Props = {
 }
 const useStyles = makeStyles({
     input: {
-        fontSize:20,
+        fontSize: 20,
         color: 'rgba(0, 223, 221, 1)',
-        border:'rgba(0, 223, 221, 1)',
-
+        border: 'rgba(0, 223, 221, 1)',
 
 
     },
@@ -33,7 +32,7 @@ const useStyles = makeStyles({
     focused: {},
     error: {}
 
-   
+
 });
 
 
@@ -41,21 +40,17 @@ export function SearchBox(props: Props) {
     const classes = useStyles();
 
 
-
-
-
-
-
-return(
-    <ThemeProvider theme={MyTheme}>
-    <ButtonGroup style={{marginBottom:20}}   >
-        <Button style={{borderColor:MyTheme.palette.primary.dark}}  disabled onClick={() => {
-        }}><SearchIcon style={{color:MyTheme.palette.secondary.main}} ></SearchIcon></Button>
-        <div>
-            <TextField variant={"standard"} color='secondary' value={props.search}
-                       placeholder={'Search Character'} onChange={e => props.setSearch(e.target.value)} InputProps={{classes}} />
-        </div>
-    </ButtonGroup>
-    </ThemeProvider>
-)
+    return (
+        <ThemeProvider theme={MyTheme}>
+            <ButtonGroup style={{marginBottom: 20}}>
+                <Button style={{borderColor: MyTheme.palette.primary.dark}} disabled onClick={() => {
+                }}><SearchIcon style={{color: MyTheme.palette.secondary.main}}></SearchIcon></Button>
+                <div>
+                    <TextField variant={"standard"} color='secondary' value={props.search}
+                               placeholder={'Search Character'} onChange={e => props.setSearch(e.target.value)}
+                               InputProps={{classes}}/>
+                </div>
+            </ButtonGroup>
+        </ThemeProvider>
+    )
 }

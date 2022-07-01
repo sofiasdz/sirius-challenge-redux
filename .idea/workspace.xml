@@ -10,10 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="created accions for request, responde and error">
-      <change afterPath="$PROJECT_DIR$/my-app/src/redux/middleware/middleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/reducers/characterReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/reducers/characterReducer.ts" afterDir="false" />
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="wip middleware">
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/SearchBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/SearchBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/TableCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/TableCell.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +65,7 @@
       <workItem from="1656623718146" duration="474000" />
       <workItem from="1656624236814" duration="306000" />
       <workItem from="1656677761397" duration="4083000" />
-      <workItem from="1656705742603" duration="447000" />
+      <workItem from="1656705742603" duration="777000" />
     </task>
     <task id="LOCAL-00001" summary="comit">
       <created>1655826734234</created>
@@ -401,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656684029992</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="wip middleware">
+      <created>1656706994663</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1656706994663</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,7 +429,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented state asociated to species sorting buttons" />
     <MESSAGE value="sorting alfabetically by species works!" />
     <MESSAGE value="added pagination ui" />
     <MESSAGE value="pagination is implemented but doesnt work" />
@@ -445,7 +453,8 @@
     <MESSAGE value="changed search box to match figma" />
     <MESSAGE value="wip implementing redux, created first store, reducer and action" />
     <MESSAGE value="created accions for request, responde and error" />
-    <option name="LAST_COMMIT_MESSAGE" value="created accions for request, responde and error" />
+    <MESSAGE value="wip middleware" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip middleware" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">

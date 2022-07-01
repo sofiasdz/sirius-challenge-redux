@@ -1,19 +1,16 @@
 import React, {useEffect, useState} from 'react';
-import './App.css';
-import {
-    Box,
-    Container,
-} from "@material-ui/core";
-import BasicTable from "./Table";
-import {SearchBox} from "./SearchBox";
-import {CharacterType} from "./Types/Types";
-import {getAllCharacterData} from "./api/CharacterApi";
+import '../App.css';
+import {Box, Container,} from "@material-ui/core";
+import BasicTable from "../components/Table";
+import {SearchBox} from "../components/SearchBox";
+import {CharacterType} from "../Types/Types";
+import {getAllCharacterData} from "../api/CharacterApi";
 import {ThemeProvider} from '@material-ui/core/styles';
-import {MyTheme} from "./Theme";
+import {MyTheme} from "../components/Theme";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import logo from './logo_alta_ 1 1.png'
+import logo from '../resources/logo_alta_ 1 1.png'
 import {Provider} from 'react-redux'
-import store from "./redux/store"
+import store from "./store"
 
 
 function App() {
@@ -70,7 +67,7 @@ function App() {
                     characters.length === 0 ? <></> :
 
                         <BasicTable data={characters} setCharacters={setCharacters} search={search}
-    setSearch={setSearch}/>
+                                    setSearch={setSearch}/>
 
                 }
 
