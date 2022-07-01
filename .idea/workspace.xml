@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="wip implementing redux, created first store, reducer and action">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="created accions for request, responde and error">
+      <change afterPath="$PROJECT_DIR$/my-app/src/redux/middleware/middleware.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/actions/action.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/redux/reducers/characterReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/reducers/characterReducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/my-app/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -62,7 +62,8 @@
       <workItem from="1656374018441" duration="3782000" />
       <workItem from="1656623718146" duration="474000" />
       <workItem from="1656624236814" duration="306000" />
-      <workItem from="1656677761397" duration="2733000" />
+      <workItem from="1656677761397" duration="4083000" />
+      <workItem from="1656705742603" duration="447000" />
     </task>
     <task id="LOCAL-00001" summary="comit">
       <created>1655826734234</created>
@@ -393,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656682322237</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="created accions for request, responde and error">
+      <created>1656684029992</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1656684029992</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +420,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented sorting species buttons" />
     <MESSAGE value="implemented state asociated to species sorting buttons" />
     <MESSAGE value="sorting alfabetically by species works!" />
     <MESSAGE value="added pagination ui" />
@@ -437,7 +444,8 @@
     <MESSAGE value="FINISHED STYLING" />
     <MESSAGE value="changed search box to match figma" />
     <MESSAGE value="wip implementing redux, created first store, reducer and action" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip implementing redux, created first store, reducer and action" />
+    <MESSAGE value="created accions for request, responde and error" />
+    <option name="LAST_COMMIT_MESSAGE" value="created accions for request, responde and error" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
@@ -448,10 +456,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1656682325676">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1656684031809">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1656682325676" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1656684031809" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
