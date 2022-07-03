@@ -6,7 +6,7 @@ import {
 } from "../actions/action"
 
 
-const sessionMiddleware = ({ dispatch:any, getState:any}) => next => action => {
+const sessionMiddleware = () => (next: (arg0: any) => void) => (action: { type: any; }) => {
     next(action);
     switch (action.type) {
         case CHARACTER_REQUEST:

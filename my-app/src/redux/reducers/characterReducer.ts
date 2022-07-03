@@ -9,6 +9,7 @@ import session, {
 const initialState = {
     characters:[]
 };
+
 const reducer = (state: CharacterType[],action: {type: string, response:any }) =>{
     switch(action.type){
         case "CHARACTER_REQUEST":
