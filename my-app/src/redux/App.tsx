@@ -20,11 +20,11 @@ function App() {
     const [search, setSearch] = useState("");
     const dispatch =useDispatch()
     const {getCharacterError,getCharacterRequest,getCharacterResponse}= bindActionCreators(actionCreators,dispatch)
-    const state= useSelector((state:State)=> state.character)//state.characters(?
+    const state= useSelector((state:State)=> state.characterReducer.characters)//state.characters(?
 
 
     useEffect(() => {
-        dispatch(session.characterRequest()) //le tengo q mandar el numero de pagina
+        dispatch(session.characterRequest(1)) //le tengo q mandar el numero de pagina
         //no estoy usando action creators
     }, [])
 
