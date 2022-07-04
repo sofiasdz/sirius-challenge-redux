@@ -1,5 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore , createStore} from '@reduxjs/toolkit'
+import reducers from "./reducers/characterReducer";
+
 
 export default configureStore({
-    reducer: {}
+    reducer: reducers
 })
+
