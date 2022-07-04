@@ -7,15 +7,19 @@ import session, {
 
 
 const initialState = {
-    characters:[]
+    characters:[],
+    status:'',
+    page:1
 };
+//El middleware no sabe a quien sobreescribir, eso lo hace el reducer!
 
-const reducer = (state: CharacterType[],action: {type: string, response:any }) =>{
+const reducer = (state= initialState,action: {type: string, response:any }) =>{
     switch(action.type){
         case "CHARACTER_REQUEST":
             return  {... state,status: 'loading'}
         case "CHARACTER_RESPONSE":
-            return  {... state,status: 'idle'}
+            //setCharacters(res.results)
+            return  {... state,status: 'idle',characters: action.response.result}
         case "CHARACTER_ERROR":
             return  {... state,status: 'error'}
         default:

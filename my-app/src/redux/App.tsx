@@ -11,6 +11,8 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import logo from '../resources/logo_alta_ 1 1.png'
 import {Provider} from 'react-redux'
 import store from "./store"
+import session from "./actions/action";
+import { Dispatch} from "redux"
 
 
 function App() {
@@ -19,15 +21,7 @@ function App() {
 
 
     useEffect(() => {
-        getAllCharacterData(1)
-            .then((res) => {
-                setCharacters(res.results)
-            })
-            .catch((err) => {
-                if (err.status === 401 || err.status === 404)
-                    console.log(err)
-
-            })
+       // dispatch(session.characterRequest())
     }, [])
 
     return (
