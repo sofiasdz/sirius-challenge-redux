@@ -133,12 +133,12 @@ export default function BasicTable(props: Props) {
     const [pageNumber, setPageNumber] = useState(1);
     const dispatch =useDispatch()
     const {getCharacterError,getCharacterRequest,getCharacterResponse}= bindActionCreators(actionCreators,dispatch)
-    const state= useSelector((state:State)=> state.character)//state.characters(?
+    const state= useSelector((state:State)=> state.characterReducer.characters)//state.characters(?
 
 
     const handleChange = (event: any, value: number) => {
         setPageNumber(value);
-        dispatch(session.characterRequest()) //le tengo q mandar el numero de pagina
+        dispatch(session.characterRequest(value)) //le tengo q mandar el numero de pagina
         //no estoy usando action creators
 
 

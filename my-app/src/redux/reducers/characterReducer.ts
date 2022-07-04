@@ -9,7 +9,6 @@ import session, {
 const initialState = {
     characters:[],
     status:'',
-    page:1
 };
 //El middleware no sabe a quien sobreescribir, eso lo hace el reducer!
 

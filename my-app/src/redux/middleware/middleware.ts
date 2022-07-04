@@ -6,11 +6,11 @@ import { Dispatch} from "redux"
 import {getAllCharacterData} from "../../api/CharacterApi";
 
 
-const sessionMiddleware = (dispatch:Dispatch,getState:any) => (next: (arg0: any) => void) => (action: { type: any; }) => {
+const sessionMiddleware = (dispatch:Dispatch,getState:any) => (next: (arg0: any) => void) => (action: { type: any, page:number}) => {
     next(action);
     switch (action.type) {
         case CHARACTER_REQUEST:
-            getAllCharacterData(1)
+            getAllCharacterData(action.page)
                 .then((res) => {
                     dispatch(session.characterResponse(res))
                 })
@@ -18,7 +18,6 @@ const sessionMiddleware = (dispatch:Dispatch,getState:any) => (next: (arg0: any)
                     dispatch(session.characterError(err))
 
                 })
-
             break;
         case CHARACTER_RESPONSE:
 

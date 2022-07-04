@@ -4,7 +4,7 @@
   export enum CHARACTER_RESPONSE {CHARACTER_RESPONSE='CHARACTER_RESPONSE'};
   export enum CHARACTER_ERROR { CHARACTER_ERROR ='CHARACTER_ERROR'};
   const session = {
-      characterRequest: () => ({type: CHARACTER_REQUEST}),
+      characterRequest: (page:number) => ({type: CHARACTER_REQUEST, page}),
       characterResponse: (response:string[]) => ({type: CHARACTER_RESPONSE, response: response}),
       characterError: (error:string) => ({type: CHARACTER_ERROR, error}),
   }
