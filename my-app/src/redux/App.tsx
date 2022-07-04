@@ -4,24 +4,28 @@ import {Box, Container,} from "@material-ui/core";
 import BasicTable from "../components/Table";
 import {SearchBox} from "../components/SearchBox";
 import {CharacterType} from "../Types/Types";
-import {getAllCharacterData} from "../api/CharacterApi";
 import {ThemeProvider} from '@material-ui/core/styles';
 import {MyTheme} from "../components/Theme";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import logo from '../resources/logo_alta_ 1 1.png'
-import {Provider} from 'react-redux'
+import {Provider, useDispatch, useSelector} from 'react-redux'
 import store from "./store"
 import session from "./actions/action";
-import { Dispatch} from "redux"
+import {bindActionCreators, Dispatch} from "redux"
+import {actionCreators, State} from "./index";
 
 
 function App() {
     const [characters, setCharacters] = useState<CharacterType[]>([]);
     const [search, setSearch] = useState("");
+    const dispatch =useDispatch()
+    const {getCharacterError,getCharacterRequest,getCharacterResponse}= bindActionCreators(actionCreators,dispatch)
+    const state= useSelector((state:State)=> state.character)//state.characters(?
 
 
     useEffect(() => {
-       // dispatch(session.characterRequest())
+        dispatch(session.characterRequest()) //le tengo q mandar el numero de pagina
+        //no estoy usando action creators
     }, [])
 
     return (

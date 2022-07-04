@@ -6,7 +6,6 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import {getAllCharacterData} from "../api/CharacterApi";
 import {CharacterType} from "../Types/Types";
 import TableCellCharacter from "./TableCell";
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
@@ -14,6 +13,10 @@ import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import {Button} from "@material-ui/core";
 import Pagination from "@material-ui/lab/Pagination";
 import {MyTheme} from "./Theme";
+import {useDispatch, useSelector} from "react-redux";
+import {bindActionCreators} from "redux";
+import {actionCreators, State} from "../redux";
+import session from "../redux/actions/action";
 
 const useStyles = makeStyles({
     table: {
@@ -129,28 +132,21 @@ export default function BasicTable(props: Props) {
     const classes3 = useStyles3();
     const [species, setSpecies] = useState("des");
     const [pageNumber, setPageNumber] = useState(1);
+    const dispatch =useDispatch()
+    const {getCharacterError,getCharacterRequest,getCharacterResponse}= bindActionCreators(actionCreators,dispatch)
+    const state= useSelector((state:State)=> state.character)//state.characters(?
 
 
     const handleChange = (event: any, value: number) => {
         setPageNumber(value);
-        getNewPage(value)
-        console.log(value)
+        dispatch(session.characterRequest()) //le tengo q mandar el numero de pagina
+        //no estoy usando action creators
+
 
     };
 
 
-    function getNewPage(pageNumber: number) {
-        getAllCharacterData(pageNumber)
-            .then((res) => {
-                props.setCharacters(res.results)
 
-            })
-            .catch((err) => {
-                if (err.status === 401 || err.status === 404)
-                    console.log(err)
-
-            })
-    }
 
     return (
 
