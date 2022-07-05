@@ -65,7 +65,7 @@ function App() {
 
 
                 {
-                    characters.length === 0 ? <></> :
+                    useSelector((state:any)=> state.characters.characters.status)==='loading' ? <div><text>Loading...</text></div> :
 
                         <BasicTable data={characters}  search={search}/>
 
