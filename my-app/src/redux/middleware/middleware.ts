@@ -1,36 +1,26 @@
 
-import
-    session
-    , {CHARACTER_ERROR, CHARACTER_REQUEST, CHARACTER_RESPONSE} from "../actions/action"
+
 import { Dispatch} from "redux"
 import {getAllCharacterData} from "../../api/CharacterApi";
+import {CHARACTER_REQUEST} from "../actions/action";
 
 
-const sessionMiddleware = (dispatch:Dispatch,getState:any) => (next: (arg0: any) => void) => (action: { type: any, page:number}) => {
+const charactersMiddleware = (dispatch:Dispatch, getState:any) => (next: any) => (action: any) => {
     next(action);
     switch (action.type) {
         case CHARACTER_REQUEST:
             getAllCharacterData(action.page)
                 .then((res) => {
-                    dispatch(session.characterResponse(res))
+                    console.log(res)
+                    dispatch(action.characters.characterResponse(res))
                 })
                 .catch((err) => {
-                    dispatch(session.characterError(err))
+                    dispatch(action.characters.characterError(err))
 
                 })
             break;
-        case CHARACTER_RESPONSE:
-
-
-            break;
-        case CHARACTER_ERROR:
-           // console.log(err)
-
-
-            break;
-
         default:
     }
 }
 
-export default sessionMiddleware;
+export default charactersMiddleware;

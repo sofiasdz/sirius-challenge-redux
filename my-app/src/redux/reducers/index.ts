@@ -1,8 +1,8 @@
 import {combineReducers} from "redux"
 import characterReducer from "./characterReducer"
 
-const reducers= combineReducers({
-    characterReducer,
+const rootReducer = combineReducers({
+    characters: characterReducer,
 });
-export default reducers
-export type State =ReturnType<typeof reducers>
+
+export default rootReducer

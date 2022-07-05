@@ -13,10 +13,7 @@ import {Button} from "@material-ui/core";
 import Pagination from "@material-ui/lab/Pagination";
 import {MyTheme} from "./Theme";
 import {useDispatch, useSelector} from "react-redux";
-import {bindActionCreators} from "redux";
-import {actionCreators, State} from "../redux";
-import session from "../redux/actions/action";
-
+import actions from "../redux/actions"
 const useStyles = makeStyles({
     table: {
         minWidth: 650,
@@ -119,9 +116,8 @@ const StyledTableRow = withStyles((theme) => ({
 
 type Props = {
     data: CharacterType[],
-    setCharacters: any,
     search: string,
-    setSearch: any,
+
 
 
 }
@@ -132,14 +128,11 @@ export default function BasicTable(props: Props) {
     const [species, setSpecies] = useState("des");
     const [pageNumber, setPageNumber] = useState(1);
     const dispatch =useDispatch()
-    const {getCharacterError,getCharacterRequest,getCharacterResponse}= bindActionCreators(actionCreators,dispatch)
-    const state= useSelector((state:State)=> state.characterReducer.characters)//state.characters(?
 
 
     const handleChange = (event: any, value: number) => {
         setPageNumber(value);
-        dispatch(session.characterRequest(value)) //le tengo q mandar el numero de pagina
-        //no estoy usando action creators
+        dispatch(actions.characters.characterRequest(value))
 
 
     };

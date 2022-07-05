@@ -1,11 +1,10 @@
+export const CHARACTER_REQUEST = 'CHARACTER_REQUEST';
+export const CHARACTER_RESPONSE='CHARACTER_RESPONSE';
+export const CHARACTER_ERROR ='CHARACTER_ERROR';
 
-
-  export enum CHARACTER_REQUEST  {CHARACTER_REQUEST='CHARACTER_REQUEST'};
-  export enum CHARACTER_RESPONSE {CHARACTER_RESPONSE='CHARACTER_RESPONSE'};
-  export enum CHARACTER_ERROR { CHARACTER_ERROR ='CHARACTER_ERROR'};
-  const session = {
+  const characters = {
       characterRequest: (page:number) => ({type: CHARACTER_REQUEST, page}),
-      characterResponse: (response:string[]) => ({type: CHARACTER_RESPONSE, response: response}),
+      characterResponse: (response:string[]) => ({type: CHARACTER_RESPONSE, response}),
       characterError: (error:string) => ({type: CHARACTER_ERROR, error}),
   }
-  export default session;
+  export default characters;

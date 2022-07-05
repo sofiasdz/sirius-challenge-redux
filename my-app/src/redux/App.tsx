@@ -10,22 +10,22 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import logo from '../resources/logo_alta_ 1 1.png'
 import {Provider, useDispatch, useSelector} from 'react-redux'
 import store from "./store"
-import session from "./actions/action";
-import {bindActionCreators, Dispatch} from "redux"
-import {actionCreators, State} from "./index";
+import actions from "./actions"
 
 
 function App() {
     const [characters, setCharacters] = useState<CharacterType[]>([]);
     const [search, setSearch] = useState("");
     const dispatch =useDispatch()
-    const {getCharacterError,getCharacterRequest,getCharacterResponse}= bindActionCreators(actionCreators,dispatch)
-    const state= useSelector((state:State)=> state.characterReducer.characters)//state.characters(?
+    // @ts-ignore
+    const charactersState= useSelector((state)=> state.characters.characters)//state.characters(?
 
 
     useEffect(() => {
-        dispatch(session.characterRequest(1)) //le tengo q mandar el numero de pagina
+        dispatch(actions.characters.characterRequest(1)) //le tengo q mandar el numero de pagina
         //no estoy usando action creators
+        setCharacters(charactersState)
+
     }, [])
 
     return (
@@ -64,8 +64,7 @@ function App() {
                 {
                     characters.length === 0 ? <></> :
 
-                        <BasicTable data={characters} setCharacters={setCharacters} search={search}
-                                    setSearch={setSearch}/>
+                        <BasicTable data={characters}  search={search}/>
 
                 }
 

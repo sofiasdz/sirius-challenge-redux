@@ -1,8 +1,12 @@
-import { configureStore , createStore} from '@reduxjs/toolkit'
-import reducers from "./reducers/characterReducer";
+import { configureStore } from '@reduxjs/toolkit'
+import rootReducer from "./reducers";
+import middlewares from "./middleware"
+
 
 
 export default configureStore({
-    reducer: reducers
+    reducer: rootReducer,
+    // @ts-ignore
+    middleware: middlewares
 })
 

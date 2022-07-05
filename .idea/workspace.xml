@@ -10,12 +10,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="wip implementing redux">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="implemented action that recieves page number">
+      <change afterPath="$PROJECT_DIR$/my-app/src/redux/actions/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/redux/middleware/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/action-creators/index.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/redux/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/actions/action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/index.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/redux/middleware/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/middleware/middleware.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/redux/reducers/characterReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/reducers/characterReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/redux/reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/reducers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,21 +76,8 @@
       <workItem from="1656623718146" duration="474000" />
       <workItem from="1656624236814" duration="306000" />
       <workItem from="1656677761397" duration="4083000" />
-      <workItem from="1656705742603" duration="10537000" />
-    </task>
-    <task id="LOCAL-00007" summary="working on api">
-      <created>1655835729924</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1655835729924</updated>
-    </task>
-    <task id="LOCAL-00008" summary="api works">
-      <created>1655838628693</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1655838628693</updated>
+      <workItem from="1656705742603" duration="11395000" />
+      <workItem from="1657039069575" duration="4733000" />
     </task>
     <task id="LOCAL-00009" summary="table shows info except episode">
       <created>1655839526975</created>
@@ -413,7 +408,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656958553952</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="implemented action that recieves page number">
+      <created>1656959542512</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1656959542513</updated>
+    </task>
+    <task id="LOCAL-00057" summary="implemented action that recieves page number">
+      <created>1656959638206</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1656959638206</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,7 +441,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="pagination still doesnt work" />
     <MESSAGE value="PAGINATION WORKSS!!" />
     <MESSAGE value="modal wip" />
     <MESSAGE value="modal now shows character data" />
@@ -457,7 +465,8 @@
     <MESSAGE value="optimized styling and unused code, created folders" />
     <MESSAGE value="wip typing redux actions and reducer" />
     <MESSAGE value="wip implementing redux" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip implementing redux" />
+    <MESSAGE value="implemented action that recieves page number" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented action that recieves page number" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
@@ -468,10 +477,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1656958558429">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657039328535">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1656958558429" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657039328535" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
