@@ -15,7 +15,7 @@ const reducer = (state= initialState,action: {type: string, response:any,page:nu
         case CHARACTER_REQUEST:
             return  {... state,status: 'loading'}
         case CHARACTER_RESPONSE:
-            return  {... state,status: 'idle',characters: action.response.results}
+            return  {... state,status: 'idle', characters: action.response}
         case CHARACTER_ERROR:
             return  {... state,status: 'error'}
         default:

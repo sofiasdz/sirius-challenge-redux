@@ -1,21 +1,21 @@
 
-
-import { Dispatch} from "redux"
+import actions from "../actions"
 import {getAllCharacterData} from "../../api/CharacterApi";
 import {CHARACTER_REQUEST} from "../actions/action";
 
 
-const charactersMiddleware = (dispatch:Dispatch, getState:any) => (next: any) => (action: any) => {
+// @ts-ignore
+const charactersMiddleware = ({dispatch, getState}) => next => action => {
     next(action);
     switch (action.type) {
         case CHARACTER_REQUEST:
             getAllCharacterData(action.page)
                 .then((res) => {
-                    console.log(res)
-                    dispatch(action.characters.characterResponse(res))
+                    console.log(action)
+                    dispatch(actions.characters.characterResponse(res.results))
                 })
                 .catch((err) => {
-                    dispatch(action.characters.characterError(err))
+                    dispatch(actions.characters.characterError(err))
 
                 })
             break;

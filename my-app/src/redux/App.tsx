@@ -20,11 +20,14 @@ function App() {
     // @ts-ignore
     const charactersState= useSelector((state)=> state.characters.characters)//state.characters(?
 
+    console.log(charactersState)
 
     useEffect(() => {
         dispatch(actions.characters.characterRequest(1)) //le tengo q mandar el numero de pagina
         //no estoy usando action creators
         setCharacters(charactersState)
+
+
 
     }, [])
 

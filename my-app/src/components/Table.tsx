@@ -127,7 +127,7 @@ export default function BasicTable(props: Props) {
     const classes3 = useStyles3();
     const [species, setSpecies] = useState("des");
     const [pageNumber, setPageNumber] = useState(1);
-    const dispatch =useDispatch()
+    const dispatch =useDispatch();
 
 
     const handleChange = (event: any, value: number) => {
