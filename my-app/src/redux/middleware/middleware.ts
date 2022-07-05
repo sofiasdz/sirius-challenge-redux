@@ -11,7 +11,6 @@ const charactersMiddleware = ({dispatch, getState}) => next => action => {
         case CHARACTER_REQUEST:
             getAllCharacterData(action.page)
                 .then((res) => {
-                    console.log(action)
                     dispatch(actions.characters.characterResponse(res.results))
                 })
                 .catch((err) => {

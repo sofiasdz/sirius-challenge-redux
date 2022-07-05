@@ -14,20 +14,18 @@ import actions from "./actions"
 
 function App() {
     const [search, setSearch] = useState("");
-    const dispatch =useDispatch()
+    const dispatch = useDispatch()
     // @ts-ignore
-    const status =useSelector((state)=> state.characters.status)
+    const status = useSelector((state)=> state.characters.status)
     // @ts-ignore
     const charactersState= useSelector((state)=> state.characters.characters)//state.characters(?
 
-    console.log(charactersState)
-    console.log(status)
+    console.log("render")
 
 
 
     useEffect(() => {
         dispatch(actions.characters.characterRequest(1)) //le tengo q mandar el numero de pagina
-
     }, [])
 
     return (

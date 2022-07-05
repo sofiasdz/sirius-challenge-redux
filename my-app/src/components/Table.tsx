@@ -33,19 +33,13 @@ const useStyles = makeStyles({
 const useStyles2 = makeStyles({
 
     root: {
-
-
         backgroundColor: MyTheme.palette.primary.dark,
         height: 50,
         '& ul > li:not(:first-child):not(:last-child) > button:not(.Mui-selected)': {
             backgroundColor: 'transparent',
             color: 'white',
             borderColor: MyTheme.palette.primary.main,
-
-
         },
-
-
     },
     ul: {
         height: 50,
@@ -118,32 +112,23 @@ type Props = {
     data: CharacterType[],
     search: string,
 
-
-
 }
-export default function BasicTable(props: Props) {
+const BasicTable = (props: Props) => {
     const classes = useStyles();
     const classes2 = useStyles2();
     const classes3 = useStyles3();
     const [species, setSpecies] = useState("des");
-    const [pageNumber, setPageNumber] = useState(1);
-    const dispatch =useDispatch();
+    // @ts-ignore
+    const pageNumber = useSelector(state => state.characters.pageNumber)
+    const dispatch = useDispatch();
 
 
     const handleChange = (event: any, value: number) => {
-        setPageNumber(value);
         dispatch(actions.characters.characterRequest(value))
-
-
     };
 
-
-
-
     return (
-
         <TableContainer className={classes3.root} component={Paper}>
-
             <TableHead classes={{root: classes.root}}>
                 <StyledTableRow>
                     <StyledTableCell align="left">Name</StyledTableCell>
@@ -166,8 +151,6 @@ export default function BasicTable(props: Props) {
                                     props.data.sort((a, b) => a.species.localeCompare(b.species)).reverse()
                                 }}><ArrowUpwardIcon/></Button>
                             }
-
-
                             <text>Species</text>
 
                         </div>
@@ -193,3 +176,5 @@ export default function BasicTable(props: Props) {
     );
 
 }
+
+export default BasicTable;
