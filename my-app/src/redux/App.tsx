@@ -3,7 +3,6 @@ import '../App.css';
 import {Box, Container,} from "@material-ui/core";
 import BasicTable from "../components/Table";
 import {SearchBox} from "../components/SearchBox";
-import {CharacterType} from "../Types/Types";
 import {ThemeProvider} from '@material-ui/core/styles';
 import {MyTheme} from "../components/Theme";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -14,20 +13,20 @@ import actions from "./actions"
 
 
 function App() {
-    const [characters, setCharacters] = useState<CharacterType[]>([]);
     const [search, setSearch] = useState("");
     const dispatch =useDispatch()
+    // @ts-ignore
+    const status =useSelector((state)=> state.characters.status)
     // @ts-ignore
     const charactersState= useSelector((state)=> state.characters.characters)//state.characters(?
 
     console.log(charactersState)
+    console.log(status)
+
+
 
     useEffect(() => {
         dispatch(actions.characters.characterRequest(1)) //le tengo q mandar el numero de pagina
-        //no estoy usando action creators
-        setCharacters(charactersState)
-
-
 
     }, [])
 
@@ -65,9 +64,16 @@ function App() {
 
 
                 {
-                    useSelector((state:any)=> state.characters.characters.status)==='loading' ? <div><text>Loading...</text></div> :
+                   status==="loading" ? <div>   <header style={{
+                           textAlign: "center",
+                           alignSelf: "center",
+                           color: MyTheme.palette.secondary.main,
+                           fontSize: 15,
+                           padding: 20
+                       }}>Loading...
+                       </header></div> :
 
-                        <BasicTable data={characters}  search={search}/>
+                        <BasicTable data={charactersState}  search={search}/>
 
                 }
 
