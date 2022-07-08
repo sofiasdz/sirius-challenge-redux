@@ -10,12 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="redux works but pagination doesnt">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="pagination works!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/middleware/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/middleware/middleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/reducers/characterReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/reducers/characterReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,14 +66,8 @@
       <workItem from="1656624236814" duration="306000" />
       <workItem from="1656677761397" duration="4083000" />
       <workItem from="1656705742603" duration="11395000" />
-      <workItem from="1657039069575" duration="11094000" />
-    </task>
-    <task id="LOCAL-00013" summary="trying to make the table cell component work">
-      <created>1655910769992</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1655910769992</updated>
+      <workItem from="1657039069575" duration="11510000" />
+      <workItem from="1657320574984" duration="468000" />
     </task>
     <task id="LOCAL-00014" summary="cell compenent and episode request works">
       <created>1655913504374</created>
@@ -414,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657050606660</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="pagination works!">
+      <created>1657052962992</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1657052962992</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +431,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="FUNCTIONALITY FINISHED" />
     <MESSAGE value="created theme with figma colors" />
     <MESSAGE value="change search box text color" />
     <MESSAGE value="changed dialog background color and centered items" />
@@ -458,7 +455,8 @@
     <MESSAGE value="redux works" />
     <MESSAGE value="changed state on table" />
     <MESSAGE value="redux works but pagination doesnt" />
-    <option name="LAST_COMMIT_MESSAGE" value="redux works but pagination doesnt" />
+    <MESSAGE value="pagination works!" />
+    <option name="LAST_COMMIT_MESSAGE" value="pagination works!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
@@ -469,10 +467,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657050610628">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657052964820">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657050610628" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657052964820" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
