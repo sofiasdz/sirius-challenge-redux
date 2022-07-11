@@ -67,12 +67,15 @@ export default function TableCellCharacter(props: Props) {
     const classes3 = useStyles3();
     const [open, setOpen] = useState(false);
 
-    const handleOpen = () => {
-        setOpen(true);
-    };
-    const handleClose = () => {
-        setOpen(false);
-    };
+
+
+    const toggleModal = ()=>{
+        if (open==true){
+            setOpen(false)
+        } else setOpen(true)
+
+
+    }
 
 
     const StyledTableRow = withStyles((theme) => ({
@@ -185,12 +188,12 @@ export default function TableCellCharacter(props: Props) {
                 </text>
             </StyledTableCell>
             <TableCell style={{borderBottom: "none"}} align="left">
-                <Button onClick={handleOpen}>
+                <Button onClick={toggleModal}>
                     <VisibilityIcon style={{color: MyTheme.palette.primary.contrastText}}></VisibilityIcon>
                     <div color={MyTheme.palette.primary.dark}>
                         <Dialog
                             open={open}
-                            onClose={handleClose}
+                            onClose={toggleModal}
                             aria-labelledby="alert-dialog-title"
                             aria-describedby="alert-dialog-description"
                             color={MyTheme.palette.primary.dark}

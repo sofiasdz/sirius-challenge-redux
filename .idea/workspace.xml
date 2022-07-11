@@ -10,10 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="removed error where useEffect() was called twice">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="removed unused code, imports and console logs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/api/CharacterApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/api/CharacterApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/SearchBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/SearchBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/TableCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/TableCell.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,14 +69,7 @@
       <workItem from="1656677761397" duration="4083000" />
       <workItem from="1656705742603" duration="11395000" />
       <workItem from="1657039069575" duration="11510000" />
-      <workItem from="1657320574984" duration="1151000" />
-    </task>
-    <task id="LOCAL-00015" summary="added elipsis with episodes">
-      <created>1655919275123</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1655919275123</updated>
+      <workItem from="1657320574984" duration="1810000" />
     </task>
     <task id="LOCAL-00016" summary="added tooltip">
       <created>1655920742101</created>
@@ -414,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657321561841</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="removed unused code, imports and console logs">
+      <created>1657554693049</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1657554693049</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +433,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change search box text color" />
     <MESSAGE value="changed dialog background color and centered items" />
     <MESSAGE value="Dialog finished, looks like figma" />
     <MESSAGE value="table looks closer to figma" />
@@ -458,7 +457,8 @@
     <MESSAGE value="redux works but pagination doesnt" />
     <MESSAGE value="pagination works!" />
     <MESSAGE value="removed error where useEffect() was called twice" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed error where useEffect() was called twice" />
+    <MESSAGE value="removed unused code, imports and console logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed unused code, imports and console logs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">

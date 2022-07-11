@@ -45,11 +45,11 @@ export function SearchBox(props: Props) {
             <ButtonGroup style={{marginBottom: 20}}>
                 <Button style={{borderColor: MyTheme.palette.primary.dark}} disabled onClick={() => {
                 }}><SearchIcon style={{color: MyTheme.palette.secondary.main}}></SearchIcon></Button>
-                <div>
+
                     <TextField variant={"standard"} color='secondary' value={props.search}
                                placeholder={'Search Character'} onChange={e => props.setSearch(e.target.value)}
                                InputProps={{classes}}/>
-                </div>
+
             </ButtonGroup>
         </ThemeProvider>
     )
