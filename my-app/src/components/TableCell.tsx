@@ -61,7 +61,7 @@ const useTextFieldStyles = makeStyles({
     }
 });
 
-export default function TableCellCharacter(props: Props) {
+const TableCellCharacter=(props: Props) =>{
     const classesForm = useFormStyles();
     const classesDialogContent = useDialogContentStyles();
     const classesTextField = useTextFieldStyles();
@@ -343,3 +343,5 @@ export default function TableCellCharacter(props: Props) {
 
     )
 }
+
+export default TableCellCharacter

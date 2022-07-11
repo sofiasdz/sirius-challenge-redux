@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import '../App.css';
 import {Box, Container,} from "@material-ui/core";
 import BasicTable from "../components/Table";
-import {SearchBox} from "../components/SearchBox";
 import {ThemeProvider} from '@material-ui/core/styles';
 import {MyTheme} from "../components/Theme";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -10,6 +9,7 @@ import logo from '../resources/logo_alta_ 1 1.png'
 import {Provider, useDispatch, useSelector} from 'react-redux'
 import store from "./store"
 import actions from "./actions"
+import SearchBox from "../components/SearchBox";
 
 
 function App() {
