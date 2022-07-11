@@ -20,7 +20,6 @@ function App() {
     // @ts-ignore
     const charactersState= useSelector((state)=> state.characters.characters)//state.characters(?
 
-    console.log("render")
 
 
 
