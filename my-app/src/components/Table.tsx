@@ -68,7 +68,7 @@ const usePainationStyles = makeStyles({
 
 
 });
-const useTableContainerStyles = makeStyles({
+const useStyles3 = makeStyles({
 
     root: {
         borderRadius: 10,
@@ -116,7 +116,7 @@ type Props = {
 const BasicTable = (props: Props) => {
     const classesTableHead = useTableHeadStyles();
     const classesPagination = usePainationStyles();
-    const classesTableContainer = useTableContainerStyles();
+    const classesTableContainer = useStyles3();
     const [species, setSpecies] = useState("des");
     // @ts-ignore
     const pageNumber = useSelector(state => state.characters.pageNumber)
@@ -162,7 +162,7 @@ const BasicTable = (props: Props) => {
                 </StyledTableRow>
             </TableHead>
 
-            {props.data.filter(f => f.name.toLowerCase().includes(props.search.toLowerCase()) || props.search === '')
+            {props.data.filter(character => character.name.toLowerCase().includes(props.search.toLowerCase()) || props.search === '')
                 .map((c) => (
                     <TableCellCharacter character={c}/>
                 ))}
