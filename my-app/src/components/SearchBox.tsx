@@ -9,7 +9,7 @@ type Props = {
     search: string
     setSearch: any
 }
-const useStyles = makeStyles({
+const useTextFieldStyles = makeStyles({
     input: {
         fontSize: 20,
         color: 'rgba(0, 223, 221, 1)',
@@ -35,20 +35,43 @@ const useStyles = makeStyles({
 
 });
 
+const useButtonGroupStyles = makeStyles({
+    root: {
+        marginBottom: 20
+    },
+
+
+});
+const useButtonStyles = makeStyles({
+    root: {
+        borderColor: MyTheme.palette.primary.dark
+    },
+
+
+});
+const useSearchStyles = makeStyles({
+    root: {
+        color: MyTheme.palette.secondary.main
+    },
+
+
+});
 
 const SearchBox = (props: Props) => {
-    const classes = useStyles();
-
+    const classesTextField = useTextFieldStyles();
+    const classesButtonGroup= useButtonGroupStyles();
+    const classesButton = useButtonStyles();
+    const classesSearch = useSearchStyles();
 
     return (
         <ThemeProvider theme={MyTheme}>
-            <ButtonGroup style={{marginBottom: 20}}>
-                <Button style={{borderColor: MyTheme.palette.primary.dark}} disabled onClick={() => {
-                }}><SearchIcon style={{color: MyTheme.palette.secondary.main}}></SearchIcon></Button>
+            <ButtonGroup classes={{root:classesButtonGroup.root}}>
+                <Button classes={{root:classesButton.root}} disabled onClick={() => {
+                }}><SearchIcon classes={{root:classesSearch.root}}></SearchIcon></Button>
 
                 <TextField variant={"standard"} color='secondary' value={props.search}
                            placeholder={'Search Character'} onChange={e => props.setSearch(e.target.value)}
-                           InputProps={{classes}}/>
+                           InputProps={{classes: classesTextField}}/>
 
             </ButtonGroup>
         </ThemeProvider>

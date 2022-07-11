@@ -10,12 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="defined all functional compenents as arrow functions">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="Fixed html spaces and indentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/SearchBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/SearchBox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/TableCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/TableCell.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,14 +68,7 @@
       <workItem from="1656677761397" duration="4083000" />
       <workItem from="1656705742603" duration="11395000" />
       <workItem from="1657039069575" duration="11510000" />
-      <workItem from="1657320574984" duration="5261000" />
-    </task>
-    <task id="LOCAL-00022" summary="sorting alfabetically by species works!">
-      <created>1655992825246</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1655992825246</updated>
+      <workItem from="1657320574984" duration="6434000" />
     </task>
     <task id="LOCAL-00023" summary="added pagination ui">
       <created>1655995785665</created>
@@ -416,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657560156315</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Fixed html spaces and indentation">
+      <created>1657560824433</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1657560824434</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,7 +432,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added sirius logo" />
     <MESSAGE value="made the  character details dialog wider" />
     <MESSAGE value="minor styling fixes" />
     <MESSAGE value="FINISHED STYLING" />
@@ -460,7 +456,8 @@
     <MESSAGE value="fixed species button so that the arrow sits besides the text" />
     <MESSAGE value="made the filter functions a single handler" />
     <MESSAGE value="defined all functional compenents as arrow functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="defined all functional compenents as arrow functions" />
+    <MESSAGE value="Fixed html spaces and indentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed html spaces and indentation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
@@ -471,10 +468,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657560160891">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657560826530">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657560160891" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657560826530" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
