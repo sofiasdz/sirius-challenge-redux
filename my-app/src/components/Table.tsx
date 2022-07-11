@@ -126,6 +126,16 @@ const BasicTable = (props: Props) => {
     const handleChange = (event: any, value: number) => {
         dispatch(actions.characters.characterRequest(value))
     };
+    const sortHandler = (order:string) => {
+        if (order=='des'){
+            setSpecies('des')
+            props.data.sort((a, b) => a.species.localeCompare(b.species))
+        }
+        else{
+            setSpecies('asd')
+            props.data.sort((a, b) => a.species.localeCompare(b.species)).reverse()
+        }
+    };
 
     return (
         <TableContainer className={classesTableContainer.root} component={Paper}>
@@ -137,19 +147,11 @@ const BasicTable = (props: Props) => {
                         <div style={{flexDirection: 'row', justifyContent: 'space-between', flex: 1,}}>
 
                             {species === 'asd' ?
-                                <Button color={"secondary"} onClick={
-                                    () => {
-                                        setSpecies('des')
-                                        props.data.sort((a, b) => a.species.localeCompare(b.species))
-                                    }}>
+                                <Button color={"secondary"} onClick={() => sortHandler('des')}>
                                     Species<ArrowDownwardIcon/>
                                 </Button>
                                 :
-
-                                <Button color={"secondary"} onClick={() => {
-                                    setSpecies('asd')
-                                    props.data.sort((a, b) => a.species.localeCompare(b.species)).reverse()
-                                }}>Species<ArrowUpwardIcon/></Button>
+                                <Button color={"secondary"} onClick={() => sortHandler('asd')}>Species<ArrowUpwardIcon/></Button>
                             }
 
 

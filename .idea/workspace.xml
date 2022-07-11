@@ -10,7 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="changed f in filter to character">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="fixed species button so that the arrow sits besides the text">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Table.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,14 +68,7 @@
       <workItem from="1656677761397" duration="4083000" />
       <workItem from="1656705742603" duration="11395000" />
       <workItem from="1657039069575" duration="11510000" />
-      <workItem from="1657320574984" duration="3142000" />
-    </task>
-    <task id="LOCAL-00019" summary="search bar works">
-      <created>1655988130894</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1655988130894</updated>
+      <workItem from="1657320574984" duration="3892000" />
     </task>
     <task id="LOCAL-00020" summary="Implemented sorting species buttons">
       <created>1655990727754</created>
@@ -412,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657557843538</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="fixed species button so that the arrow sits besides the text">
+      <created>1657558360440</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1657558360440</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,7 +432,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed table body text and icons to white" />
     <MESSAGE value="pagination matches table" />
     <MESSAGE value="fixed styling issues" />
     <MESSAGE value="added sirius logo" />
@@ -456,7 +456,8 @@
     <MESSAGE value="unified methods open modal and close modal into toggle modal" />
     <MESSAGE value="Defined clasese 1,2,3 more clearly in every component" />
     <MESSAGE value="changed f in filter to character" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed f in filter to character" />
+    <MESSAGE value="fixed species button so that the arrow sits besides the text" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed species button so that the arrow sits besides the text" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
@@ -467,10 +468,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657557845890">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657558362622">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657557845890" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657558362622" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
