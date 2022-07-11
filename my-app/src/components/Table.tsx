@@ -14,7 +14,7 @@ import Pagination from "@material-ui/lab/Pagination";
 import {MyTheme} from "./Theme";
 import {useDispatch, useSelector} from "react-redux";
 import actions from "../redux/actions"
-const useStyles = makeStyles({
+const useTableHeadStyles = makeStyles({
     table: {
         minWidth: 650,
         borderRadius: 10,
@@ -30,7 +30,7 @@ const useStyles = makeStyles({
 
 });
 
-const useStyles2 = makeStyles({
+const usePainationStyles = makeStyles({
 
     root: {
         backgroundColor: MyTheme.palette.primary.dark,
@@ -68,7 +68,7 @@ const useStyles2 = makeStyles({
 
 
 });
-const useStyles3 = makeStyles({
+const useTableContainerStyles = makeStyles({
 
     root: {
         borderRadius: 10,
@@ -114,9 +114,9 @@ type Props = {
 
 }
 const BasicTable = (props: Props) => {
-    const classes = useStyles();
-    const classes2 = useStyles2();
-    const classes3 = useStyles3();
+    const classesTableHead = useTableHeadStyles();
+    const classesPagination = usePainationStyles();
+    const classesTableContainer = useTableContainerStyles();
     const [species, setSpecies] = useState("des");
     // @ts-ignore
     const pageNumber = useSelector(state => state.characters.pageNumber)
@@ -128,8 +128,8 @@ const BasicTable = (props: Props) => {
     };
 
     return (
-        <TableContainer className={classes3.root} component={Paper}>
-            <TableHead classes={{root: classes.root}}>
+        <TableContainer className={classesTableContainer.root} component={Paper}>
+            <TableHead classes={{root: classesTableHead.root}}>
                 <StyledTableRow>
                     <StyledTableCell align="left">Name</StyledTableCell>
                     <StyledTableCell align="left">Status</StyledTableCell>
@@ -168,7 +168,7 @@ const BasicTable = (props: Props) => {
                 ))}
 
 
-            <Pagination classes={{root: classes2.root, ul: classes2.ul}} count={10} page={pageNumber}
+            <Pagination classes={{root: classesPagination.root, ul: classesPagination.ul}} count={10} page={pageNumber}
                         variant={'outlined'} onChange={handleChange} size="large"/>
 
         </TableContainer>

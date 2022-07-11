@@ -13,7 +13,7 @@ type Props = {
 }
 
 
-const useStyles = makeStyles((theme: Theme) =>
+const useFormStyles = makeStyles((theme: Theme) =>
     createStyles({
         paper: {
             position: 'absolute',
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
     }),
 );
-const useStyles2 = makeStyles({
+const useDialogContentStyles = makeStyles({
     root: {
         flex: 1,
         flexDirection: 'column',
@@ -51,7 +51,7 @@ const useStyles2 = makeStyles({
 
     },
 });
-const useStyles3 = makeStyles({
+const useTextFieldStyles = makeStyles({
     root: {
         background: MyTheme.palette.primary.contrastText,
         borderRadius: 4,
@@ -62,14 +62,16 @@ const useStyles3 = makeStyles({
 });
 
 export default function TableCellCharacter(props: Props) {
-    const classes = useStyles();
-    const classes2 = useStyles2();
-    const classes3 = useStyles3();
+    const classesForm = useFormStyles();
+    const classesDialogContent = useDialogContentStyles();
+    const classesTextField = useTextFieldStyles();
+
     const [open, setOpen] = useState(false);
 
 
 
     const toggleModal = ()=>{
+
         if (open==true){
             setOpen(false)
         } else setOpen(true)
@@ -209,7 +211,7 @@ export default function TableCellCharacter(props: Props) {
                         >
                             <DialogContent>
                                 <DialogContentText classes={{
-                                    root: classes2.root, // class name, e.g. `classes-nesting-root-x`
+                                    root: classesDialogContent.root, // class name, e.g. `classes-nesting-root-x`
 
                                 }}>
                                     <div style={{
@@ -226,7 +228,7 @@ export default function TableCellCharacter(props: Props) {
                                     </div>
 
 
-                                    <form color={MyTheme.palette.primary.dark} className={classes.root} noValidate
+                                    <form color={MyTheme.palette.primary.dark} className={classesForm.root} noValidate
                                           autoComplete="off">
                                         <div style={{
 
@@ -240,7 +242,7 @@ export default function TableCellCharacter(props: Props) {
                                             <TextField id="standard-read-only-input"
 
                                                        defaultValue={props.character.name}
-                                                       className={classes3.root}
+                                                       className={classesTextField.root}
                                                        inputProps={{readOnly: true}}
                                                        variant="outlined"
 
@@ -252,7 +254,7 @@ export default function TableCellCharacter(props: Props) {
                                             <TextField id="standard-read-only-input"
 
                                                        defaultValue={props.character.id}
-                                                       className={classes3.root}
+                                                       className={classesTextField.root}
                                                        InputProps={{
                                                            readOnly: true,
                                                        }}
@@ -268,7 +270,7 @@ export default function TableCellCharacter(props: Props) {
                                                        InputProps={{
                                                            readOnly: true,
                                                        }} variant="outlined"
-                                                       className={classes3.root}/>
+                                                       className={classesTextField.root}/>
                                             <text
                                                 style={{color: MyTheme.palette.primary.contrastText, fontSize: 15}}>Type
                                             </text>
@@ -280,7 +282,7 @@ export default function TableCellCharacter(props: Props) {
                                                        }}
 
                                                        variant="outlined"
-                                                       className={classes3.root}/>
+                                                       className={classesTextField.root}/>
                                             <text style={{
                                                 color: MyTheme.palette.primary.contrastText,
                                                 fontSize: 15
@@ -294,7 +296,7 @@ export default function TableCellCharacter(props: Props) {
                                                        }}
 
                                                        variant="outlined"
-                                                       className={classes3.root}
+                                                       className={classesTextField.root}
                                             />
                                             <text style={{
                                                 color: MyTheme.palette.primary.contrastText,
@@ -308,7 +310,7 @@ export default function TableCellCharacter(props: Props) {
                                                            readOnly: true,
                                                        }}
 
-                                                       className={classes3.root}
+                                                       className={classesTextField.root}
                                                        variant="outlined"
                                             />
                                             <text style={{
@@ -323,7 +325,7 @@ export default function TableCellCharacter(props: Props) {
                                                        }}
 
                                                        variant="outlined"
-                                                       className={classes3.root}/>
+                                                       className={classesTextField.root}/>
 
 
                                         </div>
