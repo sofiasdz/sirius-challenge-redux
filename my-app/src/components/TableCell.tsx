@@ -61,7 +61,7 @@ const useTextFieldStyles = makeStyles({
     }
 });
 
-const TableCellCharacter=(props: Props) =>{
+const TableCellCharacter = (props: Props) => {
     const classesForm = useFormStyles();
     const classesDialogContent = useDialogContentStyles();
     const classesTextField = useTextFieldStyles();
@@ -69,10 +69,9 @@ const TableCellCharacter=(props: Props) =>{
     const [open, setOpen] = useState(false);
 
 
+    const toggleModal = () => {
 
-    const toggleModal = ()=>{
-
-        if (open==true){
+        if (open == true) {
             setOpen(false)
         } else setOpen(true)
 

@@ -14,6 +14,7 @@ import Pagination from "@material-ui/lab/Pagination";
 import {MyTheme} from "./Theme";
 import {useDispatch, useSelector} from "react-redux";
 import actions from "../redux/actions"
+
 const useTableHeadStyles = makeStyles({
     table: {
         minWidth: 650,
@@ -126,12 +127,11 @@ const BasicTable = (props: Props) => {
     const handleChange = (event: any, value: number) => {
         dispatch(actions.characters.characterRequest(value))
     };
-    const sortHandler = (order:string) => {
-        if (order=='des'){
+    const sortHandler = (order: string) => {
+        if (order == 'des') {
             setSpecies('des')
             props.data.sort((a, b) => a.species.localeCompare(b.species))
-        }
-        else{
+        } else {
             setSpecies('asd')
             props.data.sort((a, b) => a.species.localeCompare(b.species)).reverse()
         }

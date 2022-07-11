@@ -36,7 +36,7 @@ const useStyles = makeStyles({
 });
 
 
- const SearchBox=(props: Props) => {
+const SearchBox = (props: Props) => {
     const classes = useStyles();
 
 
@@ -46,9 +46,9 @@ const useStyles = makeStyles({
                 <Button style={{borderColor: MyTheme.palette.primary.dark}} disabled onClick={() => {
                 }}><SearchIcon style={{color: MyTheme.palette.secondary.main}}></SearchIcon></Button>
 
-                    <TextField variant={"standard"} color='secondary' value={props.search}
-                               placeholder={'Search Character'} onChange={e => props.setSearch(e.target.value)}
-                               InputProps={{classes}}/>
+                <TextField variant={"standard"} color='secondary' value={props.search}
+                           placeholder={'Search Character'} onChange={e => props.setSearch(e.target.value)}
+                           InputProps={{classes}}/>
 
             </ButtonGroup>
         </ThemeProvider>

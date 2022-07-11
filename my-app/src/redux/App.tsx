@@ -16,11 +16,9 @@ function App() {
     const [search, setSearch] = useState("");
     const dispatch = useDispatch()
     // @ts-ignore
-    const status = useSelector((state)=> state.characters.status)
+    const status = useSelector((state) => state.characters.status)
     // @ts-ignore
-    const charactersState= useSelector((state)=> state.characters.characters)//state.characters(?
-
-
+    const charactersState = useSelector((state) => state.characters.characters)//state.characters(?
 
 
     useEffect(() => {
@@ -61,16 +59,18 @@ function App() {
 
 
                 {
-                   status==="loading" ? <div>   <header style={{
-                           textAlign: "center",
-                           alignSelf: "center",
-                           color: MyTheme.palette.secondary.main,
-                           fontSize: 15,
-                           padding: 20
-                       }}>Loading...
-                       </header></div> :
+                    status === "loading" ? <div>
+                            <header style={{
+                                textAlign: "center",
+                                alignSelf: "center",
+                                color: MyTheme.palette.secondary.main,
+                                fontSize: 15,
+                                padding: 20
+                            }}>Loading...
+                            </header>
+                        </div> :
 
-                        <BasicTable data={charactersState}  search={search}/>
+                        <BasicTable data={charactersState} search={search}/>
 
                 }
 
