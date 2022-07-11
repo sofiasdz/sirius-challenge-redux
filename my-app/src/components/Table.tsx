@@ -142,16 +142,16 @@ const BasicTable = (props: Props) => {
                                         setSpecies('des')
                                         props.data.sort((a, b) => a.species.localeCompare(b.species))
                                     }}>
-                                    <ArrowDownwardIcon/>
+                                    Species<ArrowDownwardIcon/>
                                 </Button>
                                 :
 
                                 <Button color={"secondary"} onClick={() => {
                                     setSpecies('asd')
                                     props.data.sort((a, b) => a.species.localeCompare(b.species)).reverse()
-                                }}><ArrowUpwardIcon/></Button>
+                                }}>Species<ArrowUpwardIcon/></Button>
                             }
-                            <text>Species</text>
+
 
                         </div>
                     </StyledTableCell>

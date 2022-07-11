@@ -10,11 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="unified methods open modal and close modal into toggle modal">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="changed f in filter to character">
       <change beforePath="$PROJECT_DIR$/my-app/src/components/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/TableCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/TableCell.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,21 +67,7 @@
       <workItem from="1656677761397" duration="4083000" />
       <workItem from="1656705742603" duration="11395000" />
       <workItem from="1657039069575" duration="11510000" />
-      <workItem from="1657320574984" duration="2747000" />
-    </task>
-    <task id="LOCAL-00017" summary="scraped episode list">
-      <created>1655925934691</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1655925934691</updated>
-    </task>
-    <task id="LOCAL-00018" summary="tooltip shows episode list">
-      <created>1655987156479</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1655987156480</updated>
+      <workItem from="1657320574984" duration="3142000" />
     </task>
     <task id="LOCAL-00019" summary="search bar works">
       <created>1655988130894</created>
@@ -415,7 +398,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657556787132</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Defined clasese 1,2,3 more clearly in every component">
+      <created>1657557757413</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1657557757413</updated>
+    </task>
+    <task id="LOCAL-00067" summary="changed f in filter to character">
+      <created>1657557843538</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1657557843538</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,8 +431,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Dialog finished, looks like figma" />
-    <MESSAGE value="table looks closer to figma" />
     <MESSAGE value="changed table body text and icons to white" />
     <MESSAGE value="pagination matches table" />
     <MESSAGE value="fixed styling issues" />
@@ -459,7 +454,9 @@
     <MESSAGE value="removed error where useEffect() was called twice" />
     <MESSAGE value="removed unused code, imports and console logs" />
     <MESSAGE value="unified methods open modal and close modal into toggle modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="unified methods open modal and close modal into toggle modal" />
+    <MESSAGE value="Defined clasese 1,2,3 more clearly in every component" />
+    <MESSAGE value="changed f in filter to character" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed f in filter to character" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
@@ -470,10 +467,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657556790485">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657557845890">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657556790485" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657557845890" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
