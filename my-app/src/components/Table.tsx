@@ -115,6 +115,8 @@ type Props = {
 
 }
 const BasicTable = (props: Props) => {
+    const {search}=props
+    const {data}=props
     const classesTableHead = useTableHeadStyles();
     const classesPagination = usePainationStyles();
     const classesTableContainer = useStyles3();
@@ -130,10 +132,10 @@ const BasicTable = (props: Props) => {
     const sortHandler = (order: string) => {
         if (order == 'des') {
             setSpecies('des')
-            props.data.sort((a, b) => a.species.localeCompare(b.species))
+            data.sort((a, b) => a.species.localeCompare(b.species))
         } else {
             setSpecies('asd')
-            props.data.sort((a, b) => a.species.localeCompare(b.species)).reverse()
+            data.sort((a, b) => a.species.localeCompare(b.species)).reverse()
         }
     };
 
@@ -164,7 +166,7 @@ const BasicTable = (props: Props) => {
                 </StyledTableRow>
             </TableHead>
 
-            {props.data.filter(character => character.name.toLowerCase().includes(props.search.toLowerCase()) || props.search === '')
+            {data.filter(character => character.name.toLowerCase().includes(search.toLowerCase()) || search === '')
                 .map((c) => (
                     <TableCellCharacter character={c}/>
                 ))}

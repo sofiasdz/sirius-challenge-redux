@@ -62,6 +62,7 @@ const useTextFieldStyles = makeStyles({
 });
 
 const TableCellCharacter = (props: Props) => {
+    const {character}=props
     const classesForm = useFormStyles();
     const classesDialogContent = useDialogContentStyles();
     const classesTextField = useTextFieldStyles();
@@ -143,38 +144,38 @@ const TableCellCharacter = (props: Props) => {
 
     return (
 
-        <StyledTableRow key={props.character.id}>
+        <StyledTableRow key={character.id}>
             <TableCell style={{borderBottom: "none"}} align="left">
                 <text style={{color: MyTheme.palette.primary.contrastText}}>
-                    {props.character.name}
+                    {character.name}
                 </text>
             </TableCell>
             <StyledTableCell align="left">
                 <text style={{color: MyTheme.palette.primary.contrastText}}>
-                    {props.character.status}
+                    {character.status}
                 </text>
             </StyledTableCell>
             <StyledTableCell align="left">
                 <text style={{color: MyTheme.palette.primary.contrastText}}>
-                    {props.character.species}
+                    {character.species}
                 </text>
             </StyledTableCell>
             <StyledTableCell align="left">
                 <text style={{color: MyTheme.palette.primary.contrastText}}>
-                    {props.character.gender}
+                    {character.gender}
                 </text>
             </StyledTableCell>
 
 
-            <LightTooltip disableFocusListener disableTouchListener title={props.character.episode.join(", ")}>
+            <LightTooltip disableFocusListener disableTouchListener title={character.episode.join(", ")}>
 
                 <StyledTableCell align="left">
                     <text style={{color: MyTheme.palette.primary.contrastText}}>
                         <Ellipsis
                             ellipsis="..."
                             label=""
-                            id={props.character.id}
-                            text={props.character.episode.join(", ")}
+                            id={character.id}
+                            text={character.episode.join(", ")}
                             limit={20}
                             class="more"
                             mode={EllipsisMode.After}/>
@@ -185,7 +186,7 @@ const TableCellCharacter = (props: Props) => {
 
             <StyledTableCell align="left">
                 <text style={{color: MyTheme.palette.primary.contrastText}}>
-                    {props.character.type}
+                    {character.type}
                 </text>
             </StyledTableCell>
             <TableCell style={{borderBottom: "none"}} align="left">
@@ -223,7 +224,7 @@ const TableCellCharacter = (props: Props) => {
                                         paddingLeft: 130,
                                         paddingBottom: 5
                                     }}>
-                                        <img style={{borderRadius: 200, height: 120}} src={props.character.image}></img>
+                                        <img style={{borderRadius: 200, height: 120}} src={character.image}></img>
                                     </div>
 
 
@@ -240,7 +241,7 @@ const TableCellCharacter = (props: Props) => {
 
                                             <TextField id="standard-read-only-input"
 
-                                                       defaultValue={props.character.name}
+                                                       defaultValue={character.name}
                                                        className={classesTextField.root}
                                                        inputProps={{readOnly: true}}
                                                        variant="outlined"
@@ -252,7 +253,7 @@ const TableCellCharacter = (props: Props) => {
                                             </text>
                                             <TextField id="standard-read-only-input"
 
-                                                       defaultValue={props.character.id}
+                                                       defaultValue={character.id}
                                                        className={classesTextField.root}
                                                        InputProps={{
                                                            readOnly: true,
@@ -265,7 +266,7 @@ const TableCellCharacter = (props: Props) => {
                                                 Date
                                             </text>
                                             <TextField id="standard-read-only-input"
-                                                       defaultValue={props.character.created}
+                                                       defaultValue={character.created}
                                                        InputProps={{
                                                            readOnly: true,
                                                        }} variant="outlined"
@@ -275,7 +276,7 @@ const TableCellCharacter = (props: Props) => {
                                             </text>
                                             <TextField id="standard-read-only-input"
 
-                                                       defaultValue={props.character.type}
+                                                       defaultValue={character.type}
                                                        InputProps={{
                                                            readOnly: true,
                                                        }}
@@ -289,7 +290,7 @@ const TableCellCharacter = (props: Props) => {
                                             </text>
                                             <TextField id="standard-read-only-input"
 
-                                                       defaultValue={props.character.gender}
+                                                       defaultValue={character.gender}
                                                        InputProps={{
                                                            readOnly: true,
                                                        }}
@@ -304,7 +305,7 @@ const TableCellCharacter = (props: Props) => {
                                             </text>
                                             <TextField id="standard-read-only-input"
 
-                                                       defaultValue={props.character.origin.name}
+                                                       defaultValue={character.origin.name}
                                                        InputProps={{
                                                            readOnly: true,
                                                        }}
@@ -318,7 +319,7 @@ const TableCellCharacter = (props: Props) => {
                                             }}>Location
                                             </text>
                                             <TextField id="standard-read-only-input"
-                                                       defaultValue={props.character.location.name}
+                                                       defaultValue={character.location.name}
                                                        InputProps={{
                                                            readOnly: true,
                                                        }}
