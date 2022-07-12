@@ -10,9 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="added a catch to the request with an alert that displays que error">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="props in all functional components are destructured">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/api/CharacterApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/api/CharacterApi.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Table.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/TableCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/TableCell.tsx" afterDir="false" />
     </list>
@@ -71,14 +70,7 @@
       <workItem from="1656705742603" duration="11395000" />
       <workItem from="1657039069575" duration="11510000" />
       <workItem from="1657320574984" duration="7834000" />
-      <workItem from="1657645323060" duration="983000" />
-    </task>
-    <task id="LOCAL-00025" summary="pagination still doesnt work">
-      <created>1656073507424</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1656073507424</updated>
+      <workItem from="1657645323060" duration="3428000" />
     </task>
     <task id="LOCAL-00026" summary="pagination still doesnt work">
       <created>1656076471584</created>
@@ -416,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657646003541</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="props in all functional components are destructured">
+      <created>1657646650843</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1657646650843</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,7 +434,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="FINISHED STYLING" />
     <MESSAGE value="changed search box to match figma" />
     <MESSAGE value="wip implementing redux, created first store, reducer and action" />
     <MESSAGE value="created accions for request, responde and error" />
@@ -460,7 +458,8 @@
     <MESSAGE value="Fixed html spaces and indentation" />
     <MESSAGE value="removed inline styling in searchbox component" />
     <MESSAGE value="added a catch to the request with an alert that displays que error" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a catch to the request with an alert that displays que error" />
+    <MESSAGE value="props in all functional components are destructured" />
+    <option name="LAST_COMMIT_MESSAGE" value="props in all functional components are destructured" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
@@ -471,10 +470,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657646007283">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657646656058">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657646007283" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657646656058" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

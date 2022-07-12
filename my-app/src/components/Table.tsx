@@ -69,7 +69,7 @@ const usePainationStyles = makeStyles({
 
 
 });
-const useStyles3 = makeStyles({
+const useTableContainerStyles = makeStyles({
 
     root: {
         borderRadius: 10,
@@ -83,6 +83,16 @@ const useStyles3 = makeStyles({
 
 
     }
+});
+
+const useContainerStyles = makeStyles({
+
+    root: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        flex: 1
+    },
+
 });
 
 
@@ -119,7 +129,8 @@ const BasicTable = (props: Props) => {
     const {data}=props
     const classesTableHead = useTableHeadStyles();
     const classesPagination = usePainationStyles();
-    const classesTableContainer = useStyles3();
+    const classesTableContainer = useTableContainerStyles();
+    const classesContainer = useContainerStyles();
     const [species, setSpecies] = useState("des");
     // @ts-ignore
     const pageNumber = useSelector(state => state.characters.pageNumber)
@@ -146,7 +157,7 @@ const BasicTable = (props: Props) => {
                     <StyledTableCell align="left">Name</StyledTableCell>
                     <StyledTableCell align="left">Status</StyledTableCell>
                     <StyledTableCell align="left">
-                        <div style={{flexDirection: 'row', justifyContent: 'space-between', flex: 1,}}>
+                        <div className={classesContainer.root}>
 
                             {species === 'asd' ?
                                 <Button color={"secondary"} onClick={() => sortHandler('des')}>

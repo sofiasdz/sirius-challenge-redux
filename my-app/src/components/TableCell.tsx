@@ -40,7 +40,7 @@ const useDialogContentStyles = makeStyles({
         alignItems: 'center',
         alignContent: 'center',
         paddingRight: 50,
-        paddingLeft: 10,
+        paddingLeft: 20,
 
 
     },
@@ -51,6 +51,32 @@ const useDialogContentStyles = makeStyles({
 
     },
 });
+const useTableCellStyles = makeStyles({
+    root: {
+        borderBottom: "none"
+
+    }
+});
+
+const useTitleTextStyles = makeStyles({
+    root: {
+        color: MyTheme.palette.primary.contrastText
+    }
+});
+
+const useDialogContainerStyles = makeStyles({
+    root: {
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignContent: 'center',
+        paddingRight: 60,
+        paddingLeft: 130,
+        paddingBottom: 5
+    }
+});
+
 const useTextFieldStyles = makeStyles({
     root: {
         background: MyTheme.palette.primary.contrastText,
@@ -60,12 +86,31 @@ const useTextFieldStyles = makeStyles({
 
     }
 });
+const useImgStyles = makeStyles({
+    root: {
+        borderRadius: 200, height: 120
+    }
+});
+
+const useFormTextStyles = makeStyles({
+    root: {
+        color: MyTheme.palette.primary.contrastText,
+        fontSize: 15
+    }
+});
+
 
 const TableCellCharacter = (props: Props) => {
     const {character}=props
     const classesForm = useFormStyles();
     const classesDialogContent = useDialogContentStyles();
     const classesTextField = useTextFieldStyles();
+    const classesTableCell = useTableCellStyles();
+    const classesTitleText = useTitleTextStyles();
+    const classesDialogContainer = useDialogContainerStyles();
+    const classesImg = useImgStyles();
+    const classesFormText = useFormTextStyles();
+
 
     const [open, setOpen] = useState(false);
 
@@ -108,6 +153,8 @@ const TableCellCharacter = (props: Props) => {
 
     }))(TableRow);
 
+
+
     const StyledTableCell = withStyles((theme) => ({
         root: {
             '&:nth-of-type(odd)': {
@@ -145,23 +192,23 @@ const TableCellCharacter = (props: Props) => {
     return (
 
         <StyledTableRow key={character.id}>
-            <TableCell style={{borderBottom: "none"}} align="left">
-                <text style={{color: MyTheme.palette.primary.contrastText}}>
+            <TableCell classes={{root:classesTableCell.root}} align="left">
+                <text className={classesTitleText.root}>
                     {character.name}
                 </text>
             </TableCell>
             <StyledTableCell align="left">
-                <text style={{color: MyTheme.palette.primary.contrastText}}>
+                <text className={classesTitleText.root}>
                     {character.status}
                 </text>
             </StyledTableCell>
             <StyledTableCell align="left">
-                <text style={{color: MyTheme.palette.primary.contrastText}}>
+                <text className={classesTitleText.root}>
                     {character.species}
                 </text>
             </StyledTableCell>
             <StyledTableCell align="left">
-                <text style={{color: MyTheme.palette.primary.contrastText}}>
+                <text className={classesTitleText.root}>
                     {character.gender}
                 </text>
             </StyledTableCell>
@@ -170,7 +217,7 @@ const TableCellCharacter = (props: Props) => {
             <LightTooltip disableFocusListener disableTouchListener title={character.episode.join(", ")}>
 
                 <StyledTableCell align="left">
-                    <text style={{color: MyTheme.palette.primary.contrastText}}>
+                    <text className={classesTitleText.root}>
                         <Ellipsis
                             ellipsis="..."
                             label=""
@@ -185,14 +232,14 @@ const TableCellCharacter = (props: Props) => {
 
 
             <StyledTableCell align="left">
-                <text style={{color: MyTheme.palette.primary.contrastText}}>
+                <text className={classesTitleText.root}>
                     {character.type}
                 </text>
             </StyledTableCell>
-            <TableCell style={{borderBottom: "none"}} align="left">
+            <TableCell classes={{root:classesTableCell.root}} align="left">
                 <Button onClick={toggleModal}>
-                    <VisibilityIcon style={{color: MyTheme.palette.primary.contrastText}}></VisibilityIcon>
-                    <div color={MyTheme.palette.primary.dark}>
+                    <VisibilityIcon className={classesTitleText.root}/>
+                    <div >
                         <Dialog
                             open={open}
                             onClose={toggleModal}
@@ -211,32 +258,19 @@ const TableCellCharacter = (props: Props) => {
                         >
                             <DialogContent>
                                 <DialogContentText classes={{
-                                    root: classesDialogContent.root, // class name, e.g. `classes-nesting-root-x`
+                                    root: classesDialogContent.root,
 
                                 }}>
-                                    <div style={{
-                                        flex: 1,
-                                        flexDirection: 'column',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        alignContent: 'center',
-                                        paddingRight: 60,
-                                        paddingLeft: 130,
-                                        paddingBottom: 5
-                                    }}>
-                                        <img style={{borderRadius: 200, height: 120}} src={character.image}></img>
+                                    <div className={classesDialogContainer.root}>
+                                        <img className={classesImg.root} src={character.image}/>
                                     </div>
 
 
-                                    <form color={MyTheme.palette.primary.dark} className={classesForm.root} noValidate
+                                    <form  className={classesForm.root} noValidate
                                           autoComplete="off">
-                                        <div style={{
 
-                                            paddingLeft: 10,
-
-                                        }}>
                                             <text
-                                                style={{color: MyTheme.palette.primary.contrastText, fontSize: 15}}>Name
+                                                className={classesFormText.root}>Name
                                             </text>
 
                                             <TextField id="standard-read-only-input"
@@ -249,7 +283,7 @@ const TableCellCharacter = (props: Props) => {
 
                                             />
                                             <text
-                                                style={{color: MyTheme.palette.primary.contrastText, fontSize: 15}}>Code
+                                                className={classesFormText.root}>Code
                                             </text>
                                             <TextField id="standard-read-only-input"
 
@@ -261,8 +295,7 @@ const TableCellCharacter = (props: Props) => {
 
                                                        variant="outlined"
                                             />
-                                            <text
-                                                style={{color: MyTheme.palette.primary.contrastText, fontSize: 15}}>Air
+                                            <text className={classesFormText.root}>Air
                                                 Date
                                             </text>
                                             <TextField id="standard-read-only-input"
@@ -271,8 +304,7 @@ const TableCellCharacter = (props: Props) => {
                                                            readOnly: true,
                                                        }} variant="outlined"
                                                        className={classesTextField.root}/>
-                                            <text
-                                                style={{color: MyTheme.palette.primary.contrastText, fontSize: 15}}>Type
+                                            <text className={classesFormText.root}>Type
                                             </text>
                                             <TextField id="standard-read-only-input"
 
@@ -283,10 +315,7 @@ const TableCellCharacter = (props: Props) => {
 
                                                        variant="outlined"
                                                        className={classesTextField.root}/>
-                                            <text style={{
-                                                color: MyTheme.palette.primary.contrastText,
-                                                fontSize: 15
-                                            }}>Gender
+                                            <text className={classesFormText.root}>Gender
                                             </text>
                                             <TextField id="standard-read-only-input"
 
@@ -298,10 +327,7 @@ const TableCellCharacter = (props: Props) => {
                                                        variant="outlined"
                                                        className={classesTextField.root}
                                             />
-                                            <text style={{
-                                                color: MyTheme.palette.primary.contrastText,
-                                                fontSize: 15
-                                            }}>Origin
+                                            <text className={classesFormText.root}>Origin
                                             </text>
                                             <TextField id="standard-read-only-input"
 
@@ -313,10 +339,7 @@ const TableCellCharacter = (props: Props) => {
                                                        className={classesTextField.root}
                                                        variant="outlined"
                                             />
-                                            <text style={{
-                                                color: MyTheme.palette.primary.contrastText,
-                                                fontSize: 15
-                                            }}>Location
+                                            <text className={classesFormText.root}>Location
                                             </text>
                                             <TextField id="standard-read-only-input"
                                                        defaultValue={character.location.name}
@@ -328,7 +351,6 @@ const TableCellCharacter = (props: Props) => {
                                                        className={classesTextField.root}/>
 
 
-                                        </div>
 
                                     </form>
 
