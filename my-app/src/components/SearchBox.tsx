@@ -57,7 +57,9 @@ const useSearchStyles = makeStyles({
 
 });
 
+
 const SearchBox = (props: Props) => {
+    const {search,setSearch}=props
     const classesTextField = useTextFieldStyles();
     const classesButtonGroup= useButtonGroupStyles();
     const classesButton = useButtonStyles();
@@ -69,8 +71,8 @@ const SearchBox = (props: Props) => {
                 <Button classes={{root:classesButton.root}} disabled onClick={() => {
                 }}><SearchIcon classes={{root:classesSearch.root}}></SearchIcon></Button>
 
-                <TextField variant={"standard"} color='secondary' value={props.search}
-                           placeholder={'Search Character'} onChange={e => props.setSearch(e.target.value)}
+                <TextField variant={"standard"} color='secondary' value={search}
+                           placeholder={'Search Character'} onChange={e => setSearch(e.target.value)}
                            InputProps={{classes: classesTextField}}/>
 
             </ButtonGroup>
