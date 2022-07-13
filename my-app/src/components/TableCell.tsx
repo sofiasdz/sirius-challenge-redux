@@ -3,7 +3,6 @@ import {createStyles, makeStyles, Theme, withStyles} from "@material-ui/core/sty
 import TableRow from "@material-ui/core/TableRow";
 import {CharacterType} from "../Types/Types";
 import {Button, Dialog, DialogContent, DialogContentText, TableCell, TextField} from "@material-ui/core";
-import {Ellipsis, EllipsisMode} from "react-simple-ellipsis";
 import Tooltip from '@material-ui/core/Tooltip';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import {MyTheme} from "./Theme";
@@ -64,6 +63,18 @@ const useTitleTextStyles = makeStyles({
     }
 });
 
+const useEllipsisTextStyles = makeStyles({
+    root: {
+        flex:1,
+        width:250,
+        textOverflow: 'ellipsis',
+        maxWidth: 250,
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+    }
+});
+
+
 const useDialogContainerStyles = makeStyles({
     root: {
         flex: 1,
@@ -88,7 +99,8 @@ const useTextFieldStyles = makeStyles({
 });
 const useImgStyles = makeStyles({
     root: {
-        borderRadius: 200, height: 120
+        borderRadius: 200, height: 120,
+
     }
 });
 
@@ -110,6 +122,7 @@ const TableCellCharacter = (props: Props) => {
     const classesDialogContainer = useDialogContainerStyles();
     const classesImg = useImgStyles();
     const classesFormText = useFormTextStyles();
+    const classesEllipsis = useEllipsisTextStyles();
 
 
     const [open, setOpen] = useState(false);
@@ -218,14 +231,8 @@ const TableCellCharacter = (props: Props) => {
 
                 <StyledTableCell align="left">
                     <text className={classesTitleText.root}>
-                        <Ellipsis
-                            ellipsis="..."
-                            label=""
-                            id={character.id}
-                            text={character.episode.join(", ")}
-                            limit={20}
-                            class="more"
-                            mode={EllipsisMode.After}/>
+                    <td className={classesEllipsis.root}> {character.episode.join(", ")}
+                    </td>
                     </text>
                 </StyledTableCell>
             </LightTooltip>
