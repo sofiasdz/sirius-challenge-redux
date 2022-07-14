@@ -1,4 +1,4 @@
-import charactersMiddleware from "./middleware";
+import charactersMiddleware from "./character.middleware";
 export default [
     charactersMiddleware
 ]

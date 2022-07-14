@@ -7,6 +7,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import {MyTheme} from "./Theme";
 import ListIcon from '@material-ui/icons/List';
+import EpisodeTable from "./EpisodeTable";
 
 type Props = {
     character: CharacterType
@@ -380,7 +381,7 @@ const TableCellCharacter = (props: Props) => {
 
                 </Button>
                 <Button>
-                    <ListIcon onClick={toggleListModal}/>
+                    <ListIcon className={classesTitleText.root} onClick={toggleListModal}/>
 
                     <Dialog
                         open={openList}
@@ -403,7 +404,8 @@ const TableCellCharacter = (props: Props) => {
                                 root: classesDialogContent.root,
 
                             }}>
-                                <text>hello</text>
+                                <header className={classesTitleText.root}>Episode List</header>
+                                <EpisodeTable data={} />
                             </DialogContentText>
                         </DialogContent>
 

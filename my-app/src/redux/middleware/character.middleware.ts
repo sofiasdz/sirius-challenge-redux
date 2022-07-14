@@ -1,7 +1,7 @@
 
 import actions from "../actions"
 import {getAllCharacterData} from "../../api/CharacterApi";
-import {CHARACTER_REQUEST} from "../actions/action";
+import {CHARACTER_REQUEST} from "../actions/character.action";
 
 
 // @ts-ignore

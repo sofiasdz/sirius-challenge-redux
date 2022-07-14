@@ -1,23 +1,19 @@
-import {
-    CHARACTER_REQUEST,
-    CHARACTER_RESPONSE,
-    CHARACTER_ERROR,
-} from "../actions/character.action";
+import {EPISODE_ERROR, EPISODE_REQUEST, EPISODE_RESPONSE} from "../actions/episodes.action";
 
 
 const initialState = {
-    characters:[],
+    episodes:[],
     status:'',
     pageNumber:1,
 };
 
 const reducer = (state= initialState,action: {type: string, response:any,page:number }) =>{
     switch(action.type){
-        case CHARACTER_REQUEST:
+        case EPISODE_REQUEST:
             return  {... state,status: 'loading', pageNumber: action.page}
-        case CHARACTER_RESPONSE:
-            return  {... state,status: 'idle', characters: action.response}
-        case CHARACTER_ERROR:
+        case EPISODE_RESPONSE:
+            return  {... state,status: 'idle', episodes: action.response}
+        case EPISODE_ERROR:
             return  {... state,status: 'error'}
         default:
             return state

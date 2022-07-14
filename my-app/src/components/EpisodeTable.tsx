@@ -1,15 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import {CharacterType} from "../Types/Types";
-import TableCellCharacter from "./TableCell";
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
-import {Button} from "@material-ui/core";
+import {EpisodeType} from "../Types/Types";
 import Pagination from "@material-ui/lab/Pagination";
 import {MyTheme} from "./Theme";
 import {useDispatch, useSelector} from "react-redux";
@@ -94,6 +90,18 @@ const useContainerStyles = makeStyles({
     },
 
 });
+const useTableCellStyles = makeStyles({
+    root: {
+        borderBottom: "none"
+
+    }
+});
+
+const useTitleTextStyles = makeStyles({
+    root: {
+        color: MyTheme.palette.primary.contrastText
+    }
+});
 
 
 const StyledTableCell = withStyles((theme) => ({
@@ -119,20 +127,14 @@ const StyledTableRow = withStyles((theme) => ({
     root: {},
 }))(TableRow);
 
-type Props = {
-    data: CharacterType[],
-    search: string,
 
-}
-const BasicTable = (props: Props) => {
-    const {search}=props
-    const {data}=props
+const EpisodeTable = () => {
+    //const {data, setData}=[]
     const classesTableHead = useTableHeadStyles();
     const classesPagination = usePainationStyles();
     const classesTableContainer = useTableContainerStyles();
-    const classesContainer = useContainerStyles();
-    const [species, setSpecies] = useState("des");
-    const [episodeList, setEpisodeList]=useState([]);
+    const classesTableCell = useTableCellStyles();
+    const classesTitleText = useTitleTextStyles();
 
     // @ts-ignore
     const pageNumber = useSelector(state => state.characters.pageNumber)
@@ -142,46 +144,36 @@ const BasicTable = (props: Props) => {
     const handleChange = (event: any, value: number) => {
         dispatch(actions.characters.characterRequest(value))
     };
-    const sortHandler = (order: string) => {
-        if (order == 'des') {
-            setSpecies('des')
-            data.sort((a, b) => a.species.localeCompare(b.species))
-        } else {
-            setSpecies('asd')
-            data.sort((a, b) => a.species.localeCompare(b.species)).reverse()
-        }
-    };
+
 
     return (
         <TableContainer className={classesTableContainer.root} component={Paper}>
             <TableHead classes={{root: classesTableHead.root}}>
                 <StyledTableRow>
                     <StyledTableCell align="left">Name</StyledTableCell>
-                    <StyledTableCell align="left">Status</StyledTableCell>
-                    <StyledTableCell align="left">
-                        <div className={classesContainer.root}>
-
-                            {species === 'asd' ?
-                                <Button color={"secondary"} onClick={() => sortHandler('des')}>
-                                    Species<ArrowDownwardIcon/>
-                                </Button>
-                                :
-                                <Button color={"secondary"} onClick={() => sortHandler('asd')}>Species<ArrowUpwardIcon/></Button>
-                            }
-
-
-                        </div>
-                    </StyledTableCell>
-                    <StyledTableCell align="left">Gender</StyledTableCell>
-                    <StyledTableCell align="left">Episodes</StyledTableCell>
-                    <StyledTableCell align="left">Detail</StyledTableCell>
-                    <StyledTableCell align="left"></StyledTableCell>
+                    <StyledTableCell align="left">Code</StyledTableCell>
+                    <StyledTableCell align="left">Air Date</StyledTableCell>
                 </StyledTableRow>
             </TableHead>
 
-            {data.filter(character => character.name.toLowerCase().includes(search.toLowerCase()) || search === '')
-                .map((c) => (
-                    <TableCellCharacter character={c}/>
+            {data.map((episode) => (
+                <StyledTableRow key={episode.id}>
+                    <TableCell classes={{root:classesTableCell.root}} align="left">
+                        <text className={classesTitleText.root}>
+                            {episode.name}
+                        </text>
+                    </TableCell>
+                    <StyledTableCell align="left">
+                        <text className={classesTitleText.root}>
+                            {episode.code}
+                        </text>
+                    </StyledTableCell>
+                    <StyledTableCell align="left">
+                        <text className={classesTitleText.root}>
+                            {episode.airDate}
+                        </text>
+                    </StyledTableCell>
+                </StyledTableRow>
                 ))}
 
 
@@ -194,4 +186,4 @@ const BasicTable = (props: Props) => {
 
 }
 
-export default BasicTable;
+export default EpisodeTable;
