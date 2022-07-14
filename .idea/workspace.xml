@@ -10,9 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="eliminated all inline styling and replaced it with classes styles">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="elipsis implemented with css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/TableCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/TableCell.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +40,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/my-app/src/assets" />
       <recent name="$PROJECT_DIR$/my-app/src/components" />
+      <recent name="$PROJECT_DIR$/my-app/src/assets" />
       <recent name="$PROJECT_DIR$/my-app/src/resources" />
       <recent name="$PROJECT_DIR$/my-app/src/redux" />
       <recent name="$PROJECT_DIR$/my-app/src" />
@@ -70,14 +73,7 @@
       <workItem from="1657039069575" duration="11510000" />
       <workItem from="1657320574984" duration="7834000" />
       <workItem from="1657645323060" duration="5678000" />
-      <workItem from="1657728228004" duration="754000" />
-    </task>
-    <task id="LOCAL-00028" summary="modal wip">
-      <created>1656078313323</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1656078313323</updated>
+      <workItem from="1657728228004" duration="2929000" />
     </task>
     <task id="LOCAL-00029" summary="modal now shows character data">
       <created>1656081077352</created>
@@ -415,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657650236378</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="elipsis implemented with css">
+      <created>1657729225186</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1657729225187</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,7 +437,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="wip implementing redux, created first store, reducer and action" />
     <MESSAGE value="created accions for request, responde and error" />
     <MESSAGE value="wip middleware" />
     <MESSAGE value="optimized styling and unused code, created folders" />
@@ -459,7 +461,8 @@
     <MESSAGE value="added a catch to the request with an alert that displays que error" />
     <MESSAGE value="props in all functional components are destructured" />
     <MESSAGE value="eliminated all inline styling and replaced it with classes styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="eliminated all inline styling and replaced it with classes styles" />
+    <MESSAGE value="elipsis implemented with css" />
+    <option name="LAST_COMMIT_MESSAGE" value="elipsis implemented with css" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655986265690">
@@ -470,10 +473,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657651849388">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657729227869">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657651849388" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657729227869" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

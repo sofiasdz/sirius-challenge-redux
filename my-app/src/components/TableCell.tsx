@@ -6,6 +6,7 @@ import {Button, Dialog, DialogContent, DialogContentText, TableCell, TextField} 
 import Tooltip from '@material-ui/core/Tooltip';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import {MyTheme} from "./Theme";
+import ListIcon from '@material-ui/icons/List';
 
 type Props = {
     character: CharacterType
@@ -127,12 +128,23 @@ const TableCellCharacter = (props: Props) => {
 
     const [open, setOpen] = useState(false);
 
+    const [openList, setOpenList] = useState(false);
+
 
     const toggleModal = () => {
 
         if (open == true) {
             setOpen(false)
         } else setOpen(true)
+
+
+    }
+
+    const toggleListModal = () => {
+
+        if (openList == true) {
+            setOpenList(false)
+        } else setOpenList(true)
 
 
     }
@@ -365,6 +377,38 @@ const TableCellCharacter = (props: Props) => {
                             </DialogContent>
                         </Dialog>
                     </div>
+
+                </Button>
+                <Button>
+                    <ListIcon onClick={toggleListModal}/>
+
+                    <Dialog
+                        open={openList}
+                        onClose={toggleListModal}
+                        aria-labelledby="alert-dialog-title"
+                        aria-describedby="alert-dialog-description"
+                        color={MyTheme.palette.primary.dark}
+
+                        PaperProps={{
+                            style: {
+                                backgroundColor: MyTheme.palette.primary.dark,
+                                boxShadow: 'none',
+                                width: 450
+
+                            },
+                        }}
+                    >
+                        <DialogContent>
+                            <DialogContentText classes={{
+                                root: classesDialogContent.root,
+
+                            }}>
+                                <text>hello</text>
+                            </DialogContentText>
+                        </DialogContent>
+
+                    </Dialog>
+
                 </Button>
             </TableCell>
         </StyledTableRow>
