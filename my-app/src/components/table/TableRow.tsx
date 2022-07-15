@@ -1,13 +1,16 @@
 import React, {useState} from "react";
 import {createStyles, makeStyles, Theme, withStyles} from "@material-ui/core/styles";
 import TableRow from "@material-ui/core/TableRow";
-import {CharacterType} from "../Types/Types";
+import {CharacterType} from "../../Types/Types";
 import {Button, Dialog, DialogContent, DialogContentText, TableCell, TextField} from "@material-ui/core";
 import Tooltip from '@material-ui/core/Tooltip';
 import VisibilityIcon from '@material-ui/icons/Visibility';
-import {MyTheme} from "./Theme";
+import {MyTheme} from "../../config/Theme";
 import ListIcon from '@material-ui/icons/List';
 import EpisodeTable from "./EpisodeTable";
+import {getEpisodeIdByCharacter} from "../../utils/episodes.utils";
+import actions from "../../redux/actions";
+import {useDispatch, useSelector} from "react-redux";
 
 type Props = {
     character: CharacterType
@@ -130,6 +133,21 @@ const TableCellCharacter = (props: Props) => {
     const [open, setOpen] = useState(false);
 
     const [openList, setOpenList] = useState(false);
+
+    // @ts-ignore
+    const dispatch = useDispatch()
+    // @ts-ignore
+    const status = useSelector((state) => state.episodes.status)
+    // @ts-ignore
+    const episodesState = useSelector((state) => state.episodes.episodes)
+
+
+    const onClick =()=>{
+        const episodesList = getEpisodeIdByCharacter(character.episode)
+        // const url = buildEpisodeUrl(episodesList)
+        const url = `https://rickandmortyapi.com/api/episode/${episodesList.join(',')}`
+        dispatch(actions.episodes.episodeRequest(url))
+    }
 
 
     const toggleModal = () => {
@@ -405,7 +423,7 @@ const TableCellCharacter = (props: Props) => {
 
                             }}>
                                 <header className={classesTitleText.root}>Episode List</header>
-                                <EpisodeTable character={character} />
+                                <EpisodeTable episodes={episodesState} />
                             </DialogContentText>
                         </DialogContent>
 

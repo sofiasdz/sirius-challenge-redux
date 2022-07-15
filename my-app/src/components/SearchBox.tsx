@@ -2,7 +2,7 @@ import {Button, ButtonGroup, TextField} from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
 import React from "react";
 import {ThemeProvider} from "@material-ui/core/styles";
-import {MyTheme} from "./Theme";
+import {MyTheme} from "../config/Theme";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
 type Props = {

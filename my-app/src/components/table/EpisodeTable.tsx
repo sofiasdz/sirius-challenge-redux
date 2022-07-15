@@ -5,11 +5,11 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import {MyTheme} from "./Theme";
+import {MyTheme} from "../../config/Theme";
 import {useDispatch, useSelector} from "react-redux";
-import actions from "../redux/actions";
-import getCharacterEpisodes from "../utils/episodes.utils";
-import {CharacterType} from "../Types/Types";
+import actions from "../../redux/actions";
+import {CharacterType, EpisodeType} from "../../Types/Types";
+import {getEpisodeIdByCharacter} from "../../utils/episodes.utils";
 
 
 const useTableHeadStyles = makeStyles({
@@ -82,30 +82,22 @@ const StyledTableRow = withStyles((theme) => ({
     root: {},
 }))(TableRow);
 type Props = {
-    character: CharacterType,
+    episodes: EpisodeType[],
 
 
 }
 
 const EpisodeTable = (props:Props) => {
-    const {character}=props
+    const {episodes}=props
     const classesTableHead = useTableHeadStyles();
     const classesTableContainer = useTableContainerStyles();
     const classesTableCell = useTableCellStyles();
     const classesTitleText = useTitleTextStyles();
 
-    // @ts-ignore
-    const dispatch = useDispatch()
-    // @ts-ignore
-    const status = useSelector((state) => state.episodes.status)
-    // @ts-ignore
-    const episodesState = useSelector((state) => state.episodes.episodes)
 
 
-    useEffect(() => {
-        const episodesList= getCharacterEpisodes(character.episode)
-        dispatch(actions.episodes.episodeRequest(episodesList)) //le tengo q mandar el numero de pagina
-    }, [])
+
+
 
     return (
         <TableContainer className={classesTableContainer.root} component={Paper}>
@@ -117,7 +109,7 @@ const EpisodeTable = (props:Props) => {
                 </StyledTableRow>
             </TableHead>
 
-            {episodesState.map((episode:any) => (
+            {episodes.map((episode:any) => (
                 <StyledTableRow key={episode.id}>
                     <TableCell classes={{root:classesTableCell.root}} align="left">
                         <text className={classesTitleText.root}>

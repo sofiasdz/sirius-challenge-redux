@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import '../App.css';
+import './App.css';
 import {Box, Container,} from "@material-ui/core";
-import BasicTable from "./Table";
+import BasicTable from "./components/table/Table";
 import {makeStyles, ThemeProvider} from '@material-ui/core/styles';
-import {MyTheme} from "./Theme";
+import {MyTheme} from "./config/Theme";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import logo from '../resources/logo_alta_ 1 1.png'
+import logo from './resources/logo_alta_ 1 1.png'
 import {Provider, useDispatch, useSelector} from 'react-redux'
-import store from "../redux/store"
-import actions from "../redux/actions"
-import SearchBox from "./SearchBox";
+import store from "./redux/store"
+import actions from "./redux/actions"
+import SearchBox from "./components/SearchBox";
 
 const useContainerStyles = makeStyles({
 

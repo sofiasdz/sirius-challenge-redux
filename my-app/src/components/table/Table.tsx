@@ -5,15 +5,15 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import {CharacterType} from "../Types/Types";
-import TableCellCharacter from "./TableCell";
+import {CharacterType} from "../../Types/Types";
+import TableCellCharacter from "./TableRow";
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import {Button} from "@material-ui/core";
 import Pagination from "@material-ui/lab/Pagination";
-import {MyTheme} from "./Theme";
+import {MyTheme} from "../../config/Theme";
 import {useDispatch, useSelector} from "react-redux";
-import actions from "../redux/actions"
+import actions from "../../redux/actions"
 
 const useTableHeadStyles = makeStyles({
     table: {
