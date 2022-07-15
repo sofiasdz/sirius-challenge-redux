@@ -1,6 +1,6 @@
 import {CharacterType} from "../Types/Types";
 
-const  getCharacterEpisodes = (characterEpisodes:[string]) => {
+const  getCharacterEpisodes = (characterEpisodes:string[]) => {
 
     const numberPattern = /\d+/g;
     const episodesList: any[] =[]
@@ -10,3 +10,5 @@ const  getCharacterEpisodes = (characterEpisodes:[string]) => {
     return episodesList
 
  }
+
+ export default getCharacterEpisodes

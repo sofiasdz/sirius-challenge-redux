@@ -405,7 +405,7 @@ const TableCellCharacter = (props: Props) => {
 
                             }}>
                                 <header className={classesTitleText.root}>Episode List</header>
-                                <EpisodeTable data={} />
+                                <EpisodeTable character={character} />
                             </DialogContentText>
                         </DialogContent>
 

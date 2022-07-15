@@ -3,7 +3,7 @@ export const CHARACTER_RESPONSE = 'CHARACTER_RESPONSE';
 export const CHARACTER_ERROR = 'CHARACTER_ERROR';
 
   const characters = {
-      characterRequest: (episodesList:number[]) => ({type: CHARACTER_REQUEST, episodesList}),
+      characterRequest: (pageNumber:number) => ({type: CHARACTER_REQUEST, pageNumber}),
       characterResponse: (response:any[]) => ({type: CHARACTER_RESPONSE, response}),
       characterError: (error:string) => ({type: CHARACTER_ERROR, error}),
   }

@@ -1,15 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import {EpisodeType} from "../Types/Types";
-import Pagination from "@material-ui/lab/Pagination";
 import {MyTheme} from "./Theme";
 import {useDispatch, useSelector} from "react-redux";
-import actions from "../redux/actions"
+import actions from "../redux/actions";
+import getCharacterEpisodes from "../utils/episodes.utils";
+import {CharacterType} from "../Types/Types";
+
 
 const useTableHeadStyles = makeStyles({
     table: {
@@ -27,44 +28,7 @@ const useTableHeadStyles = makeStyles({
 
 });
 
-const usePainationStyles = makeStyles({
 
-    root: {
-        backgroundColor: MyTheme.palette.primary.dark,
-        height: 50,
-        '& ul > li:not(:first-child):not(:last-child) > button:not(.Mui-selected)': {
-            backgroundColor: 'transparent',
-            color: 'white',
-            borderColor: MyTheme.palette.primary.main,
-        },
-    },
-    ul: {
-        height: 50,
-        "& > *": {
-            marginTop: 10
-        },
-        '& .Mui-selected': {
-            backgroundColor: 'transparent',
-            color: '#19D5C6',
-            borderColor: '#19D5C6',
-
-        },
-        "& .MuiPaginationItem-icon": {
-            color: MyTheme.palette.secondary.main,
-
-
-        },
-        "& .MuiPaginationItem-ellipsis": {
-            color: MyTheme.palette.secondary.main,
-
-
-        }
-
-
-    },
-
-
-});
 const useTableContainerStyles = makeStyles({
 
     root: {
@@ -81,15 +45,6 @@ const useTableContainerStyles = makeStyles({
     }
 });
 
-const useContainerStyles = makeStyles({
-
-    root: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        flex: 1
-    },
-
-});
 const useTableCellStyles = makeStyles({
     root: {
         borderBottom: "none"
@@ -126,25 +81,31 @@ const StyledTableCell = withStyles((theme) => ({
 const StyledTableRow = withStyles((theme) => ({
     root: {},
 }))(TableRow);
+type Props = {
+    character: CharacterType,
 
 
-const EpisodeTable = () => {
-    //const {data, setData}=[]
+}
+
+const EpisodeTable = (props:Props) => {
+    const {character}=props
     const classesTableHead = useTableHeadStyles();
-    const classesPagination = usePainationStyles();
     const classesTableContainer = useTableContainerStyles();
     const classesTableCell = useTableCellStyles();
     const classesTitleText = useTitleTextStyles();
 
     // @ts-ignore
-    const pageNumber = useSelector(state => state.characters.pageNumber)
-    const dispatch = useDispatch();
+    const dispatch = useDispatch()
+    // @ts-ignore
+    const status = useSelector((state) => state.episodes.status)
+    // @ts-ignore
+    const episodesState = useSelector((state) => state.episodes.episodes)
 
 
-    const handleChange = (event: any, value: number) => {
-        dispatch(actions.characters.characterRequest(value))
-    };
-
+    useEffect(() => {
+        const episodesList= getCharacterEpisodes(character.episode)
+        dispatch(actions.episodes.episodeRequest(episodesList)) //le tengo q mandar el numero de pagina
+    }, [])
 
     return (
         <TableContainer className={classesTableContainer.root} component={Paper}>
@@ -156,7 +117,7 @@ const EpisodeTable = () => {
                 </StyledTableRow>
             </TableHead>
 
-            {data.map((episode) => (
+            {episodesState.map((episode:any) => (
                 <StyledTableRow key={episode.id}>
                     <TableCell classes={{root:classesTableCell.root}} align="left">
                         <text className={classesTitleText.root}>
@@ -177,8 +138,7 @@ const EpisodeTable = () => {
                 ))}
 
 
-            <Pagination classes={{root: classesPagination.root, ul: classesPagination.ul}} count={10} page={pageNumber}
-                        variant={'outlined'} onChange={handleChange} size="large"/>
+
 
         </TableContainer>
 

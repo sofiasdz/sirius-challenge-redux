@@ -4,13 +4,12 @@ import {EPISODE_ERROR, EPISODE_REQUEST, EPISODE_RESPONSE} from "../actions/episo
 const initialState = {
     episodes:[],
     status:'',
-    pageNumber:1,
 };
 
-const reducer = (state= initialState,action: {type: string, response:any,page:number }) =>{
+const reducer = (state= initialState,action: {type: string, response:any,episodes:number[] }) =>{
     switch(action.type){
         case EPISODE_REQUEST:
-            return  {... state,status: 'loading', pageNumber: action.page}
+            return  {... state,status: 'loading', episodes: action.episodes}
         case EPISODE_RESPONSE:
             return  {... state,status: 'idle', episodes: action.response}
         case EPISODE_ERROR:
