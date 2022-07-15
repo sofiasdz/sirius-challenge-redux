@@ -12,7 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="error when sending episode request">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/reducers/episodeReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/reducers/episodeReducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/utils/episodes.utils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/utils/episodes.utils.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,14 +71,7 @@
       <workItem from="1657320574984" duration="7834000" />
       <workItem from="1657645323060" duration="5678000" />
       <workItem from="1657728228004" duration="7549000" />
-      <workItem from="1657901383444" duration="8811000" />
-    </task>
-    <task id="LOCAL-00034" summary="change search box text color">
-      <created>1656103681230</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1656103681230</updated>
+      <workItem from="1657901383444" duration="9759000" />
     </task>
     <task id="LOCAL-00035" summary="changed dialog background color and centered items">
       <created>1656348452029</created>
@@ -416,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657913716573</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="error when sending episode request">
+      <created>1657914270660</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1657914270660</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,10 +471,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657913718546">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657914273435">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657913718546" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657914273435" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

@@ -4,11 +4,12 @@ import {stringify} from "querystring";
 
 export const  getEpisodeIdByCharacter = (characterEpisodes:string[]) => {
 
-    const numberPattern = /\d+/g;
-    const episodesList: any[] =[]
+    const episodesList: string[] =[]
     characterEpisodes.forEach(function (value) {
-    episodesList.concat(value.match( numberPattern ))
+        const input = value
+    episodesList.concat( input.replace(/[^0-9]/g,''))
     });
+    console.log(episodesList)
     return episodesList
 
  }
