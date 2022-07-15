@@ -137,7 +137,7 @@ const TableCellCharacter = (props: Props) => {
     // @ts-ignore
     const dispatch = useDispatch()
     // @ts-ignore
-    const status = useSelector((state) => state.episodes.status)
+    //const status = useSelector((state) => state.episodes.status)
     // @ts-ignore
     const episodesState = useSelector((state) => state.episodes.episodes)
 
@@ -147,6 +147,7 @@ const TableCellCharacter = (props: Props) => {
         // const url = buildEpisodeUrl(episodesList)
         const url = `https://rickandmortyapi.com/api/episode/${episodesList.join(',')}`
         dispatch(actions.episodes.episodeRequest(url))
+        toggleListModal()
     }
 
 
@@ -399,7 +400,7 @@ const TableCellCharacter = (props: Props) => {
 
                 </Button>
                 <Button>
-                    <ListIcon className={classesTitleText.root} onClick={toggleListModal}/>
+                    <ListIcon className={classesTitleText.root} onClick={onClick}/>
 
                     <Dialog
                         open={openList}

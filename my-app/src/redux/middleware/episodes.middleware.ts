@@ -10,7 +10,7 @@ const episodesMiddleware = ({dispatch, getState}) => next => action => {
         case EPISODE_REQUEST:
             getEpisodeData(action.url)
                 .then((res) => {
-                    dispatch(actions.episodes.episodeResponse(res.results))
+                    dispatch(actions.episodes.episodeResponse(res))
                 })
                 .catch((err) => {
                     dispatch(actions.episodes.episodeError(err))

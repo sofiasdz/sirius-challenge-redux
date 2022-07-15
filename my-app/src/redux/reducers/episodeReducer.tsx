@@ -6,7 +6,7 @@ const initialState = {
     status:'',
 };
 
-const reducer = (state= initialState,action: {type: string, response:any,episodes:number[] }) =>{
+const episodeReducer = (state= initialState,action: {type: string, response:any,episodes:number[] }) =>{
     switch(action.type){
         case EPISODE_REQUEST:
             return  {... state,status: 'loading', episodes: action.episodes}
@@ -19,4 +19,4 @@ const reducer = (state= initialState,action: {type: string, response:any,episode
     }
 
 }
-export default reducer
+export default episodeReducer

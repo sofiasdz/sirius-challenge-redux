@@ -12,17 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="wip implementing redux with getEpisodes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/EpisodeTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/EpisodeTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/SearchBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/SearchBox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/TableCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Theme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/config/Theme.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/actions/episodes.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/actions/episodes.action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/redux/middleware/episodes.middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/middleware/episodes.middleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/utils/episodes.utils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/utils/episodes.utils.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,14 +72,7 @@
       <workItem from="1657320574984" duration="7834000" />
       <workItem from="1657645323060" duration="5678000" />
       <workItem from="1657728228004" duration="7549000" />
-      <workItem from="1657901383444" duration="7294000" />
-    </task>
-    <task id="LOCAL-00032" summary="created theme with figma colors">
-      <created>1656097033232</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1656097033232</updated>
+      <workItem from="1657901383444" duration="8364000" />
     </task>
     <task id="LOCAL-00033" summary="fixed styling issues">
       <created>1656102892217</created>
@@ -426,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657907797621</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="wip implementing redux with getEpisodes">
+      <created>1657912379178</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1657912379178</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
