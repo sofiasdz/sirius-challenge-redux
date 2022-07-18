@@ -436,7 +436,7 @@ const TableCellCharacter = (props: Props) => {
                             style: {
                                 backgroundColor: MyTheme.palette.primary.dark,
                                 boxShadow: 'none',
-                                width: 450
+                                width:800
 
                             },
                         }}
@@ -446,7 +446,7 @@ const TableCellCharacter = (props: Props) => {
                                 root: classesDialogContent.root,
 
                             }}>
-                                <header className={classesHeader.root}>Episode List</header>
+                                <header className={classesHeader.root}>Episode List of {character.name}</header>
 
 
                                 {
