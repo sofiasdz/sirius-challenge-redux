@@ -17,6 +17,7 @@ const useTableHeadStyles = makeStyles({
         borderRadius: 10,
 
 
+
     },
     root: {
         borderRadius: 10,
@@ -100,10 +101,10 @@ const EpisodeTable = (props:Props) => {
 
 
     return (
-        <TableContainer  >
-            <TableHead >
+        <TableContainer>
+            <TableHead>
                 <StyledTableRow>
-                    <StyledTableCell align="left">Name</StyledTableCell>
+                    <StyledTableCell  align="left">Name</StyledTableCell>
                     <StyledTableCell align="left">Code</StyledTableCell>
                     <StyledTableCell align="left">Air Date</StyledTableCell>
                 </StyledTableRow>
@@ -113,17 +114,17 @@ const EpisodeTable = (props:Props) => {
             {episodes.map((episode:EpisodeType) => (
                 <StyledTableRow key={episode.id}>
                     <TableCell  align="left">
-                        <text >
+                        <text className={classesTitleText.root}>
                             {episode.name}
                         </text>
                     </TableCell>
                     <StyledTableCell align="left">
-                        <text >
+                        <text className={classesTitleText.root}>
                             {episode.episode}
                         </text>
                     </StyledTableCell>
                     <StyledTableCell align="left">
-                        <text >
+                        <text className={classesTitleText.root}>
                             {episode.air_date}
                         </text>
                     </StyledTableCell>

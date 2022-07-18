@@ -10,9 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="inserted loading before table renders">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="episode table works!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/Types/Types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Types/Types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/table/EpisodeTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/EpisodeTable.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,14 +72,7 @@
       <workItem from="1657645323060" duration="5678000" />
       <workItem from="1657728228004" duration="7549000" />
       <workItem from="1657901383444" duration="9930000" />
-      <workItem from="1658166506565" duration="4712000" />
-    </task>
-    <task id="LOCAL-00040" summary="fixed styling issues">
-      <created>1656359897853</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1656359897853</updated>
+      <workItem from="1658166506565" duration="5613000" />
     </task>
     <task id="LOCAL-00041" summary="added sirius logo">
       <created>1656362324840</created>
@@ -418,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658171218163</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="episode table works!!">
+      <created>1658171585298</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1658171585298</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +436,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed state on table" />
     <MESSAGE value="redux works but pagination doesnt" />
     <MESSAGE value="pagination works!" />
     <MESSAGE value="removed error where useEffect() was called twice" />
@@ -462,7 +460,8 @@
     <MESSAGE value="fixed error were page number appeared to be undefined" />
     <MESSAGE value="fixed request error but episode table not properly shown" />
     <MESSAGE value="inserted loading before table renders" />
-    <option name="LAST_COMMIT_MESSAGE" value="inserted loading before table renders" />
+    <MESSAGE value="episode table works!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="episode table works!!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1657912150608">
@@ -473,10 +472,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658171220904">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658171587633">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658171220904" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658171587633" />
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1658172459845">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1658172459845" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
