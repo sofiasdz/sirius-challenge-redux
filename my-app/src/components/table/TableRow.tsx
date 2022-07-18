@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {createStyles, makeStyles, Theme, withStyles} from "@material-ui/core/styles";
 import TableRow from "@material-ui/core/TableRow";
 import {CharacterType} from "../../Types/Types";
-import {Button, Dialog, DialogContent, DialogContentText, TableCell, TextField} from "@material-ui/core";
+import {Button, Container, Dialog, DialogContent, DialogContentText, TableCell, TextField} from "@material-ui/core";
 import Tooltip from '@material-ui/core/Tooltip';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import {MyTheme} from "../../config/Theme";
@@ -11,6 +11,7 @@ import EpisodeTable from "./EpisodeTable";
 import {getEpisodeIdByCharacter} from "../../utils/episodes.utils";
 import actions from "../../redux/actions";
 import {useDispatch, useSelector} from "react-redux";
+import BasicTable from "./Table";
 
 type Props = {
     character: CharacterType
@@ -115,7 +116,17 @@ const useFormTextStyles = makeStyles({
         fontSize: 15
     }
 });
+const useLoadingStyles = makeStyles({
 
+    root: {
+        textAlign: "center",
+        alignSelf: "center",
+        color: MyTheme.palette.secondary.main,
+        fontSize: 15,
+        padding: 20,
+    },
+
+});
 
 const TableCellCharacter = (props: Props) => {
     const {character}=props
@@ -128,6 +139,7 @@ const TableCellCharacter = (props: Props) => {
     const classesImg = useImgStyles();
     const classesFormText = useFormTextStyles();
     const classesEllipsis = useEllipsisTextStyles();
+    const classesLoading = useLoadingStyles();
 
 
     const [open, setOpen] = useState(false);
@@ -140,12 +152,11 @@ const TableCellCharacter = (props: Props) => {
     //const status = useSelector((state) => state.episodes.status)
     // @ts-ignore
     const episodesState = useSelector((state) => state.episodes.episodes)
-
+    // @ts-ignore
+    const status = useSelector((state) => state.episodes.status)
 
     const onClick =()=>{
-        console.log(character.episode)
         const episodesList = getEpisodeIdByCharacter(character.episode)
-
         // const url = buildEpisodeUrl(episodesList)
         const url = `https://rickandmortyapi.com/api/episode/${episodesList.join(',')}`
         dispatch(actions.episodes.episodeRequest(url))
@@ -426,7 +437,19 @@ const TableCellCharacter = (props: Props) => {
 
                             }}>
                                 <header className={classesTitleText.root}>Episode List</header>
-                                <EpisodeTable episodes={episodesState} />
+
+
+                                {
+                                    status === "loading" ? <div>
+                                            <header className={classesLoading.root}>Loading...
+                                            </header>
+                                        </div> :
+
+                                        <EpisodeTable episodes={episodesState} />
+
+                                }
+
+
                             </DialogContentText>
                         </DialogContent>
 

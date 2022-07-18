@@ -92,6 +92,7 @@ const EpisodeTable = (props:Props) => {
     const classesTableContainer = useTableContainerStyles();
     const classesTableCell = useTableCellStyles();
     const classesTitleText = useTitleTextStyles();
+    console.log(episodes)
 
 
 
@@ -108,7 +109,8 @@ const EpisodeTable = (props:Props) => {
                 </StyledTableRow>
             </TableHead>
 
-            {episodes.map((episode:any) => (
+
+            {episodes.map((episode:EpisodeType) => (
                 <StyledTableRow key={episode.id}>
                     <TableCell classes={{root:classesTableCell.root}} align="left">
                         <text className={classesTitleText.root}>

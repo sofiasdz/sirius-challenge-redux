@@ -132,7 +132,6 @@ const BasicTable = (props: Props) => {
     const classesTableContainer = useTableContainerStyles();
     const classesContainer = useContainerStyles();
     const [species, setSpecies] = useState("des");
-    const [episodeList, setEpisodeList]=useState([]);
 
     // @ts-ignore
     const pageNumber = useSelector(state => state.characters.pageNumber)
@@ -140,7 +139,6 @@ const BasicTable = (props: Props) => {
 
 
     const handleChange = (event: any, value: number) => {
-        console.log(pageNumber)
         dispatch(actions.characters.characterRequest(value))
     };
     const sortHandler = (order: string) => {
