@@ -6,8 +6,10 @@ export const  getEpisodeIdByCharacter = (characterEpisodes:string[]) => {
 
     const episodesList: string[] =[]
     characterEpisodes.forEach(function (value) {
-        const input = value
-    episodesList.concat( input.replace(/[^0-9]/g,''))
+        console.log(value)
+        const input=value.replace(/[^0-9 ]/g, "")
+        console.log(input)
+    episodesList.push(input)
     });
     console.log(episodesList)
     return episodesList

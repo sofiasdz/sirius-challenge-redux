@@ -6,10 +6,9 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import {MyTheme} from "../../config/Theme";
-import {useDispatch, useSelector} from "react-redux";
-import actions from "../../redux/actions";
-import {CharacterType, EpisodeType} from "../../Types/Types";
-import {getEpisodeIdByCharacter} from "../../utils/episodes.utils";
+import {EpisodeType} from "../../Types/Types";
+
+
 
 
 const useTableHeadStyles = makeStyles({

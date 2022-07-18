@@ -10,8 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="error when sending episode request">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="regex doesnt work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/table/EpisodeTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/EpisodeTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/utils/episodes.utils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/utils/episodes.utils.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,14 +73,8 @@
       <workItem from="1657320574984" duration="7834000" />
       <workItem from="1657645323060" duration="5678000" />
       <workItem from="1657728228004" duration="7549000" />
-      <workItem from="1657901383444" duration="9759000" />
-    </task>
-    <task id="LOCAL-00035" summary="changed dialog background color and centered items">
-      <created>1656348452029</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1656348452029</updated>
+      <workItem from="1657901383444" duration="9930000" />
+      <workItem from="1658166506565" duration="1623000" />
     </task>
     <task id="LOCAL-00036" summary="Dialog finished, looks like figma">
       <created>1656351129806</created>
@@ -416,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657914270660</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="regex doesnt work">
+      <created>1657915481778</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1657915481778</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,7 +438,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="wip typing redux actions and reducer" />
     <MESSAGE value="wip implementing redux" />
     <MESSAGE value="implemented action that recieves page number" />
     <MESSAGE value="redux implementation correction" />
@@ -460,7 +462,8 @@
     <MESSAGE value="added list icon to add episodes list" />
     <MESSAGE value="wip implementing redux with getEpisodes" />
     <MESSAGE value="error when sending episode request" />
-    <option name="LAST_COMMIT_MESSAGE" value="error when sending episode request" />
+    <MESSAGE value="regex doesnt work" />
+    <option name="LAST_COMMIT_MESSAGE" value="regex doesnt work" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1657912150608">
@@ -471,10 +474,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657914273435">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1657915485341">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657914273435" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1657915485341" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

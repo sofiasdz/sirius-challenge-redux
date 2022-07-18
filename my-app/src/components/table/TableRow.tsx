@@ -143,7 +143,9 @@ const TableCellCharacter = (props: Props) => {
 
 
     const onClick =()=>{
+        console.log(character.episode)
         const episodesList = getEpisodeIdByCharacter(character.episode)
+
         // const url = buildEpisodeUrl(episodesList)
         const url = `https://rickandmortyapi.com/api/episode/${episodesList.join(',')}`
         dispatch(actions.episodes.episodeRequest(url))
