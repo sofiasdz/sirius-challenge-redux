@@ -1,14 +1,11 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
 import {MyTheme} from "../../config/Theme";
 import {EpisodeType} from "../../Types/Types";
-
-
 
 
 const useTableHeadStyles = makeStyles({
@@ -45,12 +42,7 @@ const useTableContainerStyles = makeStyles({
     }
 });
 
-const useTableCellStyles = makeStyles({
-    root: {
-        borderBottom: "none"
 
-    }
-});
 
 const useTitleTextStyles = makeStyles({
     root: {
@@ -73,13 +65,27 @@ const StyledTableCell = withStyles((theme) => ({
         borderBottom: "none"
 
 
+
     },
     body: {},
 
 }))(TableCell);
 
 const StyledTableRow = withStyles((theme) => ({
-    root: {},
+        root: {
+
+                borderBottom: "none",
+                borderBottomLeftRadius: 30,
+                borderTopLeftRadius: 30
+
+
+
+
+
+        },
+
+
+
 }))(TableRow);
 type Props = {
     episodes: EpisodeType[],
@@ -91,7 +97,6 @@ const EpisodeTable = (props:Props) => {
     const {episodes}=props
     const classesTableHead = useTableHeadStyles();
     const classesTableContainer = useTableContainerStyles();
-    const classesTableCell = useTableCellStyles();
     const classesTitleText = useTitleTextStyles();
     console.log(episodes)
 
@@ -101,9 +106,9 @@ const EpisodeTable = (props:Props) => {
 
 
     return (
-        <TableContainer>
-            <TableHead>
-                <StyledTableRow>
+        <TableContainer  className={classesTableContainer.root} >
+            <TableHead classes={{root: classesTableHead.root}}>
+                <StyledTableRow >
                     <StyledTableCell  align="left">Name</StyledTableCell>
                     <StyledTableCell align="left">Code</StyledTableCell>
                     <StyledTableCell align="left">Air Date</StyledTableCell>

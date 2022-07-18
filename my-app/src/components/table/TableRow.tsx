@@ -11,7 +11,7 @@ import EpisodeTable from "./EpisodeTable";
 import {getEpisodeIdByCharacter} from "../../utils/episodes.utils";
 import actions from "../../redux/actions";
 import {useDispatch, useSelector} from "react-redux";
-import BasicTable from "./Table";
+
 
 type Props = {
     character: CharacterType
@@ -127,6 +127,17 @@ const useLoadingStyles = makeStyles({
     },
 
 });
+const useHeaderStyles = makeStyles({
+
+    root: {
+        textAlign: "center",
+        alignSelf: "center",
+        color: MyTheme.palette.secondary.main,
+        fontSize: 30,
+        padding: 20,
+    },
+
+});
 
 const TableCellCharacter = (props: Props) => {
     const {character}=props
@@ -140,6 +151,7 @@ const TableCellCharacter = (props: Props) => {
     const classesFormText = useFormTextStyles();
     const classesEllipsis = useEllipsisTextStyles();
     const classesLoading = useLoadingStyles();
+    const classesHeader = useHeaderStyles();
 
 
     const [open, setOpen] = useState(false);
@@ -148,8 +160,6 @@ const TableCellCharacter = (props: Props) => {
 
     // @ts-ignore
     const dispatch = useDispatch()
-    // @ts-ignore
-    //const status = useSelector((state) => state.episodes.status)
     // @ts-ignore
     const episodesState = useSelector((state) => state.episodes.episodes)
     // @ts-ignore
@@ -436,7 +446,7 @@ const TableCellCharacter = (props: Props) => {
                                 root: classesDialogContent.root,
 
                             }}>
-                                <header className={classesTitleText.root}>Episode List</header>
+                                <header className={classesHeader.root}>Episode List</header>
 
 
                                 {
