@@ -26,7 +26,7 @@ export type Location = {
 
 export type EpisodeType = {
     name:string,
-    code: string,
-    airDate: string,
+    episode: string,
+    air_date: string,
     id: number,
 }

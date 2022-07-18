@@ -13,14 +13,14 @@ import {EpisodeType} from "../../Types/Types";
 
 const useTableHeadStyles = makeStyles({
     table: {
-        minWidth: 650,
+        minWidth: 50,
         borderRadius: 10,
 
 
     },
     root: {
         borderRadius: 10,
-        minWidth: 650,
+        minWidth: 50,
 
 
     },
@@ -63,7 +63,7 @@ const StyledTableCell = withStyles((theme) => ({
         backgroundColor: MyTheme.palette.primary.main,
         color: MyTheme.palette.secondary.main,
         fontSize: 18,
-        width: 500,
+        width: 40,
         paddingTop: 20,
         height: 5,
         flex: 1,
@@ -100,8 +100,8 @@ const EpisodeTable = (props:Props) => {
 
 
     return (
-        <TableContainer className={classesTableContainer.root} component={Paper}>
-            <TableHead classes={{root: classesTableHead.root}}>
+        <TableContainer  >
+            <TableHead >
                 <StyledTableRow>
                     <StyledTableCell align="left">Name</StyledTableCell>
                     <StyledTableCell align="left">Code</StyledTableCell>
@@ -112,19 +112,19 @@ const EpisodeTable = (props:Props) => {
 
             {episodes.map((episode:EpisodeType) => (
                 <StyledTableRow key={episode.id}>
-                    <TableCell classes={{root:classesTableCell.root}} align="left">
-                        <text className={classesTitleText.root}>
+                    <TableCell  align="left">
+                        <text >
                             {episode.name}
                         </text>
                     </TableCell>
                     <StyledTableCell align="left">
-                        <text className={classesTitleText.root}>
-                            {episode.code}
+                        <text >
+                            {episode.episode}
                         </text>
                     </StyledTableCell>
                     <StyledTableCell align="left">
-                        <text className={classesTitleText.root}>
-                            {episode.airDate}
+                        <text >
+                            {episode.air_date}
                         </text>
                     </StyledTableCell>
                 </StyledTableRow>
