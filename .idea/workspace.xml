@@ -10,12 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="regex works but request doesnt">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="fixed error were page number appeared to be undefined">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/middleware/character.middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/middleware/character.middleware.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/redux/middleware/episodes.middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/middleware/episodes.middleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/reducers/characterReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/reducers/characterReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/reducers/episodeReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/reducers/episodeReducer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,14 +73,7 @@
       <workItem from="1657645323060" duration="5678000" />
       <workItem from="1657728228004" duration="7549000" />
       <workItem from="1657901383444" duration="9930000" />
-      <workItem from="1658166506565" duration="2291000" />
-    </task>
-    <task id="LOCAL-00037" summary="table looks closer to figma">
-      <created>1656352475719</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1656352475719</updated>
+      <workItem from="1658166506565" duration="2672000" />
     </task>
     <task id="LOCAL-00038" summary="changed table body text and icons to white">
       <created>1656353475363</created>
@@ -420,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658168271168</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="fixed error were page number appeared to be undefined">
+      <created>1658169182134</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1658169182134</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +437,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implemented action that recieves page number" />
     <MESSAGE value="redux implementation correction" />
     <MESSAGE value="redux works" />
     <MESSAGE value="changed state on table" />
@@ -464,7 +461,8 @@
     <MESSAGE value="error when sending episode request" />
     <MESSAGE value="regex doesnt work" />
     <MESSAGE value="regex works but request doesnt" />
-    <option name="LAST_COMMIT_MESSAGE" value="regex works but request doesnt" />
+    <MESSAGE value="fixed error were page number appeared to be undefined" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed error were page number appeared to be undefined" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1657912150608">
@@ -475,10 +473,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658168273379">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658169183854">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658168273379" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658169183854" />
     <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

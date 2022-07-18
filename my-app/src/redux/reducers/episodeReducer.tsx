@@ -10,7 +10,7 @@ const initialState = {
 const episodeReducer = (state= initialState,action: {type: string, response:any,episodeUrl:string,episodes:number[] }) =>{
     switch(action.type){
         case EPISODE_REQUEST:
-            return  {... state,status: 'loading', url: action.episodeUrl}
+            return  {... state,status: 'loading', episodeUrl: action.episodeUrl}
         case EPISODE_RESPONSE:
             return  {... state,status: 'idle', episodes: action.response}
         case EPISODE_ERROR:
