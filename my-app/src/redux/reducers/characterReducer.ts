@@ -11,10 +11,10 @@ const initialState = {
     pageNumber:1,
 };
 
-const reducer = (state= initialState,action: {type: string, response:any,page:number }) =>{
+const reducer = (state= initialState,action: {type: string, response:any,pageNumber:number }) =>{
     switch(action.type){
         case CHARACTER_REQUEST:
-            return  {... state,status: 'loading', pageNumber: action.page}
+            return  {... state,status: 'loading', pageNumber: action.pageNumber}
         case CHARACTER_RESPONSE:
             return  {... state,status: 'idle', characters: action.response}
         case CHARACTER_ERROR:

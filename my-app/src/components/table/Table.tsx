@@ -140,6 +140,7 @@ const BasicTable = (props: Props) => {
 
 
     const handleChange = (event: any, value: number) => {
+        console.log(pageNumber)
         dispatch(actions.characters.characterRequest(value))
     };
     const sortHandler = (order: string) => {

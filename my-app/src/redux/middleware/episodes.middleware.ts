@@ -11,6 +11,7 @@ const episodesMiddleware = ({dispatch, getState}) => next => action => {
             getEpisodeData(action.url)
                 .then((res) => {
                     dispatch(actions.episodes.episodeResponse(res))
+                    console.log("request sent")
                 })
                 .catch((err) => {
                     dispatch(actions.episodes.episodeError(err))
