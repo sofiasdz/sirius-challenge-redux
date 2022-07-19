@@ -56,12 +56,7 @@ const useDialogContentStyles = makeStyles({
 
     },
 });
-const useTableCellStyles = makeStyles({
-    root: {
-        borderBottom: "none"
 
-    }
-});
 
 const useTitleTextStyles = makeStyles({
     root: {
@@ -144,7 +139,6 @@ const TableCellCharacter = (props: Props) => {
     const classesForm = useFormStyles();
     const classesDialogContent = useDialogContentStyles();
     const classesTextField = useTextFieldStyles();
-    const classesTableCell = useTableCellStyles();
     const classesTitleText = useTitleTextStyles();
     const classesDialogContainer = useDialogContainerStyles();
     const classesImg = useImgStyles();
@@ -215,20 +209,8 @@ const TableCellCharacter = (props: Props) => {
 
     const StyledTableCell = withStyles((theme) => ({
         root: {
-            '&:nth-of-type(odd)': {
-
-
-                borderBottom: "none",
-
-
-            },
-            '&:nth-of-type(even)': {
-
-                borderBottom: "none",
-
-
-            },
-
+            borderBottom: "none",
+            color: MyTheme.palette.primary.contrastText
 
         },
 
@@ -250,23 +232,23 @@ const TableCellCharacter = (props: Props) => {
     return (
 
         <StyledTableRow key={character.id}>
-            <TableCell classes={{root:classesTableCell.root}} align="left">
-                <text className={classesTitleText.root}>
+            <StyledTableCell align="left">
+                <text >
                     {character.name}
                 </text>
-            </TableCell>
+            </StyledTableCell>
             <StyledTableCell align="left">
-                <text className={classesTitleText.root}>
+                <text>
                     {character.status}
                 </text>
             </StyledTableCell>
             <StyledTableCell align="left">
-                <text className={classesTitleText.root}>
+                <text >
                     {character.species}
                 </text>
             </StyledTableCell>
             <StyledTableCell align="left">
-                <text className={classesTitleText.root}>
+                <text >
                     {character.gender}
                 </text>
             </StyledTableCell>
@@ -275,7 +257,7 @@ const TableCellCharacter = (props: Props) => {
             <LightTooltip disableFocusListener disableTouchListener title={character.episode.join(", ")}>
 
                 <StyledTableCell align="left">
-                    <text className={classesTitleText.root}>
+                    <text>
                     <td className={classesEllipsis.root}> {character.episode.join(", ")}
                     </td>
                     </text>
@@ -284,11 +266,11 @@ const TableCellCharacter = (props: Props) => {
 
 
             <StyledTableCell align="left">
-                <text className={classesTitleText.root}>
+                <text>
                     {character.type}
                 </text>
             </StyledTableCell>
-            <TableCell classes={{root:classesTableCell.root}} align="left">
+            <StyledTableCell align="left">
                 <Button onClick={toggleModal}>
                     <VisibilityIcon className={classesTitleText.root}/>
                     <div >
@@ -456,7 +438,7 @@ const TableCellCharacter = (props: Props) => {
                     </Dialog>
 
                 </Button>
-            </TableCell>
+            </StyledTableCell>
         </StyledTableRow>
 
 
