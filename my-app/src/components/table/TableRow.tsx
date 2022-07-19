@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {createStyles, makeStyles, Theme, withStyles} from "@material-ui/core/styles";
 import TableRow from "@material-ui/core/TableRow";
 import {CharacterType} from "../../Types/Types";
-import {Button, Container, Dialog, DialogContent, DialogContentText, TableCell, TextField} from "@material-ui/core";
+import {Button, Dialog, DialogContent, DialogContentText, TableCell, TextField} from "@material-ui/core";
 import Tooltip from '@material-ui/core/Tooltip';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import {MyTheme} from "../../config/Theme";
@@ -66,8 +66,8 @@ const useTitleTextStyles = makeStyles({
 
 const useEllipsisTextStyles = makeStyles({
     root: {
-        flex:1,
-        width:250,
+        flex: 1,
+        width: 250,
         textOverflow: 'ellipsis',
         maxWidth: 250,
         whiteSpace: 'nowrap',
@@ -134,8 +134,8 @@ const useHeaderStyles = makeStyles({
 
 });
 
-const TableCellCharacter = (props: Props) => {
-    const {character}=props
+const TableCharacterRow = (props: Props) => {
+    const {character} = props
     const classesForm = useFormStyles();
     const classesDialogContent = useDialogContentStyles();
     const classesTextField = useTextFieldStyles();
@@ -159,9 +159,8 @@ const TableCellCharacter = (props: Props) => {
     // @ts-ignore
     const status = useSelector((state) => state.episodes.status)
 
-    const onClick =()=>{
+    const onClick = () => {
         const episodesList = getEpisodeIdByCharacter(character.episode)
-        // const url = buildEpisodeUrl(episodesList)
         const url = `https://rickandmortyapi.com/api/episode/${episodesList.join(',')}`
         dispatch(actions.episodes.episodeRequest(url))
         toggleListModal()
@@ -206,7 +205,6 @@ const TableCellCharacter = (props: Props) => {
     }))(TableRow);
 
 
-
     const StyledTableCell = withStyles((theme) => ({
         root: {
             borderBottom: "none",
@@ -233,7 +231,7 @@ const TableCellCharacter = (props: Props) => {
 
         <StyledTableRow key={character.id}>
             <StyledTableCell align="left">
-                <text >
+                <text>
                     {character.name}
                 </text>
             </StyledTableCell>
@@ -243,12 +241,12 @@ const TableCellCharacter = (props: Props) => {
                 </text>
             </StyledTableCell>
             <StyledTableCell align="left">
-                <text >
+                <text>
                     {character.species}
                 </text>
             </StyledTableCell>
             <StyledTableCell align="left">
-                <text >
+                <text>
                     {character.gender}
                 </text>
             </StyledTableCell>
@@ -258,8 +256,8 @@ const TableCellCharacter = (props: Props) => {
 
                 <StyledTableCell align="left">
                     <text>
-                    <td className={classesEllipsis.root}> {character.episode.join(", ")}
-                    </td>
+                        <td className={classesEllipsis.root}> {character.episode.join(", ")}
+                        </td>
                     </text>
                 </StyledTableCell>
             </LightTooltip>
@@ -273,7 +271,7 @@ const TableCellCharacter = (props: Props) => {
             <StyledTableCell align="left">
                 <Button onClick={toggleModal}>
                     <VisibilityIcon className={classesTitleText.root}/>
-                    <div >
+                    <div>
                         <Dialog
                             open={open}
                             onClose={toggleModal}
@@ -300,90 +298,89 @@ const TableCellCharacter = (props: Props) => {
                                     </div>
 
 
-                                    <form  className={classesForm.root} noValidate
+                                    <form className={classesForm.root} noValidate
                                           autoComplete="off">
 
-                                            <text
-                                                className={classesFormText.root}>Name
-                                            </text>
+                                        <text
+                                            className={classesFormText.root}>Name
+                                        </text>
 
-                                            <TextField id="standard-read-only-input"
+                                        <TextField id="standard-read-only-input"
 
-                                                       defaultValue={character.name}
-                                                       className={classesTextField.root}
-                                                       inputProps={{readOnly: true}}
-                                                       variant="outlined"
+                                                   defaultValue={character.name}
+                                                   className={classesTextField.root}
+                                                   inputProps={{readOnly: true}}
+                                                   variant="outlined"
 
 
-                                            />
-                                            <text
-                                                className={classesFormText.root}>Code
-                                            </text>
-                                            <TextField id="standard-read-only-input"
+                                        />
+                                        <text
+                                            className={classesFormText.root}>Code
+                                        </text>
+                                        <TextField id="standard-read-only-input"
 
-                                                       defaultValue={character.id}
-                                                       className={classesTextField.root}
-                                                       InputProps={{
-                                                           readOnly: true,
-                                                       }}
+                                                   defaultValue={character.id}
+                                                   className={classesTextField.root}
+                                                   InputProps={{
+                                                       readOnly: true,
+                                                   }}
 
-                                                       variant="outlined"
-                                            />
-                                            <text className={classesFormText.root}>Air
-                                                Date
-                                            </text>
-                                            <TextField id="standard-read-only-input"
-                                                       defaultValue={character.created}
-                                                       InputProps={{
-                                                           readOnly: true,
-                                                       }} variant="outlined"
-                                                       className={classesTextField.root}/>
-                                            <text className={classesFormText.root}>Type
-                                            </text>
-                                            <TextField id="standard-read-only-input"
+                                                   variant="outlined"
+                                        />
+                                        <text className={classesFormText.root}>Air
+                                            Date
+                                        </text>
+                                        <TextField id="standard-read-only-input"
+                                                   defaultValue={character.created}
+                                                   InputProps={{
+                                                       readOnly: true,
+                                                   }} variant="outlined"
+                                                   className={classesTextField.root}/>
+                                        <text className={classesFormText.root}>Type
+                                        </text>
+                                        <TextField id="standard-read-only-input"
 
-                                                       defaultValue={character.type}
-                                                       InputProps={{
-                                                           readOnly: true,
-                                                       }}
+                                                   defaultValue={character.type}
+                                                   InputProps={{
+                                                       readOnly: true,
+                                                   }}
 
-                                                       variant="outlined"
-                                                       className={classesTextField.root}/>
-                                            <text className={classesFormText.root}>Gender
-                                            </text>
-                                            <TextField id="standard-read-only-input"
+                                                   variant="outlined"
+                                                   className={classesTextField.root}/>
+                                        <text className={classesFormText.root}>Gender
+                                        </text>
+                                        <TextField id="standard-read-only-input"
 
-                                                       defaultValue={character.gender}
-                                                       InputProps={{
-                                                           readOnly: true,
-                                                       }}
+                                                   defaultValue={character.gender}
+                                                   InputProps={{
+                                                       readOnly: true,
+                                                   }}
 
-                                                       variant="outlined"
-                                                       className={classesTextField.root}
-                                            />
-                                            <text className={classesFormText.root}>Origin
-                                            </text>
-                                            <TextField id="standard-read-only-input"
+                                                   variant="outlined"
+                                                   className={classesTextField.root}
+                                        />
+                                        <text className={classesFormText.root}>Origin
+                                        </text>
+                                        <TextField id="standard-read-only-input"
 
-                                                       defaultValue={character.origin.name}
-                                                       InputProps={{
-                                                           readOnly: true,
-                                                       }}
+                                                   defaultValue={character.origin.name}
+                                                   InputProps={{
+                                                       readOnly: true,
+                                                   }}
 
-                                                       className={classesTextField.root}
-                                                       variant="outlined"
-                                            />
-                                            <text className={classesFormText.root}>Location
-                                            </text>
-                                            <TextField id="standard-read-only-input"
-                                                       defaultValue={character.location.name}
-                                                       InputProps={{
-                                                           readOnly: true,
-                                                       }}
+                                                   className={classesTextField.root}
+                                                   variant="outlined"
+                                        />
+                                        <text className={classesFormText.root}>Location
+                                        </text>
+                                        <TextField id="standard-read-only-input"
+                                                   defaultValue={character.location.name}
+                                                   InputProps={{
+                                                       readOnly: true,
+                                                   }}
 
-                                                       variant="outlined"
-                                                       className={classesTextField.root}/>
-
+                                                   variant="outlined"
+                                                   className={classesTextField.root}/>
 
 
                                     </form>
@@ -408,7 +405,7 @@ const TableCellCharacter = (props: Props) => {
                             style: {
                                 backgroundColor: MyTheme.palette.primary.dark,
                                 boxShadow: 'none',
-                                width:800
+                                width: 800
 
                             },
                         }}
@@ -427,7 +424,7 @@ const TableCellCharacter = (props: Props) => {
                                             </header>
                                         </div> :
 
-                                        <EpisodeTable episodes={episodesState} />
+                                        <EpisodeTable episodes={episodesState}/>
 
                                 }
 
@@ -445,4 +442,4 @@ const TableCellCharacter = (props: Props) => {
     )
 }
 
-export default TableCellCharacter
+export default TableCharacterRow
