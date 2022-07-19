@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {createStyles, makeStyles, Theme, withStyles} from "@material-ui/core/styles";
+import {createStyles, emphasize, makeStyles, Theme, withStyles} from "@material-ui/core/styles";
 import TableRow from "@material-ui/core/TableRow";
 import {CharacterType} from "../../Types/Types";
 import {Button, Dialog, DialogContent, DialogContentText, TableCell, TextField} from "@material-ui/core";
@@ -11,6 +11,7 @@ import EpisodeTable from "./EpisodeTable";
 import {getEpisodeIdByCharacter} from "../../utils/episodes.utils";
 import actions from "../../redux/actions";
 import {useDispatch, useSelector} from "react-redux";
+import CharacterDetail from "./CharacterDetail";
 
 
 type Props = {
@@ -18,25 +19,7 @@ type Props = {
 }
 
 
-const useFormStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        paper: {
-            position: 'absolute',
-            width: 400,
-            backgroundColor: MyTheme.palette.primary.main,
-            border: '2px solid #000',
-            boxShadow: theme.shadows[5],
-            padding: theme.spacing(2, 4, 3),
-        },
-        root: {
-            '& > *': {
-                margin: theme.spacing(1),
-                width: '25ch',
 
-            },
-        },
-    }),
-);
 const useDialogContentStyles = makeStyles({
     root: {
         flex: 1,
@@ -89,28 +72,10 @@ const useDialogContainerStyles = makeStyles({
     }
 });
 
-const useTextFieldStyles = makeStyles({
-    root: {
-        background: MyTheme.palette.primary.contrastText,
-        borderRadius: 4,
-        width: 350,
 
 
-    }
-});
-const useImgStyles = makeStyles({
-    root: {
-        borderRadius: 200, height: 120,
 
-    }
-});
 
-const useFormTextStyles = makeStyles({
-    root: {
-        color: MyTheme.palette.primary.contrastText,
-        fontSize: 15
-    }
-});
 const useLoadingStyles = makeStyles({
 
     root: {
@@ -136,13 +101,10 @@ const useHeaderStyles = makeStyles({
 
 const TableCharacterRow = (props: Props) => {
     const {character} = props
-    const classesForm = useFormStyles();
+
     const classesDialogContent = useDialogContentStyles();
-    const classesTextField = useTextFieldStyles();
     const classesTitleText = useTitleTextStyles();
     const classesDialogContainer = useDialogContainerStyles();
-    const classesImg = useImgStyles();
-    const classesFormText = useFormTextStyles();
     const classesEllipsis = useEllipsisTextStyles();
     const classesLoading = useLoadingStyles();
     const classesHeader = useHeaderStyles();
@@ -293,97 +255,7 @@ const TableCharacterRow = (props: Props) => {
                                     root: classesDialogContent.root,
 
                                 }}>
-                                    <div className={classesDialogContainer.root}>
-                                        <img className={classesImg.root} src={character.image}/>
-                                    </div>
-
-
-                                    <form className={classesForm.root} noValidate
-                                          autoComplete="off">
-
-                                        <text
-                                            className={classesFormText.root}>Name
-                                        </text>
-
-                                        <TextField id="standard-read-only-input"
-
-                                                   defaultValue={character.name}
-                                                   className={classesTextField.root}
-                                                   inputProps={{readOnly: true}}
-                                                   variant="outlined"
-
-
-                                        />
-                                        <text
-                                            className={classesFormText.root}>Code
-                                        </text>
-                                        <TextField id="standard-read-only-input"
-
-                                                   defaultValue={character.id}
-                                                   className={classesTextField.root}
-                                                   InputProps={{
-                                                       readOnly: true,
-                                                   }}
-
-                                                   variant="outlined"
-                                        />
-                                        <text className={classesFormText.root}>Air
-                                            Date
-                                        </text>
-                                        <TextField id="standard-read-only-input"
-                                                   defaultValue={character.created}
-                                                   InputProps={{
-                                                       readOnly: true,
-                                                   }} variant="outlined"
-                                                   className={classesTextField.root}/>
-                                        <text className={classesFormText.root}>Type
-                                        </text>
-                                        <TextField id="standard-read-only-input"
-
-                                                   defaultValue={character.type}
-                                                   InputProps={{
-                                                       readOnly: true,
-                                                   }}
-
-                                                   variant="outlined"
-                                                   className={classesTextField.root}/>
-                                        <text className={classesFormText.root}>Gender
-                                        </text>
-                                        <TextField id="standard-read-only-input"
-
-                                                   defaultValue={character.gender}
-                                                   InputProps={{
-                                                       readOnly: true,
-                                                   }}
-
-                                                   variant="outlined"
-                                                   className={classesTextField.root}
-                                        />
-                                        <text className={classesFormText.root}>Origin
-                                        </text>
-                                        <TextField id="standard-read-only-input"
-
-                                                   defaultValue={character.origin.name}
-                                                   InputProps={{
-                                                       readOnly: true,
-                                                   }}
-
-                                                   className={classesTextField.root}
-                                                   variant="outlined"
-                                        />
-                                        <text className={classesFormText.root}>Location
-                                        </text>
-                                        <TextField id="standard-read-only-input"
-                                                   defaultValue={character.location.name}
-                                                   InputProps={{
-                                                       readOnly: true,
-                                                   }}
-
-                                                   variant="outlined"
-                                                   className={classesTextField.root}/>
-
-
-                                    </form>
+                                   <CharacterDetail character={character}/>
 
                                 </DialogContentText>
                             </DialogContent>

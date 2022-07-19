@@ -10,7 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="simplified toggle modal methods">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="fixed identation in dialog">
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/table/CharacterDetail.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" afterDir="false" />
     </list>
@@ -73,21 +74,7 @@
       <workItem from="1657728228004" duration="7549000" />
       <workItem from="1657901383444" duration="9930000" />
       <workItem from="1658166506565" duration="7932000" />
-      <workItem from="1658248290609" duration="3199000" />
-    </task>
-    <task id="LOCAL-00045" summary="changed search box to match figma">
-      <created>1656434621593</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1656434621593</updated>
-    </task>
-    <task id="LOCAL-00046" summary="changed search box to match figma">
-      <created>1656623748296</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1656623748296</updated>
+      <workItem from="1658248290609" duration="5058000" />
     </task>
     <task id="LOCAL-00047" summary="wip implementing redux, created first store, reducer and action">
       <created>1656682322237</created>
@@ -418,7 +405,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658251580399</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="simplified styling in tablerow">
+      <created>1658251976489</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1658251976489</updated>
+    </task>
+    <task id="LOCAL-00095" summary="fixed identation in dialog">
+      <created>1658252144916</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1658252144916</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,8 +438,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="unified methods open modal and close modal into toggle modal" />
-    <MESSAGE value="Defined clasese 1,2,3 more clearly in every component" />
     <MESSAGE value="changed f in filter to character" />
     <MESSAGE value="fixed species button so that the arrow sits besides the text" />
     <MESSAGE value="made the filter functions a single handler" />
@@ -462,7 +461,9 @@
     <MESSAGE value="corrected styling" />
     <MESSAGE value="made modal wider and added character name" />
     <MESSAGE value="simplified toggle modal methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="simplified toggle modal methods" />
+    <MESSAGE value="simplified styling in tablerow" />
+    <MESSAGE value="fixed identation in dialog" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed identation in dialog" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1657912150608">
@@ -477,10 +478,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="443" y="156" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1658251479486" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658251582486">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658252146802">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658251582486" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658252146802" />
     <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1658172459845">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
