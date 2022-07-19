@@ -175,21 +175,11 @@ const TableCellCharacter = (props: Props) => {
 
 
     const toggleModal = () => {
-
-        if (open == true) {
-            setOpen(false)
-        } else setOpen(true)
-
-
+        setOpen(!open)
     }
 
     const toggleListModal = () => {
-
-        if (openList == true) {
-            setOpenList(false)
-        } else setOpenList(true)
-
-
+        setOpenList(!openList)
     }
 
 

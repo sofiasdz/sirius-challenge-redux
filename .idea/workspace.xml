@@ -10,10 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="corrected styling">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="made modal wider and added character name">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/table/EpisodeTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/EpisodeTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/api/API.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/api/API.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/Table.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/actions/character.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/actions/character.action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/actions/episodes.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/actions/episodes.action.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,14 +76,8 @@
       <workItem from="1657645323060" duration="5678000" />
       <workItem from="1657728228004" duration="7549000" />
       <workItem from="1657901383444" duration="9930000" />
-      <workItem from="1658166506565" duration="7848000" />
-    </task>
-    <task id="LOCAL-00043" summary="minor styling fixes">
-      <created>1656363377161</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1656363377161</updated>
+      <workItem from="1658166506565" duration="7932000" />
+      <workItem from="1658248290609" duration="2793000" />
     </task>
     <task id="LOCAL-00044" summary="FINISHED STYLING">
       <created>1656429838683</created>
@@ -418,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658174550525</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="made modal wider and added character name">
+      <created>1658174919707</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1658174919707</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +441,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removed error where useEffect() was called twice" />
     <MESSAGE value="removed unused code, imports and console logs" />
     <MESSAGE value="unified methods open modal and close modal into toggle modal" />
     <MESSAGE value="Defined clasese 1,2,3 more clearly in every component" />
@@ -462,7 +465,8 @@
     <MESSAGE value="episode table works!!" />
     <MESSAGE value="table works with some styling issues" />
     <MESSAGE value="corrected styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="corrected styling" />
+    <MESSAGE value="made modal wider and added character name" />
+    <option name="LAST_COMMIT_MESSAGE" value="made modal wider and added character name" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1657912150608">
@@ -473,10 +477,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658174552522">
+    <state x="443" y="156" key="RollbackChangesDialog" timestamp="1658251479486">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658174552522" />
+    <state x="443" y="156" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1658251479486" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658174921462">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658174921462" />
     <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1658172459845">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

@@ -15,7 +15,7 @@ export const request = (options: any) => {
                 return json;
             })
         ) .catch(err =>{
-            alert("An ERROR ocurred in the character data REQUEST!")
+            alert(err)
             }
 
         );

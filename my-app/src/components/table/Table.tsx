@@ -6,7 +6,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import {CharacterType} from "../../Types/Types";
-import TableCellCharacter from "./TableRow";
+import TableRowCharacter from "./TableRow";
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import {Button} from "@material-ui/core";
@@ -180,7 +180,7 @@ const BasicTable = (props: Props) => {
 
             {data.filter(character => character.name.toLowerCase().includes(search.toLowerCase()) || search === '')
                 .map((c) => (
-                    <TableCellCharacter character={c}/>
+                    <TableRowCharacter character={c}/>
                 ))}
 
 
