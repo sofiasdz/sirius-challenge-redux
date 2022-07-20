@@ -62,8 +62,6 @@ const useImgStyles = makeStyles({
 });
 type Props = {
     character: CharacterType,
-
-
 }
 const useDialogContentStyles = makeStyles({
     root: {
@@ -94,12 +92,6 @@ const CharacterDetail = (props:Props) => {
     const classesImg = useImgStyles();
     const classesForm = useFormStyles();
     const classesDialogContent = useDialogContentStyles();
-
-
-
-
-
-
 
     return (
         <div className={classesDialogContent.root} onClick={e => e.stopPropagation()}>

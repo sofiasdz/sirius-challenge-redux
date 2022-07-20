@@ -80,9 +80,13 @@ function App() {
 
 
     useEffect(() => {
-        dispatch(actions.characters.characterRequest(1)) //le tengo q mandar el numero de pagina
+        dispatch(actions.characters.characterRequest(1,"")) //le tengo q mandar el numero de pagina
     }, [])
 
+   const handleSearchBoxChange=(search:string)=> {
+        setSearch(search)
+        dispatch(actions.characters.characterRequest(1,search)) //le tengo q mandar el name de la searchbox
+    }
     return (
         <ThemeProvider theme={MyTheme}>
             <CssBaseline/>
@@ -96,7 +100,7 @@ function App() {
 
                 </Box>
                 <Box className={classesBox.root} component="span" m={1}>
-                    <SearchBox search={search} setSearch={setSearch}/>
+                    <SearchBox search={search} onChange={handleSearchBoxChange}/>
                 </Box>
 
 

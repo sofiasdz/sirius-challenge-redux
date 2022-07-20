@@ -1,9 +1,9 @@
 import {request} from './API'
 
 
-export function getAllCharacterData(pageNumber:number): Promise<any> {
+export function getAllCharacterData(pageNumber:number,name:String): Promise<any> {
     return request({
-        url:`https://rickandmortyapi.com/api/character/?page=${pageNumber}`,
+        url:`https://rickandmortyapi.com/api/character/?page=${pageNumber}&${name}`,
         method: 'GET',
         headers: {'Content-Type': 'application/json'}
     },

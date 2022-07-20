@@ -9,7 +9,7 @@ const charactersMiddleware = ({dispatch, getState}) => next => action => {
     next(action);
     switch (action.type) {
         case CHARACTER_REQUEST:
-            getAllCharacterData(action.pageNumber)
+            getAllCharacterData(action.pageNumber,action.name)
                 .then((res) => {
                     dispatch(actions.characters.characterResponse(res.results))
                 })

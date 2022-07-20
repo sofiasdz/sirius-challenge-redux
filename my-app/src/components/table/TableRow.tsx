@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {createStyles, emphasize, makeStyles, Theme, withStyles} from "@material-ui/core/styles";
+import {createStyles, emphasize, makeStyles, styled, Theme, withStyles} from "@material-ui/core/styles";
 import TableRow from "@material-ui/core/TableRow";
 import {CharacterType} from "../../Types/Types";
 import {Button, Dialog, DialogContent, DialogContentText, TableCell, TextField} from "@material-ui/core";
@@ -17,8 +17,6 @@ import CharacterDetail from "./CharacterDetail";
 type Props = {
     character: CharacterType
 }
-
-
 
 const useDialogContentStyles = makeStyles({
     root: {

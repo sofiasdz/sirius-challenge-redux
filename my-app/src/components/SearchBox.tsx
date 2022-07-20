@@ -7,7 +7,7 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 
 type Props = {
     search: string
-    setSearch: any
+    onChange:any
 }
 const useTextFieldStyles = makeStyles({
     input: {
@@ -59,7 +59,8 @@ const useSearchStyles = makeStyles({
 
 
 const SearchBox = (props: Props) => {
-    const {search,setSearch}=props
+    const {search}=props
+    const {onChange}=props
     const classesTextField = useTextFieldStyles();
     const classesButtonGroup= useButtonGroupStyles();
     const classesButton = useButtonStyles();
@@ -72,7 +73,7 @@ const SearchBox = (props: Props) => {
                 }}><SearchIcon classes={{root:classesSearch.root}}></SearchIcon></Button>
 
                 <TextField variant={"standard"} color='secondary' value={search}
-                           placeholder={'Search Character'} onChange={e => setSearch(e.target.value)}
+                           placeholder={'Search Character'} onChange={e =>onChange(e.target.value)}
                            InputProps={{classes: classesTextField}}/>
 
             </ButtonGroup>

@@ -10,11 +10,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="created filter character data function">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="added personalized error message for each request">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/api/API.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/api/API.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/api/CharacterApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/api/CharacterApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/api/EpisodeApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/api/EpisodeApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/SearchBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/SearchBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/table/CharacterDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/CharacterDetail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/Table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/actions/character.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/actions/character.action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/actions/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/actions/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/middleware/character.middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/middleware/character.middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/middleware/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/middleware/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/reducers/characterReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/reducers/characterReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/redux/reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/reducers/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,14 +84,7 @@
       <workItem from="1657728228004" duration="7549000" />
       <workItem from="1657901383444" duration="9930000" />
       <workItem from="1658166506565" duration="7932000" />
-      <workItem from="1658248290609" duration="12128000" />
-    </task>
-    <task id="LOCAL-00052" summary="wip implementing redux">
-      <created>1656947413992</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1656947413992</updated>
+      <workItem from="1658248290609" duration="16380000" />
     </task>
     <task id="LOCAL-00053" summary="wip implementing redux">
       <created>1656949808467</created>
@@ -420,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658325140163</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="added personalized error message for each request">
+      <created>1658326490303</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1658326490303</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +448,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removed inline styling in searchbox component" />
     <MESSAGE value="added a catch to the request with an alert that displays que error" />
     <MESSAGE value="props in all functional components are destructured" />
     <MESSAGE value="eliminated all inline styling and replaced it with classes styles" />
@@ -464,25 +472,26 @@
     <MESSAGE value="added close button to modal but it doesnt work" />
     <MESSAGE value="fixed issue where modal closed when clicking it, removed close button" />
     <MESSAGE value="created filter character data function" />
-    <option name="LAST_COMMIT_MESSAGE" value="created filter character data function" />
+    <MESSAGE value="added personalized error message for each request" />
+    <option name="LAST_COMMIT_MESSAGE" value="added personalized error message for each request" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1657912150608">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1657912150608" />
-    <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1656075735028">
+    <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1658337660430">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1656075735028" />
+    <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1658337660430" />
     <state x="443" y="156" key="RollbackChangesDialog" timestamp="1658251479486">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="443" y="156" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1658251479486" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658325142074">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658328390265">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658325142074" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658328390265" />
     <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1658172459845">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

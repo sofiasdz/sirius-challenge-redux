@@ -139,7 +139,7 @@ const BasicTable = (props: Props) => {
 
 
     const handleChange = (event: any, value: number) => {
-        dispatch(actions.characters.characterRequest(value))
+        dispatch(actions.characters.characterRequest(value,""))
     };
     const sortHandler = (order: string) => {
         if (order == 'des') {
