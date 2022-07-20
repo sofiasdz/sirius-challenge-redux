@@ -62,7 +62,6 @@ const useImgStyles = makeStyles({
 });
 type Props = {
     character: CharacterType,
-    handleClose :any,
 
 
 }
@@ -86,22 +85,16 @@ const useDialogContentStyles = makeStyles({
     },
 });
 
-const useCloseIconStyles = makeStyles({
-    root: {
-        color: MyTheme.palette.primary.contrastText
-    }
-});
 
 const CharacterDetail = (props:Props) => {
     const {character}=props
-    const {handleClose}=props
     const classesTextField = useTextFieldStyles();
     const classesDialogContainer = useDialogContainerStyles();
     const classesFormText = useFormTextStyles();
     const classesImg = useImgStyles();
     const classesForm = useFormStyles();
     const classesDialogContent = useDialogContentStyles();
-    const classesCloseIconStyles = useCloseIconStyles();
+
 
 
 
@@ -109,8 +102,7 @@ const CharacterDetail = (props:Props) => {
 
 
     return (
-        <div className={classesDialogContent.root}>
-            <CloseIcon  className={classesCloseIconStyles.root} onClick={handleClose}/>
+        <div className={classesDialogContent.root} onClick={e => e.stopPropagation()}>
             <div className={classesDialogContainer.root}>
                 <img className={classesImg.root} src={character.image}/>
             </div>

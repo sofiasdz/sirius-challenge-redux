@@ -10,11 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="Trying to fix issue where clicking anywhere on character details modal makes it close">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="added close button to modal but it doesnt work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/table/CharacterDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/CharacterDetail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/table/EpisodeTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/EpisodeTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,14 +73,7 @@
       <workItem from="1657728228004" duration="7549000" />
       <workItem from="1657901383444" duration="9930000" />
       <workItem from="1658166506565" duration="7932000" />
-      <workItem from="1658248290609" duration="10320000" />
-    </task>
-    <task id="LOCAL-00049" summary="wip middleware">
-      <created>1656706994663</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1656706994663</updated>
+      <workItem from="1658248290609" duration="10447000" />
     </task>
     <task id="LOCAL-00050" summary="optimized styling and unused code, created folders">
       <created>1656707394637</created>
@@ -420,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658256377678</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="added close button to modal but it doesnt work">
+      <created>1658324118475</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1658324118475</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +437,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="made the filter functions a single handler" />
     <MESSAGE value="defined all functional compenents as arrow functions" />
     <MESSAGE value="Fixed html spaces and indentation" />
     <MESSAGE value="removed inline styling in searchbox component" />
@@ -464,7 +461,8 @@
     <MESSAGE value="fixed identation in dialog" />
     <MESSAGE value="created new component to place CharacterDetail functionality" />
     <MESSAGE value="Trying to fix issue where clicking anywhere on character details modal makes it close" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to fix issue where clicking anywhere on character details modal makes it close" />
+    <MESSAGE value="added close button to modal but it doesnt work" />
+    <option name="LAST_COMMIT_MESSAGE" value="added close button to modal but it doesnt work" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1657912150608">
@@ -479,10 +477,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="443" y="156" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1658251479486" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658320991760">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658324120843">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658320991760" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658324120843" />
     <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1658172459845">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
