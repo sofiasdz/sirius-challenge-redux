@@ -1,4 +1,4 @@
-export const request = (options: any,message?:any) => {
+export const request = (options: any,message:string) => {
     const headers = new Headers({
         'Content-Type': 'application/json',
     });
