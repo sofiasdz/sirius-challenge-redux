@@ -255,7 +255,7 @@ const TableCharacterRow = (props: Props) => {
                                     root: classesDialogContent.root,
 
                                 }}>
-                                   <CharacterDetail character={character}/>
+                                   <CharacterDetail character={character} handleClose={toggleModal}/>
 
                                 </DialogContentText>
                             </DialogContent>
