@@ -1,4 +1,4 @@
-export const request = (options: any) => {
+export const request = (options: any,message?:any) => {
     const headers = new Headers({
         'Content-Type': 'application/json',
     });
@@ -15,7 +15,10 @@ export const request = (options: any) => {
                 return json;
             })
         ) .catch(err =>{
-            alert(err)
+            if(message) alert(message)
+            else{
+                alert("API error")
+            }
             }
 
         );
