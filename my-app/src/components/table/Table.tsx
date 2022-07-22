@@ -187,7 +187,7 @@ const BasicTable = (props: Props) => {
                 ))}
 
 
-            <Pagination classes={{root: classesPagination.root, ul: classesPagination.ul}} count={10} page={pageNumber}
+            <Pagination classes={{root: classesPagination.root, ul: classesPagination.ul}} count={10} page={Number(pageNumber)}
                         variant={'outlined'} onChange={handleChange} size="large"/>
 
         </TableContainer>
