@@ -16,7 +16,7 @@ import CharacterDetail from "./CharacterDetail";
 
 type Props = {
     character: CharacterType,
-    id: string,
+
 }
 
 const useDialogContentStyles = makeStyles({
@@ -79,6 +79,19 @@ const useHeaderStyles = makeStyles({
     },
 
 });
+
+
+
+const StyledDialog = withStyles((theme) => ({
+paper: {
+    backgroundColor: MyTheme.palette.primary.dark,
+    boxShadow: 'none',
+    width: 800
+
+    },
+
+
+}))(Dialog);
 
 const TableCharacterRow = (props: Props) => {
     const {character} = props
@@ -215,21 +228,14 @@ const TableCharacterRow = (props: Props) => {
                 <Button onClick={toggleModal}>
                     <VisibilityIcon className={classesTitleText.root}/>
                     <div>
-                        <Dialog
+                        <StyledDialog
                             open={open}
                             onClose={toggleModal}
                             aria-labelledby="alert-dialog-title"
                             aria-describedby="alert-dialog-description"
                             color={MyTheme.palette.primary.dark}
 
-                            PaperProps={{
-                                style: {
-                                    backgroundColor: MyTheme.palette.primary.dark,
-                                    boxShadow: 'none',
-                                    width: 450
 
-                                },
-                            }}
                         >
                             <DialogContent>
                                 <DialogContentText classes={{
@@ -240,28 +246,20 @@ const TableCharacterRow = (props: Props) => {
 
                                 </DialogContentText>
                             </DialogContent>
-                        </Dialog>
+                        </StyledDialog>
                     </div>
 
                 </Button>
                 <Button>
                     <ListIcon className={classesTitleText.root} onClick={onClick}/>
 
-                    <Dialog
+                    <StyledDialog
                         open={openList}
                         onClose={toggleListModal}
                         aria-labelledby="alert-dialog-title"
                         aria-describedby="alert-dialog-description"
                         color={MyTheme.palette.primary.dark}
 
-                        PaperProps={{
-                            style: {
-                                backgroundColor: MyTheme.palette.primary.dark,
-                                boxShadow: 'none',
-                                width: 800
-
-                            },
-                        }}
                     >
                         <DialogContent>
                             <DialogContentText classes={{
@@ -285,7 +283,7 @@ const TableCharacterRow = (props: Props) => {
                             </DialogContentText>
                         </DialogContent>
 
-                    </Dialog>
+                    </StyledDialog>
 
                 </Button>
             </StyledTableCell>
