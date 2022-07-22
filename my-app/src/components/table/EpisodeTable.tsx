@@ -6,6 +6,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import {MyTheme} from "../../config/Theme";
 import {EpisodeType} from "../../Types/Types";
+import {Table} from "@material-ui/core";
 
 
 const useTableHeadStyles = makeStyles({
@@ -106,6 +107,8 @@ const EpisodeTable = (props:Props) => {
 
 
     return (
+        <Table>
+
 
         <TableContainer  className={classesTableContainer.root} >
             <TableHead classes={{root: classesTableHead.root}}>
@@ -120,19 +123,19 @@ const EpisodeTable = (props:Props) => {
             {episodes.map((episode:EpisodeType) => (
                 <StyledTableRow key={episode.id}>
                     <TableCell  align="left">
-                        <text className={classesTitleText.root}>
+                        <span className={classesTitleText.root}>
                             {episode.name}
-                        </text>
+                        </span>
                     </TableCell>
                     <StyledTableCell align="left">
-                        <text className={classesTitleText.root}>
+                        <span className={classesTitleText.root}>
                             {episode.episode}
-                        </text>
+                        </span>
                     </StyledTableCell>
                     <StyledTableCell align="left">
-                        <text className={classesTitleText.root}>
+                        <span className={classesTitleText.root}>
                             {episode.air_date}
-                        </text>
+                        </span>
                     </StyledTableCell>
                 </StyledTableRow>
                 ))}
@@ -141,6 +144,8 @@ const EpisodeTable = (props:Props) => {
 
 
         </TableContainer>
+
+        </Table>
 
     );
 

@@ -15,7 +15,8 @@ import CharacterDetail from "./CharacterDetail";
 
 
 type Props = {
-    character: CharacterType
+    character: CharacterType,
+    id: string,
 }
 
 const useDialogContentStyles = makeStyles({
@@ -56,24 +57,6 @@ const useEllipsisTextStyles = makeStyles({
     }
 });
 
-
-const useDialogContainerStyles = makeStyles({
-    root: {
-        flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        alignContent: 'center',
-        paddingRight: 60,
-        paddingLeft: 130,
-        paddingBottom: 5
-    }
-});
-
-
-
-
-
 const useLoadingStyles = makeStyles({
 
     root: {
@@ -102,7 +85,6 @@ const TableCharacterRow = (props: Props) => {
 
     const classesDialogContent = useDialogContentStyles();
     const classesTitleText = useTitleTextStyles();
-    const classesDialogContainer = useDialogContainerStyles();
     const classesEllipsis = useEllipsisTextStyles();
     const classesLoading = useLoadingStyles();
     const classesHeader = useHeaderStyles();
@@ -187,46 +169,47 @@ const TableCharacterRow = (props: Props) => {
     }))(Tooltip);
 
 
+
     return (
 
         <StyledTableRow key={character.id}>
             <StyledTableCell align="left">
-                <text>
+                <span>
                     {character.name}
-                </text>
+                </span>
             </StyledTableCell>
             <StyledTableCell align="left">
-                <text>
+                <span>
                     {character.status}
-                </text>
+                </span>
             </StyledTableCell>
             <StyledTableCell align="left">
-                <text>
+                <span>
                     {character.species}
-                </text>
+                </span>
             </StyledTableCell>
             <StyledTableCell align="left">
-                <text>
+                <span>
                     {character.gender}
-                </text>
+                </span>
             </StyledTableCell>
 
 
             <LightTooltip disableFocusListener disableTouchListener title={character.episode.join(", ")}>
 
                 <StyledTableCell align="left">
-                    <text>
+                    <span>
                         <td className={classesEllipsis.root}> {character.episode.join(", ")}
                         </td>
-                    </text>
+                    </span>
                 </StyledTableCell>
             </LightTooltip>
 
 
             <StyledTableCell align="left">
-                <text>
+                <span>
                     {character.type}
-                </text>
+                </span>
             </StyledTableCell>
             <StyledTableCell align="left">
                 <Button onClick={toggleModal}>

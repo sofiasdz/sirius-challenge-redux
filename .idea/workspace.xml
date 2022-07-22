@@ -10,11 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="filter uses back api">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="eliminated some console errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/table/EpisodeTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/EpisodeTable.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/actions/character.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/redux/actions/character.action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,14 +75,8 @@
       <workItem from="1657728228004" duration="7549000" />
       <workItem from="1657901383444" duration="9930000" />
       <workItem from="1658166506565" duration="7932000" />
-      <workItem from="1658248290609" duration="17077000" />
-    </task>
-    <task id="LOCAL-00054" summary="wip implementing redux">
-      <created>1656958174954</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1656958174954</updated>
+      <workItem from="1658248290609" duration="19977000" />
+      <workItem from="1658498716526" duration="737000" />
     </task>
     <task id="LOCAL-00055" summary="wip implementing redux">
       <created>1656958553952</created>
@@ -420,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658339576499</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="now filter returns all results">
+      <created>1658411308610</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1658411308610</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,8 +440,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="props in all functional components are destructured" />
-    <MESSAGE value="eliminated all inline styling and replaced it with classes styles" />
     <MESSAGE value="elipsis implemented with css" />
     <MESSAGE value="added list icon to add episodes list" />
     <MESSAGE value="wip implementing redux with getEpisodes" />
@@ -464,7 +463,9 @@
     <MESSAGE value="created filter character data function" />
     <MESSAGE value="added personalized error message for each request" />
     <MESSAGE value="filter uses back api" />
-    <option name="LAST_COMMIT_MESSAGE" value="filter uses back api" />
+    <MESSAGE value="now filter returns all results" />
+    <MESSAGE value="eliminated some console errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="eliminated some console errors" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1657912150608">
@@ -479,10 +480,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="443" y="156" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1658251479486" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658339579990">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658411310419">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658339579990" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658411310419" />
     <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1658172459845">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

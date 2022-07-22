@@ -153,6 +153,7 @@ const BasicTable = (props: Props) => {
 
     return (
         <TableContainer className={classesTableContainer.root} component={Paper}>
+
             <TableHead classes={{root: classesTableHead.root}}>
                 <StyledTableRow>
                     <StyledTableCell align="left">Name</StyledTableCell>
@@ -180,7 +181,9 @@ const BasicTable = (props: Props) => {
 
             {data.filter(character => character.name.toLowerCase().includes(search.toLowerCase()) || search === '')
                 .map((c) => (
-                    <TableRowCharacter character={c}/>
+                    <div key={c.id}>
+                    <TableRowCharacter id={c.id} character={c}/>
+                    </div>
                 ))}
 
 
