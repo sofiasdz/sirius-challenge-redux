@@ -10,10 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="eliminated pagination errors">
+    <list default="true" id="27152aff-6565-4896-b30c-b210c39f4bf8" name="Default Changelist" comment="fixed styling error from adding div .map">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/Table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/table/EpisodeTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/EpisodeTable.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/table/TableRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/utils/episodes.utils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/utils/episodes.utils.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,14 +76,7 @@
       <workItem from="1657901383444" duration="9930000" />
       <workItem from="1658166506565" duration="7932000" />
       <workItem from="1658248290609" duration="19977000" />
-      <workItem from="1658498716526" duration="2314000" />
-    </task>
-    <task id="LOCAL-00057" summary="implemented action that recieves page number">
-      <created>1656959638206</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1656959638206</updated>
+      <workItem from="1658498716526" duration="3133000" />
     </task>
     <task id="LOCAL-00058" summary="redux implementation correction">
       <created>1657044695560</created>
@@ -420,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658500589872</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="fixed styling error from adding div .map">
+      <created>1658516317564</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1658516317564</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +440,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="wip implementing redux with getEpisodes" />
     <MESSAGE value="error when sending episode request" />
     <MESSAGE value="regex doesnt work" />
     <MESSAGE value="regex works but request doesnt" />
@@ -464,7 +464,8 @@
     <MESSAGE value="eliminated some console errors" />
     <MESSAGE value="added id key to table row character to avoid console error" />
     <MESSAGE value="eliminated pagination errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="eliminated pagination errors" />
+    <MESSAGE value="fixed styling error from adding div .map" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed styling error from adding div .map" />
   </component>
   <component name="WindowStateProjectService">
     <state x="441" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1657912150608">
@@ -479,21 +480,21 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="443" y="156" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1658251479486" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658514853726">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1658516320130">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658514853726" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1658516320130" />
     <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1658172459845">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1658172459845" />
-    <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1655924725287">
+    <state x="421" y="82" width="597" height="735" key="find.popup" timestamp="1658517199677">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="421" y="82" width="597" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1655924725287" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1655995647658">
+    <state x="421" y="82" width="597" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1658517199677" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1658517096714">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1655995647658" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1658517096714" />
   </component>
 </project>

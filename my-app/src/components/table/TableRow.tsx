@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {createStyles, emphasize, makeStyles, styled, Theme, withStyles} from "@material-ui/core/styles";
+import {makeStyles, withStyles} from "@material-ui/core/styles";
 import TableRow from "@material-ui/core/TableRow";
 import {CharacterType} from "../../Types/Types";
 import {Button, Dialog, DialogContent, DialogContentText, TableCell, TextField} from "@material-ui/core";
@@ -82,12 +82,21 @@ const useHeaderStyles = makeStyles({
 
 
 
-const StyledDialog = withStyles((theme) => ({
+const StyledDialogEpisodes = withStyles((theme) => ({
 paper: {
     backgroundColor: MyTheme.palette.primary.dark,
     boxShadow: 'none',
     width: 800
 
+    },
+
+
+}))(Dialog);
+const StyledDialogCharacter = withStyles((theme) => ({
+    paper: {
+        backgroundColor: MyTheme.palette.primary.dark,
+        boxShadow: 'none',
+        width: 450
     },
 
 
@@ -228,7 +237,7 @@ const TableCharacterRow = (props: Props) => {
                 <Button onClick={toggleModal}>
                     <VisibilityIcon className={classesTitleText.root}/>
                     <div>
-                        <StyledDialog
+                        <StyledDialogCharacter
                             open={open}
                             onClose={toggleModal}
                             aria-labelledby="alert-dialog-title"
@@ -246,14 +255,14 @@ const TableCharacterRow = (props: Props) => {
 
                                 </DialogContentText>
                             </DialogContent>
-                        </StyledDialog>
+                        </StyledDialogCharacter>
                     </div>
 
                 </Button>
                 <Button>
                     <ListIcon className={classesTitleText.root} onClick={onClick}/>
 
-                    <StyledDialog
+                    <StyledDialogEpisodes
                         open={openList}
                         onClose={toggleListModal}
                         aria-labelledby="alert-dialog-title"
@@ -283,7 +292,7 @@ const TableCharacterRow = (props: Props) => {
                             </DialogContentText>
                         </DialogContent>
 
-                    </StyledDialog>
+                    </StyledDialogEpisodes>
 
                 </Button>
             </StyledTableCell>

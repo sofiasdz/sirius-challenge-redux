@@ -99,7 +99,7 @@ const EpisodeTable = (props:Props) => {
     const classesTableHead = useTableHeadStyles();
     const classesTableContainer = useTableContainerStyles();
     const classesTitleText = useTitleTextStyles();
-    console.log(episodes)
+
 
 
 
